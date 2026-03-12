@@ -1,13 +1,25 @@
-import { motion } from "framer-motion";
-import { Twitter, Youtube, Linkedin, Instagram, ArrowRight } from "lucide-react";
-import { Link } from "wouter";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "wouter";
+import { cn } from "@/lib/utils";
 
 export function Navbar() {
-  const socialLinks = [
-    { icon: Twitter, href: "https://twitter.com/thedankoe" },
-    { icon: Youtube, href: "https://youtube.com/c/DanKoeTalks" },
-    { icon: Linkedin, href: "https://linkedin.com/in/thedankoe" },
-    { icon: Instagram, href: "https://instagram.com/thedankoe" },
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [location] = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { href: "/about", label: "About" },
+    { href: "/portfolio", label: "Portfolio" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -15,51 +27,72 @@ export function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 glass-nav"
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        scrolled ? "bg-background/80 backdrop-blur-md border-b border-border/50 py-4" : "bg-transparent py-6"
+      )}
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-10">
-          <Link
-            href="/"
-            className="font-serif text-2xl tracking-widest font-semibold hover:text-accent transition-colors duration-300"
-          >
-            DAN KOE
-          </Link>
-          <a
-            href="https://letters.thedankoe.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors group"
-          >
-            Read The Koe Letters
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </a>
-        </div>
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <Link
+          href="/"
+          className="font-serif text-2xl md:text-3xl tracking-wide font-bold hover:text-accent transition-colors duration-300"
+        >
+          ABOUPRENEUR
+        </Link>
 
-        <nav className="flex items-center gap-5">
-          <div className="hidden sm:flex items-center gap-4 mr-4">
-            {socialLinks.map((social, i) => (
-              <a
-                key={i}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-all hover:scale-110 duration-300"
-              >
-                <social.icon className="w-5 h-5 stroke-[1.5]" />
-              </a>
-            ))}
-          </div>
-          <a
-            href="https://letters.thedankoe.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]"
-          >
-            Join The Letters
-          </a>
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "text-sm font-medium uppercase tracking-widest hover:text-accent transition-colors",
+                location === link.href ? "text-accent" : "text-muted-foreground"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          className="md:hidden text-foreground hover:text-accent transition-colors"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
+
+      {/* Mobile Nav */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-background border-b border-border/50"
+          >
+            <nav className="flex flex-col items-center gap-6 py-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "text-lg font-medium uppercase tracking-widest hover:text-accent transition-colors",
+                    location === link.href ? "text-accent" : "text-muted-foreground"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }

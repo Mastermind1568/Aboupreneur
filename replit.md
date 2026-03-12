@@ -1,3 +1,25 @@
+# Aboupreneur — Personal Brand Website
+
+## Site
+- **Brand:** Aboupreneur (Aboubakar)
+- **Domain target:** aboupreneur.page
+- **Artifact:** artifacts/dankoe/ (slug: dankoe, preview path: /)
+
+## Pages
+- `/` — Homepage (Hero, Resources, Portfolio Preview, About Preview, Testimonials, Blog, Footer)
+- `/about` — Full story page
+- `/portfolio` — All 5 client projects
+- `/blog` — Content hub (LinkedIn, Substack, YouTube)
+- `/contact` — Contact form (Formspree endpoint: xpwzqkna)
+
+## External Links
+- Farm to Funnel (LinkedIn): https://www.linkedin.com/newsletters/farm-to-funnel-7409350357295923200
+- YouTube: https://youtube.com/@aboupreneur
+- Substack: https://aboupreneur.substack.com/
+- LinkedIn Profile: https://linkedin.com/in/aboupreneur
+
+---
+
 # Workspace
 
 ## Overview

@@ -1,30 +1,35 @@
 import { ArrowUpRight } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
+import { Link } from "wouter";
 
 const resources = [
   {
-    title: "Future Proof - Premium Guides",
-    description: "My personal content creation, marketing, and AI systems I used as a creator and founder, updated 2-4x a month.",
-    cta: "Join Future Proof",
-    link: "#",
+    title: "Farm to Funnel — LinkedIn Newsletter",
+    description: "Marketing strategy for food and agricultural products. GTM frameworks, case studies, and real company breakdowns.",
+    cta: "Read on LinkedIn →",
+    link: "https://www.linkedin.com/newsletters/farm-to-funnel-7409350357295923200",
+    external: true,
   },
   {
-    title: "Eden – AI Canvas & Drive",
-    description: "Upload files, YouTube links, and more to a better drive that can always find what you need. Connect anything to AI on a visual canvas.",
-    cta: "Try Eden",
-    link: "#",
+    title: "Abou Speaks — YouTube",
+    description: "Self-development, motivation, and elevation. Everything is possible — so long as you put your mind to it.",
+    cta: "Watch on YouTube →",
+    link: "https://youtube.com/@aboupreneur?si=sF-M-FLRM8BMrNRN",
+    external: true,
   },
   {
-    title: "Purpose & Profit",
-    description: "Transform your relationship with money and discover your life's work. Download the PDF for free or get the paperback on Amazon.",
-    cta: "Get The Book",
-    link: "#",
+    title: "Substack — Deep Dives",
+    description: "Long-form personal essays. Reflections on the journey — building, immigrating, growing.",
+    cta: "Read on Substack →",
+    link: "https://aboupreneur.substack.com/",
+    external: true,
   },
   {
-    title: "The Art Of Focus",
-    description: "Find meaning, reinvent yourself, and create your ideal future. Now available on Amazon in digital, physical, or audiobook format.",
-    cta: "Get The Book",
-    link: "#",
+    title: "Digital Marketing Services",
+    description: "Web design, Google Ads, Meta Ads, SEO, analytics, and full-funnel strategy for brands that want to grow.",
+    cta: "Let's Talk →",
+    link: "/contact",
+    external: false,
   },
 ];
 
@@ -38,34 +43,51 @@ export function Resources() {
               RESOURCES
             </h5>
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-              Join The New 1%
+              Where I Think Out Loud
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl">
-              Become future-proof with these tools
-            </p>
           </FadeIn>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {resources.map((resource, i) => (
             <FadeIn key={i} delay={i * 0.1} className="h-full">
-              <a 
-                href={resource.link}
-                className="group flex flex-col justify-between h-full bg-card border border-border/50 rounded-3xl p-8 md:p-10 hover-card-effect"
-              >
-                <div>
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-accent transition-colors">
-                    {resource.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-12">
-                    {resource.description}
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-foreground group-hover:text-accent transition-colors">
-                  {resource.cta}
-                  <ArrowUpRight className="w-5 h-5 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
-                </div>
-              </a>
+              {resource.external ? (
+                <a 
+                  href={resource.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col justify-between h-full bg-card border border-border/50 rounded-2xl p-8 md:p-10 hover-card-effect"
+                >
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4 group-hover:text-accent transition-colors">
+                      {resource.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-12">
+                      {resource.description}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-foreground group-hover:text-accent transition-colors">
+                    {resource.cta}
+                  </div>
+                </a>
+              ) : (
+                <Link 
+                  href={resource.link}
+                  className="group flex flex-col justify-between h-full bg-card border border-border/50 rounded-2xl p-8 md:p-10 hover-card-effect"
+                >
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4 group-hover:text-accent transition-colors">
+                      {resource.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-12">
+                      {resource.description}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-foreground group-hover:text-accent transition-colors">
+                    {resource.cta}
+                  </div>
+                </Link>
+              )}
             </FadeIn>
           ))}
         </div>
