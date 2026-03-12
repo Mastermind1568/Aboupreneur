@@ -1,0 +1,13 @@
+packages:
+  "framer-motion": "For premium, smooth scroll-triggered animations and page transitions"
+  "clsx": "For conditional class name merging"
+  "tailwind-merge": "For merging tailwind classes safely"
+
+images:
+  - path: "artifacts/dankoe/public/images/hero-bg.png"
+    description: "Dark, moody, abstract background with deep charcoal gray and true black, very subtle warm amber light leak in the corner, minimal noise texture, highly sophisticated editorial photography style"
+    aspect_ratio: "16:9"
+
+notes:
+  - No backend required. Pure frontend static site clone.
+  - All content is hardcoded as per the prompt instructions.
