@@ -162,19 +162,16 @@ export default function About() {
               <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Agriculture. Food. Leverage.</h3>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
                 <p>
-                  Here's what most people don't know: everything I'm building points toward one destination — agriculture and food.
+                  Digital marketing is the craft. Agriculture and food are the destination.
                 </p>
                 <p>
-                  Not because it's trendy. Because it's the most durable way to build and protect wealth. People will always eat. Markets will always need food. And the agricultural sector — especially in Africa — is massively underserved when it comes to modern marketing and digital strategy.
+                  Not because it's trending — but because it's one of the most enduring industries on earth. People will always eat. Land will always produce. And the intersection of modern marketing with the agricultural world is still largely untapped, especially across the African continent.
                 </p>
                 <p>
-                  The plan is simple: use content as leverage to build the network, use marketing skills as the value engine, and use everything together to launch an agriculture-focused digital marketing agency serving SMEs across Africa — starting with South Africa, Kenya, Ethiopia, and Ghana.
+                  I'm drawn to industries that matter. Industries that feed people, sustain communities, and create generational value. That's the longer arc — and everything I'm building in marketing is the foundation for what comes next.
                 </p>
                 <p>
-                  Farm to Funnel on LinkedIn is the public proof-of-work. Every post, every case study, every framework I share is a brick in that foundation.
-                </p>
-                <p>
-                  Beyond the agency, I'm building toward real agricultural ventures — a fish business (launching 2027), a grain and corn operation in Cameroon, and eventually, a farm. Marketing is the leverage. Agriculture is the legacy.
+                  For now, the work is the proof. Every client served, every campaign built, every system designed — it all compounds toward something larger.
                 </p>
               </div>
             </div>
@@ -188,16 +185,19 @@ export default function About() {
               <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">WHERE I SHOW UP</h2>
             </div>
             <div className="md:col-span-8">
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Two Lanes. One Brand.</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Where You'll Find Me.</h3>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6 mb-12">
                 <p>
-                  I operate in two lanes — the professional and the personal.
+                  I show up in a few different places — depending on what you're looking for.
                 </p>
                 <p>
-                  The professional lane is Farm to Funnel — my LinkedIn newsletter where I break down marketing strategy for food and agricultural products. GTM frameworks, company case studies (Oatly, John Deere, Beyond Meat), and real strategic thinking. This is the client acquisition engine.
+                  <strong className="text-foreground">Farm to Funnel</strong> on LinkedIn is where I write about marketing strategy for food and agricultural brands. Real company breakdowns, GTM frameworks, and tactical thinking — grounded in an industry I genuinely care about.
                 </p>
                 <p>
-                  The personal lane is Abou Speaks — my YouTube channel and Substack where I talk about self-development, motivation, and elevation. The message is simple: everything is possible. Anything is possible. So long as you put your mind to it and you never give up.
+                  <strong className="text-foreground">Abou Speaks</strong> on YouTube is where I talk about mindset, growth, and the journey of building something from nothing. Honest, unfiltered, and personal.
+                </p>
+                <p>
+                  <strong className="text-foreground">Substack</strong> is where I write longer, slower. Essays on the process of building, immigrating, learning, and figuring out what actually matters.
                 </p>
               </div>
 
