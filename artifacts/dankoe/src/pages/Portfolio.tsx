@@ -8,16 +8,16 @@ const projects = [
     name: "The Bitcoin Kids",
     client: "Nzonda Fotsing",
     url: "thebitcoinkids.com",
-    services: ["Web Design", "Meta Ads", "Google Ads", "GA4", "SEO"],
-    oneLiner: "Built a trust-first website for a youth-focused learning brand.",
+    services: ["Digital Marketing", "Demand Generation", "Content Strategy", "International Outreach"],
+    oneLiner: "Led the full sales and promotion strategy for a youth-focused financial literacy comic book — achieving 1,000+ copies sold across 12+ countries.",
     testimonial: "Abou turned a complex idea into a parent-friendly brand and funnel. The site is fast, trustworthy, and the ads brought real sign-ups — not vanity clicks."
   },
   {
-    name: "Asabis",
-    client: "Niba Emmanuel",
-    url: "asabis.ca",
-    services: ["Web Design", "Social Content", "Google Ads", "GA4", "Email"],
-    oneLiner: "Modern small-business site with a social-to-booking funnel.",
+    name: "Akivas Inc.",
+    client: "Akivas Team",
+    url: "akivas.ca",
+    services: ["Digital Marketing", "Customer Experience", "CRM", "Onboarding Optimization"],
+    oneLiner: "Improved customer satisfaction by 60% and reduced new client onboarding time by 15% in Q3 through targeted digital strategy and CRM refinement.",
     testimonial: "Clean design, clear story, and a funnel that turns social traffic into bookings. Exactly what we needed."
   },
   {

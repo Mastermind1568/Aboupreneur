@@ -9,28 +9,31 @@ export default function About() {
   const currentServices = [
     "Brand Strategy & Positioning",
     "Web Design & Development (WordPress + AI-built sites)",
-    "Website Building with AI Tools (Replit, Claude Code, Cursor, Lovable)",
-    "AI Workflow Automation (n8n, Claude, HubSpot, Make)",
+    "AI Workflow Automation (n8n, HubSpot, Make)",
     "Search Advertising (Google Ads)",
-    "Social Advertising (Meta Ads, LinkedIn Ads)",
+    "Social Advertising (Meta, LinkedIn, TikTok, Pinterest, Snapchat)",
     "Social Media Strategy & Management",
     "Content Marketing & Copywriting",
-    "Email Marketing & Automation",
-    "SEO & On-Page Optimization",
-    "Analytics & Reporting (GA4, Looker)",
+    "Email Marketing (Mailchimp, HubSpot)",
+    "SEO & On-Page Optimization (Semrush)",
+    "Analytics & Reporting (GA4, Looker Studio)",
     "CRM Setup & Management (HubSpot)",
+    "Conversion Rate Optimization",
   ];
 
   const certifications = [
-    "Google Analytics Certification (in progress)",
-    "HubSpot Inbound Marketing Certification",
-    "HubSpot Digital Marketing Certification",
-    "HubSpot Content Marketing Certification",
-    "HubSpot SEO Certification",
-    "Google Ads Measurement Certification",
-    "HubSpot Email Marketing Certification",
-    "HubSpot Marketing Hub Software Certification",
-    "HubSpot Revenue Operations Certification",
+    { name: "Google Ads Search Certification", year: "2026" },
+    { name: "SEO Essentials with Semrush", year: "2026" },
+    { name: "Hootsuite: Social Listening & Social Media Marketing", year: "2026" },
+    { name: "Marketing Analytics: Decoding the Conversion Funnel for Revenue Growth", year: "2026" },
+    { name: "Marketing Analytics Foundations", year: "2025" },
+    { name: "Marketing Analytics in Action: Drive Growth with Data Insights", year: "2025" },
+    { name: "Marketing Analytics: Setting and Measuring KPIs", year: "2025" },
+    { name: "Google Digital Marketing & E-Commerce Professional Certificate", year: "2025" },
+    { name: "Data Analytics (IBM): Visualization, Wrangling, Essentials & ETL", year: "2023" },
+    { name: "Digital Marketing & SEO: Vision, Strategy & Metrics | Analytics | Growth", year: "2020" },
+    { name: "Web Development: WordPress", year: "2018" },
+    { name: "Jelly Academy Bootcamp", year: "In Progress" },
   ];
 
   return (
@@ -236,11 +239,14 @@ export default function About() {
                 "No certificate without application. Every course becomes a project, a case study, and a portfolio piece. Mastery over collection."
               </blockquote>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {certifications.map((cert, i) => (
                   <div key={i} className="flex items-start gap-3 bg-secondary/30 p-4 rounded-lg border border-border/30">
                     <GraduationCap className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                    <span className="text-sm font-medium text-foreground/90">{cert}</span>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-sm font-medium text-foreground/90 block">{cert.name}</span>
+                      <span className="text-xs text-accent/80 font-semibold mt-1 block">{cert.year}</span>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -249,11 +255,13 @@ export default function About() {
                 <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-muted-foreground tracking-wide uppercase">
                   <span>Jelly Academy</span>
                   <span className="text-border">|</span>
-                  <span>CXL</span>
-                  <span className="text-border">|</span>
                   <span>Google Skillshop</span>
                   <span className="text-border">|</span>
-                  <span>HubSpot Academy</span>
+                  <span>Semrush Academy</span>
+                  <span className="text-border">|</span>
+                  <span>Hootsuite Academy</span>
+                  <span className="text-border">|</span>
+                  <span>IBM SkillsBuild</span>
                 </div>
               </div>
             </div>
