@@ -1,5 +1,6 @@
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
+import SocialButtons from "@/components/ui/SocialButtons";
 
 export function AboutPreview() {
   return (
@@ -10,16 +11,27 @@ export function AboutPreview() {
             <h5 className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase mb-4">
               ABOUT ME
             </h5>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
               Who Is Aboupreneur?
             </h2>
+            <h3 className="text-xl md:text-2xl text-accent font-medium mb-8">
+              Just a builder obsessed with food, agriculture, and leverage.
+            </h3>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <p>Hey, I'm Aboubakar.</p>
               <p>
-                I'm Aboubakar — a growth marketer, builder, and new Canadian from Cameroon. I started in business importing phones and electronics from China and the U.S. into Cameroon.
+                I'm a growth marketer, web builder, and AI automation strategist based in Alberta, Canada — originally from Cameroon.
               </p>
               <p>
-                Now I build digital strategies for brands that want to grow — and I'm building toward a long-term play in agriculture and food.
+                Before funnels and frameworks, I was importing phones and electronics from China and the U.S. into Cameroon. That was the first real education in positioning, margins, and moving product. No ad platform required — just understanding what people want and figuring out how to get it to them.
               </p>
+              <p>
+                Now I build websites, run digital campaigns, and design AI-powered workflows for brands that want to grow. The long game? Agriculture and food — building wealth through the most durable industries on earth, with marketing as the leverage.
+              </p>
+            </div>
+            
+            <div className="mt-8">
+              <SocialButtons variant="icon-label" includeEmail={false} />
             </div>
             
             <div className="mt-10">

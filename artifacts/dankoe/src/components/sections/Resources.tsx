@@ -25,8 +25,8 @@ const resources = [
     external: true,
   },
   {
-    title: "Digital Marketing Services",
-    description: "Web design, Google Ads, Meta Ads, SEO, analytics, and full-funnel strategy for brands that want to grow.",
+    title: "Digital Marketing & AI Services",
+    description: "Web design, AI-built websites, automated workflows, Google Ads, Meta Ads, SEO, analytics, and full-funnel growth strategy.",
     cta: "Let's Talk →",
     link: "/contact",
     external: false,

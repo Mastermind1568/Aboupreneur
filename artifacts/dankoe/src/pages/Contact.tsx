@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { MapPin, Mail, Linkedin } from "lucide-react";
+import SocialButtons from "@/components/ui/SocialButtons";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -10,10 +11,11 @@ export default function Contact() {
     name: "",
     email: "",
     company: "",
+    service: "",
     message: ""
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
@@ -36,7 +38,7 @@ export default function Contact() {
 
       if (response.ok) {
         setStatus("success");
-        setFormData({ name: "", email: "", company: "", message: "" });
+        setFormData({ name: "", email: "", company: "", service: "", message: "" });
       } else {
         setStatus("error");
       }
@@ -59,10 +61,10 @@ export default function Contact() {
               Let's Talk
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-12">
-              If you'd like to discuss a project or learn how I can help your brand grow, drop me a message.
+              Whether you need a website, a campaign, an AI workflow, or a full growth strategy — I'd love to hear what you're working on.
             </p>
             
-            <div className="space-y-8 bg-card border border-border/50 rounded-2xl p-8">
+            <div className="space-y-8 bg-card border border-border/50 rounded-2xl p-8 mb-10">
               <a href="mailto:hello@aboupreneur.page" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
                   <Mail className="w-5 h-5" />
@@ -92,6 +94,11 @@ export default function Contact() {
                   <div className="font-medium text-foreground">Based in Alberta, Canada</div>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="text-sm font-bold tracking-widest text-muted-foreground uppercase mb-6">Connect Elsewhere</h3>
+              <SocialButtons variant="icon-label" />
             </div>
           </FadeIn>
           
@@ -137,6 +144,25 @@ export default function Contact() {
                     className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                     placeholder="Your Company"
                   />
+                </div>
+
+                <div className="space-y-2">
+                  <label htmlFor="service" className="text-sm font-medium text-foreground">What do you need help with? *</label>
+                  <select
+                    id="service"
+                    name="service"
+                    required
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all appearance-none"
+                  >
+                    <option value="" disabled>Select a service...</option>
+                    <option value="Website Design & Build">Website Design & Build</option>
+                    <option value="Ads & Digital Marketing">Ads & Digital Marketing</option>
+                    <option value="AI Automation & Workflows">AI Automation & Workflows</option>
+                    <option value="Growth Strategy">Growth Strategy</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
                 
                 <div className="space-y-2">

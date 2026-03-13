@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Linkedin, Youtube, BookOpen } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { cn } from "@/lib/utils";
+import SocialButtons from "@/components/ui/SocialButtons";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,20 +42,36 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "text-sm font-medium uppercase tracking-widest hover:text-accent transition-colors",
-                location === link.href ? "text-accent" : "text-muted-foreground"
-              )}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="hidden md:flex items-center gap-8">
+          <nav className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "text-sm font-medium uppercase tracking-widest hover:text-accent transition-colors",
+                  location === link.href ? "text-accent" : "text-muted-foreground"
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          
+          <div className="w-px h-6 bg-border/50"></div>
+          
+          <div className="flex items-center gap-4">
+            <a href="https://www.linkedin.com/in/aboupreneur" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-[#0A66C2] transition-colors" aria-label="LinkedIn">
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a href="https://youtube.com/@aboupreneur" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-[#FF0000] transition-colors" aria-label="YouTube">
+              <Youtube className="w-5 h-5" />
+            </a>
+            <a href="https://aboupreneur.substack.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-[#FF6719] transition-colors" aria-label="Substack">
+              <BookOpen className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
 
         {/* Mobile Menu Toggle */}
         <button
@@ -73,23 +90,29 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border/50"
+            className="md:hidden bg-background border-b border-border/50 overflow-hidden"
           >
-            <nav className="flex flex-col items-center gap-6 py-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={cn(
-                    "text-lg font-medium uppercase tracking-widest hover:text-accent transition-colors",
-                    location === link.href ? "text-accent" : "text-muted-foreground"
-                  )}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+            <div className="flex flex-col items-center gap-6 py-8 px-6">
+              <nav className="flex flex-col items-center gap-6">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "text-lg font-medium uppercase tracking-widest hover:text-accent transition-colors",
+                      location === link.href ? "text-accent" : "text-muted-foreground"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+              
+              <div className="w-full h-px bg-border/50 my-2"></div>
+              
+              <SocialButtons variant="icon-label" className="justify-center" />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

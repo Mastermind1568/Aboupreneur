@@ -2,83 +2,316 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
-
-const services = [
-  "Brand Strategy", 
-  "Web Design & Development", 
-  "Google & Meta Ads", 
-  "Social Media Strategy", 
-  "Content Marketing", 
-  "Email Marketing & Automation", 
-  "Analytics & Reporting (GA4)", 
-  "On-Page SEO"
-];
+import SocialButtons from "@/components/ui/SocialButtons";
+import { ArrowRight, GraduationCap } from "lucide-react";
 
 export default function About() {
+  const currentServices = [
+    "Brand Strategy & Positioning",
+    "Web Design & Development (WordPress + AI-built sites)",
+    "Website Building with AI Tools (Replit, Claude Code, Cursor, Lovable)",
+    "AI Workflow Automation (n8n, Claude, HubSpot, Make)",
+    "Search Advertising (Google Ads)",
+    "Social Advertising (Meta Ads, LinkedIn Ads)",
+    "Social Media Strategy & Management",
+    "Content Marketing & Copywriting",
+    "Email Marketing & Automation",
+    "SEO & On-Page Optimization",
+    "Analytics & Reporting (GA4, Looker)",
+    "CRM Setup & Management (HubSpot)",
+  ];
+
+  const certifications = [
+    "Google Analytics Certification (in progress)",
+    "HubSpot Inbound Marketing Certification",
+    "HubSpot Digital Marketing Certification",
+    "HubSpot Content Marketing Certification",
+    "HubSpot SEO Certification",
+    "Google Ads Measurement Certification",
+    "HubSpot Email Marketing Certification",
+    "HubSpot Marketing Hub Software Certification",
+    "HubSpot Revenue Operations Certification",
+  ];
+
+  const influences = [
+    { name: "Simon Sinek", description: "Purpose-first thinking. Calm authority. Simplicity." },
+    { name: "Dan Koe", description: "Content systems. Newsletter-as-cornerstone. Depth-first." },
+    { name: "Jonathan Martinez", description: "Builder mindset. AI workflows. Generous teaching." },
+    { name: "Alex Hormozi", description: "Directness. No-fluff value. Business as a craft." }
+  ];
+
   return (
-    <main className="min-h-screen bg-background pt-24">
+    <main className="min-h-screen bg-background pt-24 selection:bg-accent selection:text-accent-foreground">
       <Navbar />
-      
-      <div className="max-w-4xl mx-auto px-6 py-20">
-        <FadeIn>
-          <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">
-            The Story Behind Aboupreneur
-          </h1>
-          <p className="text-xl text-muted-foreground border-l-4 border-accent pl-6 py-2 mb-20 italic">
-            From Cameroon to Canada. From phones to funnels.
-          </p>
-        </FadeIn>
 
-        <div className="space-y-24">
+      {/* Section 1 - Hero */}
+      <section className="relative py-24 md:py-32 flex flex-col items-center justify-center text-center px-6 border-b border-border/50 bg-gradient-to-b from-background to-secondary/20">
+        <div className="absolute inset-0 z-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+')] mix-blend-overlay opacity-[0.03]"></div>
+        <div className="relative z-10 max-w-4xl mx-auto">
           <FadeIn>
-            <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase mb-6">01 — The Origin</h2>
-            <div className="text-lg md:text-xl text-muted-foreground leading-relaxed space-y-6">
-              <p>
-                I started in business early — importing phones and electronics from China and the U.S. into Cameroon. That's where I learned real commerce: logistics, margins, customer trust, and hustle.
-              </p>
-            </div>
-          </FadeIn>
-
-          <FadeIn>
-            <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase mb-6">02 — The Pivot</h2>
-            <div className="text-lg md:text-xl text-muted-foreground leading-relaxed space-y-6">
-              <p>
-                When I moved to Canada, I made a full pivot into digital marketing — putting everything I knew about business into the digital world. Web design. Google Ads. Meta Ads. Content strategy. Analytics.
-              </p>
-            </div>
-          </FadeIn>
-
-          <FadeIn>
-            <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase mb-6">03 — The Vision</h2>
-            <div className="text-lg md:text-xl text-muted-foreground leading-relaxed space-y-6">
-              <p>
-                My long-term play is agriculture and food. I believe the future of wealth lies in producing real things — and in telling their story better. Farm to Funnel is the bridge.
-              </p>
-            </div>
-          </FadeIn>
-
-          <FadeIn>
-            <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase mb-8">What I Do Now</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {services.map((service, i) => (
-                <div key={i} className="bg-card border border-border/50 rounded-xl p-6 flex items-center">
-                  <div className="w-2 h-2 rounded-full bg-accent mr-4"></div>
-                  <span className="font-medium text-foreground">{service}</span>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-
-          <FadeIn className="pt-10">
-            <Link 
-              href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground text-lg font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.1)]"
-            >
-              Let's Build Something Together →
-            </Link>
+            <h5 className="text-xs font-bold tracking-[0.2em] text-accent uppercase mb-6">ABOUT</h5>
+            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-glow">The Story Behind Aboupreneur</h1>
+            <p className="text-xl md:text-2xl text-muted-foreground/90 max-w-2xl mx-auto font-light italic">
+              From importing phones in Cameroon to building digital empires in Canada.
+            </p>
           </FadeIn>
         </div>
+      </section>
+
+      <div className="max-w-5xl mx-auto px-6 py-24 space-y-32">
+        
+        {/* Section 2 - The Origin */}
+        <FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+            <div className="md:col-span-4">
+              <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">WHERE IT STARTED</h2>
+            </div>
+            <div className="md:col-span-8">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Hustle Before Funnels</h3>
+              <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
+                <p>
+                  Before WordPress, before Google Ads, before growth frameworks — the education started on the ground.
+                </p>
+                <p>
+                  I grew up in Cameroon, where entrepreneurship isn't a career choice — it's survival. My first real business was importing phones and electronics from China and the United States and selling them in Cameroon. No ad platform. No CRM. No analytics dashboard. Just understanding what people want, figuring out how to source it, negotiating margins, and moving product.
+                </p>
+                <p>
+                  That was the first masterclass in positioning, demand, and distribution. Everything I do now in digital marketing? It started there — reading markets, not dashboards.
+                </p>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* Section 3 - The Pivot */}
+        <FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+            <div className="md:col-span-4">
+              <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">THE TRANSITION</h2>
+            </div>
+            <div className="md:col-span-8">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">From Physical Products to Digital Strategy</h3>
+              <div className="text-lg text-muted-foreground leading-relaxed space-y-6 mb-12">
+                <p>
+                  The move to Canada changed everything. New country. New language dynamics. New market. But the instinct was the same — find what people need, build the bridge to get it to them.
+                </p>
+                <p>
+                  The transition from physical product sales to digital marketing was natural. Same instinct, bigger toolkit. I started learning web design, then SEO, then paid ads, then analytics, then automation. Each skill unlocked the next. Each client project became a live laboratory.
+                </p>
+                <p>
+                  I didn't just collect certificates. Every certification became a real project, a case study, a portfolio piece, and proof of work. That rule hasn't changed.
+                </p>
+              </div>
+
+              {/* Timeline */}
+              <div className="relative mt-8">
+                <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-border/50 -translate-y-1/2 z-0"></div>
+                <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-2 relative z-10">
+                  {["Cameroon", "Import/Export", "Canada", "Web Design", "Digital Marketing", "AI Automation"].map((step, i) => (
+                    <div key={i} className="flex items-center gap-4 md:gap-0 md:flex-col group">
+                      <div className="w-8 h-8 rounded-full bg-secondary border border-border flex items-center justify-center text-xs font-bold md:mb-3 group-hover:bg-accent group-hover:text-accent-foreground transition-colors z-10 shadow-lg">
+                        {i + 1}
+                      </div>
+                      <span className="text-sm font-medium text-foreground whitespace-nowrap">{step}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* Section 4 - What I Do Now */}
+        <FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+            <div className="md:col-span-4">
+              <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">THE PRESENT</h2>
+            </div>
+            <div className="md:col-span-8">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Growth Marketer. Web Builder. AI Automation Strategist.</h3>
+              <div className="text-lg text-muted-foreground leading-relaxed space-y-6 mb-12">
+                <p>
+                  Today, I operate at the intersection of three things: digital marketing strategy, website development, and AI-powered business automation.
+                </p>
+                <p>
+                  For clients, that means I don't just build a website and walk away. I build the site, set up the ads, wire the analytics, design the funnel, and automate the follow-up — so the whole system works while you sleep.
+                </p>
+                <p>
+                  I'm also a member of the Canadian Marketing Association (CMA) and CAMA, actively building toward elite growth marketer status through a rigorous certification path across Google, HubSpot, and advanced platforms.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {currentServices.map((service, i) => (
+                  <div key={i} className="bg-card border border-border/50 rounded-xl p-5 hover:border-accent/50 transition-colors">
+                    <span className="text-sm font-medium text-foreground">{service}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* Section 5 - The Vision */}
+        <FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+            <div className="md:col-span-4">
+              <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">THE LONG GAME</h2>
+            </div>
+            <div className="md:col-span-8">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Agriculture. Food. Leverage.</h3>
+              <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
+                <p>
+                  Here's what most people don't know: everything I'm building points toward one destination — agriculture and food.
+                </p>
+                <p>
+                  Not because it's trendy. Because it's the most durable way to build and protect wealth. People will always eat. Markets will always need food. And the agricultural sector — especially in Africa — is massively underserved when it comes to modern marketing and digital strategy.
+                </p>
+                <p>
+                  The plan is simple: use content as leverage to build the network, use marketing skills as the value engine, and use everything together to launch an agriculture-focused digital marketing agency serving SMEs across Africa — starting with South Africa, Kenya, Ethiopia, and Ghana.
+                </p>
+                <p>
+                  Farm to Funnel on LinkedIn is the public proof-of-work. Every post, every case study, every framework I share is a brick in that foundation.
+                </p>
+                <p>
+                  Beyond the agency, I'm building toward real agricultural ventures — a fish business (launching 2027), a grain and corn operation in Cameroon, and eventually, a farm. Marketing is the leverage. Agriculture is the legacy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* Section 6 - Content Ecosystem */}
+        <FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+            <div className="md:col-span-4">
+              <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">WHERE I SHOW UP</h2>
+            </div>
+            <div className="md:col-span-8">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Two Lanes. One Brand.</h3>
+              <div className="text-lg text-muted-foreground leading-relaxed space-y-6 mb-12">
+                <p>
+                  I operate in two lanes — the professional and the personal.
+                </p>
+                <p>
+                  The professional lane is Farm to Funnel — my LinkedIn newsletter where I break down marketing strategy for food and agricultural products. GTM frameworks, company case studies (Oatly, John Deere, Beyond Meat), and real strategic thinking. This is the client acquisition engine.
+                </p>
+                <p>
+                  The personal lane is Abou Speaks — my YouTube channel and Substack where I talk about self-development, motivation, and elevation. The message is simple: everything is possible. Anything is possible. So long as you put your mind to it and you never give up.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="https://www.linkedin.com/newsletters/farm-to-funnel-7409350357295923200" target="_blank" rel="noopener noreferrer" className="group block bg-card border border-border/50 rounded-2xl p-6 hover:-translate-y-1 hover:border-accent transition-all duration-300">
+                  <h4 className="font-serif font-bold text-xl mb-2 group-hover:text-accent transition-colors">Farm to Funnel</h4>
+                  <p className="text-sm text-muted-foreground mb-6">Marketing strategy for ag & food</p>
+                  <span className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-foreground">
+                    Read on LinkedIn <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </a>
+                
+                <a href="https://youtube.com/@aboupreneur" target="_blank" rel="noopener noreferrer" className="group block bg-card border border-border/50 rounded-2xl p-6 hover:-translate-y-1 hover:border-[#FF0000] transition-all duration-300">
+                  <h4 className="font-serif font-bold text-xl mb-2 group-hover:text-[#FF0000] transition-colors">Abou Speaks</h4>
+                  <p className="text-sm text-muted-foreground mb-6">Self-development & elevation</p>
+                  <span className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-foreground">
+                    Watch on YouTube <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </a>
+
+                <a href="https://aboupreneur.substack.com/" target="_blank" rel="noopener noreferrer" className="group block bg-card border border-border/50 rounded-2xl p-6 hover:-translate-y-1 hover:border-[#FF6719] transition-all duration-300">
+                  <h4 className="font-serif font-bold text-xl mb-2 group-hover:text-[#FF6719] transition-colors">Substack</h4>
+                  <p className="text-sm text-muted-foreground mb-6">Deep dives & personal essays</p>
+                  <span className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-foreground">
+                    Read on Substack <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* Section 7 - Certifications */}
+        <FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+            <div className="md:col-span-4">
+              <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">THE CRAFT</h2>
+            </div>
+            <div className="md:col-span-8">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Always Learning. Always Building.</h3>
+              
+              <blockquote className="border-l-4 border-accent pl-6 py-2 my-8 text-xl font-serif italic text-muted-foreground/90 bg-secondary/20 rounded-r-lg">
+                "No certificate without application. Every course becomes a project, a case study, and a portfolio piece. Mastery over collection."
+              </blockquote>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                {certifications.map((cert, i) => (
+                  <div key={i} className="flex items-start gap-3 bg-secondary/30 p-4 rounded-lg border border-border/30">
+                    <GraduationCap className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                    <span className="text-sm font-medium text-foreground/90">{cert}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-6 border-t border-border/50">
+                <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-muted-foreground tracking-wide uppercase">
+                  <span>Jelly Academy</span>
+                  <span className="text-border">|</span>
+                  <span>CXL</span>
+                  <span className="text-border">|</span>
+                  <span>Google Skillshop</span>
+                  <span className="text-border">|</span>
+                  <span>HubSpot Academy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* Section 8 - Influences */}
+        <FadeIn>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+            <div className="md:col-span-4">
+              <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">INFLUENCES</h2>
+            </div>
+            <div className="md:col-span-8">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-8">People Who Sharpen My Thinking</h3>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {influences.map((inf, i) => (
+                  <div key={i} className="bg-card border border-border/50 rounded-xl p-6">
+                    <h4 className="text-lg font-bold mb-2 text-foreground">{inf.name}</h4>
+                    <p className="text-sm text-muted-foreground">{inf.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </FadeIn>
       </div>
+
+      {/* Section 9 - Social Buttons Bar */}
+      <section className="py-20 border-y border-border/50 bg-secondary/20">
+        <FadeIn className="flex justify-center px-6">
+          <SocialButtons variant="icon-label" includeEmail={true} />
+        </FadeIn>
+      </section>
+
+      {/* Section 10 - CTA */}
+      <section className="py-32 flex flex-col items-center justify-center text-center px-6">
+        <FadeIn className="max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Let's Build Something Together</h2>
+          <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+            Whether you need a website, a campaign, or a full growth strategy — I'd love to hear what you're working on.
+          </p>
+          <Link 
+            href="/contact"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-lg font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 shadow-[0_0_30px_rgba(255,255,255,0.05)] hover:shadow-[0_0_40px_rgba(255,255,255,0.1)]"
+          >
+            Get In Touch
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </FadeIn>
+      </section>
       
       <Footer />
     </main>

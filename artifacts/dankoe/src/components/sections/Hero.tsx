@@ -34,7 +34,7 @@ export function Hero() {
 
         <FadeIn delay={0.4}>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 text-balance leading-relaxed">
-            Growth marketer. Builder. Agriculture & food obsessed.
+            Growth marketer. Web builder. AI automation strategist. Agriculture & food obsessed.
           </p>
         </FadeIn>
 
