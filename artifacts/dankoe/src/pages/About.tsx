@@ -33,13 +33,6 @@ export default function About() {
     "HubSpot Revenue Operations Certification",
   ];
 
-  const influences = [
-    { name: "Simon Sinek", description: "Purpose-first thinking. Calm authority. Simplicity." },
-    { name: "Dan Koe", description: "Content systems. Newsletter-as-cornerstone. Depth-first." },
-    { name: "Jonathan Martinez", description: "Builder mindset. AI workflows. Generous teaching." },
-    { name: "Alex Hormozi", description: "Directness. No-fluff value. Business as a craft." }
-  ];
-
   return (
     <main className="min-h-screen bg-background pt-24 selection:bg-accent selection:text-accent-foreground">
       <Navbar />
@@ -267,26 +260,6 @@ export default function About() {
           </div>
         </FadeIn>
 
-        {/* Section 8 - Influences */}
-        <FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
-            <div className="md:col-span-4">
-              <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">INFLUENCES</h2>
-            </div>
-            <div className="md:col-span-8">
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-8">People Who Sharpen My Thinking</h3>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {influences.map((inf, i) => (
-                  <div key={i} className="bg-card border border-border/50 rounded-xl p-6">
-                    <h4 className="text-lg font-bold mb-2 text-foreground">{inf.name}</h4>
-                    <p className="text-sm text-muted-foreground">{inf.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </FadeIn>
       </div>
 
       {/* Section 9 - Social Buttons Bar */}
