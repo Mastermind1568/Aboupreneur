@@ -4,22 +4,22 @@ import { Link } from "wouter";
 
 const resources = [
   {
-    title: "Farm to Funnel — LinkedIn Newsletter",
+    title: "Farm to Funnel: LinkedIn Newsletter",
     description: "Marketing strategy for food and agricultural products. GTM frameworks, case studies, and real company breakdowns.",
     cta: "Read on LinkedIn →",
     link: "https://www.linkedin.com/newsletters/farm-to-funnel-7409350357295923200",
     external: true,
   },
   {
-    title: "Abou Speaks — YouTube",
-    description: "Self-development, motivation, and elevation. Everything is possible — so long as you put your mind to it.",
+    title: "Abou Speaks: YouTube",
+    description: "Self-development, motivation, and elevation. Everything is possible, so long as you put your mind to it.",
     cta: "Watch on YouTube →",
     link: "https://youtube.com/@aboupreneur?si=sF-M-FLRM8BMrNRN",
     external: true,
   },
   {
-    title: "Substack — Deep Dives",
-    description: "Long-form personal essays. Reflections on the journey — building, immigrating, growing.",
+    title: "Essays from A Creative Cosmopolitan Nerd",
+    description: "Long-form personal essays. Reflections on the journey: building, immigrating, growing.",
     cta: "Read on Substack →",
     link: "https://aboupreneur.substack.com/",
     external: true,

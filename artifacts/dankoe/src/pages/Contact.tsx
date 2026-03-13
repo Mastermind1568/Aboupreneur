@@ -61,7 +61,7 @@ export default function Contact() {
               Let's Talk
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-12">
-              Whether you need a website, a campaign, an AI workflow, or a full growth strategy — I'd love to hear what you're working on.
+              Whether you need a website, a campaign, an AI workflow, or a full growth strategy, I'd love to hear what you're working on.
             </p>
             
             <div className="space-y-8 bg-card border border-border/50 rounded-2xl p-8 mb-10">

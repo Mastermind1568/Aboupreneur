@@ -9,7 +9,7 @@ const blogPosts = [
     link: "https://www.linkedin.com/newsletters/farm-to-funnel-7409350357295923200",
   },
   {
-    title: "The Immigrant Builder Mindset",
+    title: "Essays from A Creative Cosmopolitan Nerd",
     source: "Substack",
     link: "https://aboupreneur.substack.com/",
   },

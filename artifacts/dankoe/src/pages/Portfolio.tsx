@@ -9,8 +9,8 @@ const projects = [
     client: "Nzonda Fotsing",
     url: "thebitcoinkids.com",
     services: ["Digital Marketing", "Demand Generation", "Content Strategy", "International Outreach"],
-    oneLiner: "Led the full sales and promotion strategy for a youth-focused financial literacy comic book — achieving 1,000+ copies sold across 12+ countries.",
-    testimonial: "Abou turned a complex idea into a parent-friendly brand and funnel. The site is fast, trustworthy, and the ads brought real sign-ups — not vanity clicks."
+    oneLiner: "Led the full sales and promotion strategy for a youth-focused financial literacy comic book, achieving 1,000+ copies sold across 12+ countries.",
+    testimonial: "Abou turned a complex idea into a parent-friendly brand and funnel. The site is fast, trustworthy, and the ads brought real sign-ups, not vanity clicks."
   },
   {
     name: "Akivas Inc.",
@@ -26,7 +26,7 @@ const projects = [
     url: "miratusltd.ca",
     services: ["Web Design", "Meta Ads", "Google Ads", "GA4", "SEO"],
     oneLiner: "Service website for a household support agency with clear packages.",
-    testimonial: "Our inquiries went from sporadic to steady. The packages, intake forms, and ads captured the right families — not random traffic."
+    testimonial: "Our inquiries went from sporadic to steady. The packages, intake forms, and ads captured the right families, not random traffic."
   },
   {
     name: "FA Law Offices",
@@ -34,7 +34,7 @@ const projects = [
     url: "falawoffices.com",
     services: ["Web Design"],
     oneLiner: "Professional law-firm website with practice pages and credibility elements.",
-    testimonial: "Professional sites, focused practice pages, and ads that bring qualified inquiries — plus tracking we actually trust."
+    testimonial: "Professional sites, focused practice pages, and ads that bring qualified inquiries, plus tracking we actually trust."
   },
   {
     name: "FA Global Energy",

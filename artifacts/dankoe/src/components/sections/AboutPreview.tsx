@@ -20,13 +20,13 @@ export function AboutPreview() {
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>Hey, I'm Aboubakar.</p>
               <p>
-                I'm a growth marketer, web builder, and AI automation strategist based in Alberta, Canada — originally from Cameroon.
+                I'm a growth marketer, web builder, and AI automation strategist based in Alberta, Canada, originally from Cameroon.
               </p>
               <p>
-                Before funnels and frameworks, I was importing phones and electronics from China and the U.S. into Cameroon. That was the first real education in positioning, margins, and moving product. No ad platform required — just understanding what people want and figuring out how to get it to them.
+                Before funnels and frameworks, I was importing phones and electronics from China and the U.S. into Cameroon. That was the first real education in positioning, margins, and moving product. No ad platform required. Just understanding what people want and figuring out how to get it to them.
               </p>
               <p>
-                Now I build websites, run digital campaigns, and design AI-powered workflows for brands that want to grow. The long game? Agriculture and food — building wealth through the most durable industries on earth, with marketing as the leverage.
+                Now I build websites, run digital campaigns, and design AI-powered workflows for brands that want to grow. The long game? Agriculture and food, building wealth through the most durable industries on earth, with marketing as the leverage.
               </p>
             </div>
             

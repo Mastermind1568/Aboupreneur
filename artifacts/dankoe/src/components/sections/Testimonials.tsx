@@ -2,12 +2,12 @@ import { FadeIn } from "@/components/ui/FadeIn";
 
 const testimonials = [
   {
-    quote: "Abou turned a complex idea into a parent-friendly brand and funnel. The site is fast, trustworthy, and the ads brought real sign-ups — not vanity clicks.",
+    quote: "Abou turned a complex idea into a parent-friendly brand and funnel. The site is fast, trustworthy, and the ads brought real sign-ups, not vanity clicks.",
     name: "Nzonda Fotsing",
     title: "Founder, The Bitcoin Kids",
   },
   {
-    quote: "Our inquiries went from sporadic to steady. The packages, intake forms, and ads captured the right families — not random traffic.",
+    quote: "Our inquiries went from sporadic to steady. The packages, intake forms, and ads captured the right families, not random traffic.",
     name: "Mirabelle Nchangwi",
     title: "Director, Miratus Ltd",
   },
@@ -17,7 +17,7 @@ const testimonials = [
     title: "Owner, Asabis",
   },
   {
-    quote: "Professional sites, focused practice pages, and ads that bring qualified inquiries — plus tracking we actually trust.",
+    quote: "Professional sites, focused practice pages, and ads that bring qualified inquiries, plus tracking we actually trust.",
     name: "Ferdinand N. Anomah",
     title: "Managing Partner, FA Law Offices & FA Global Energy",
   },

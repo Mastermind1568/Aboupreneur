@@ -12,14 +12,14 @@ export default function BlogPage() {
       cta: "Read Newsletter"
     },
     {
-      title: "Substack — Long-Form Essays",
-      description: "Long-form personal essays. Reflections on the journey — building, immigrating, growing. Deep dives into the entrepreneurial mindset.",
+      title: "Essays from A Creative Cosmopolitan Nerd",
+      description: "Long-form personal essays. Reflections on the journey: building, immigrating, growing. Deep dives into the entrepreneurial mindset.",
       link: "https://aboupreneur.substack.com/",
       cta: "Read Essays"
     },
     {
       title: "Abou Speaks on YouTube",
-      description: "Self-development, motivation, and elevation. Everything is possible — so long as you put your mind to it. Visual content for growth.",
+      description: "Self-development, motivation, and elevation. Everything is possible, so long as you put your mind to it. Visual content for growth.",
       link: "https://youtube.com/@aboupreneur?si=sF-M-FLRM8BMrNRN",
       cta: "Watch Videos"
     }
@@ -37,6 +37,7 @@ export default function BlogPage() {
           <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6">
             Explore the Thinking
           </h1>
+          <p className="text-sm font-bold tracking-[0.15em] text-accent uppercase mb-4">Thoughtful Provocateur</p>
           <p className="text-xl text-muted-foreground border-l-4 border-accent pl-6 py-2 mb-20 italic">
             Agriculture, food, marketing, and the journey of building.
           </p>

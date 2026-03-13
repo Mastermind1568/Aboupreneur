@@ -66,13 +66,13 @@ export default function About() {
               <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Hustle Before Funnels</h3>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
                 <p>
-                  Before WordPress, before Google Ads, before growth frameworks — the education started on the ground.
+                  Before WordPress, before Google Ads, before growth frameworks, the education started on the ground.
                 </p>
                 <p>
-                  I grew up in Cameroon, where entrepreneurship isn't a career choice — it's survival. My first real business was importing phones and electronics from China and the United States and selling them in Cameroon. No ad platform. No CRM. No analytics dashboard. Just understanding what people want, figuring out how to source it, negotiating margins, and moving product.
+                  I grew up in Cameroon, where entrepreneurship isn't a career choice. It's survival. My first real business was importing phones and electronics from China and the United States and selling them in Cameroon. No ad platform. No CRM. No analytics dashboard. Just understanding what people want, figuring out how to source it, negotiating margins, and moving product.
                 </p>
                 <p>
-                  That was the first masterclass in positioning, demand, and distribution. Everything I do now in digital marketing? It started there — reading markets, not dashboards.
+                  That was the first masterclass in positioning, demand, and distribution. Everything I do now in digital marketing? It started there: reading markets, not dashboards.
                 </p>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function About() {
               <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">From Physical Products to Digital Strategy</h3>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6 mb-12">
                 <p>
-                  The move to Canada changed everything. New country. New language dynamics. New market. But the instinct was the same — find what people need, build the bridge to get it to them.
+                  The move to Canada changed everything. New country. New language dynamics. New market. But the instinct was the same: find what people need, build the bridge to get it to them.
                 </p>
                 <p>
                   The transition from physical product sales to digital marketing was natural. Same instinct, bigger toolkit. I started learning web design, then SEO, then paid ads, then analytics, then automation. Each skill unlocked the next. Each client project became a live laboratory.
@@ -130,7 +130,7 @@ export default function About() {
                   Today, I operate at the intersection of three things: digital marketing strategy, website development, and AI-powered business automation.
                 </p>
                 <p>
-                  For clients, that means I don't just build a website and walk away. I build the site, set up the ads, wire the analytics, design the funnel, and automate the follow-up — so the whole system works while you sleep.
+                  For clients, that means I don't just build a website and walk away. I build the site, set up the ads, wire the analytics, design the funnel, and automate the follow-up, so the whole system works while you sleep.
                 </p>
                 <p>
                   I'm also a member of the Canadian Marketing Association (CMA) and CAMA, actively building toward elite growth marketer status through a rigorous certification path across Google, HubSpot, and advanced platforms.
@@ -161,13 +161,13 @@ export default function About() {
                   Digital marketing is the craft. Agriculture and food are the destination.
                 </p>
                 <p>
-                  Not because it's trending — but because it's one of the most enduring industries on earth. People will always eat. Land will always produce. And the intersection of modern marketing with the agricultural world is still largely untapped, especially across the African continent.
+                  Not because it's trending, but because it's one of the most enduring industries on earth. People will always eat. Land will always produce. And the intersection of modern marketing with the agricultural world is still largely untapped, especially across the African continent.
                 </p>
                 <p>
-                  I'm drawn to industries that matter. Industries that feed people, sustain communities, and create generational value. That's the longer arc — and everything I'm building in marketing is the foundation for what comes next.
+                  I'm drawn to industries that matter. Industries that feed people, sustain communities, and create generational value. That's the longer arc, and everything I'm building in marketing is the foundation for what comes next.
                 </p>
                 <p>
-                  For now, the work is the proof. Every client served, every campaign built, every system designed — it all compounds toward something larger.
+                  For now, the work is the proof. Every client served, every campaign built, every system designed. It all compounds toward something larger.
                 </p>
               </div>
             </div>
@@ -184,10 +184,10 @@ export default function About() {
               <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Where You'll Find Me.</h3>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6 mb-12">
                 <p>
-                  I show up in a few different places — depending on what you're looking for.
+                  I show up in a few different places, depending on what you're looking for.
                 </p>
                 <p>
-                  <strong className="text-foreground">Farm to Funnel</strong> on LinkedIn is where I write about marketing strategy for food and agricultural brands. Real company breakdowns, GTM frameworks, and tactical thinking — grounded in an industry I genuinely care about.
+                  <strong className="text-foreground">Farm to Funnel</strong> on LinkedIn is where I write about marketing strategy for food and agricultural brands. Real company breakdowns, GTM frameworks, and tactical thinking, grounded in an industry I genuinely care about.
                 </p>
                 <p>
                   <strong className="text-foreground">Abou Speaks</strong> on YouTube is where I talk about mindset, growth, and the journey of building something from nothing. Honest, unfiltered, and personal.
@@ -282,7 +282,7 @@ export default function About() {
         <FadeIn className="max-w-2xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Let's Build Something Together</h2>
           <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
-            Whether you need a website, a campaign, or a full growth strategy — I'd love to hear what you're working on.
+            Whether you need a website, a campaign, or a full growth strategy, I'd love to hear what you're working on.
           </p>
           <Link 
             href="/contact"
