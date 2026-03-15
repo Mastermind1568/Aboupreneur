@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "UeEwY_IAc-bti7T2cP82G"
+uri = "file://artifacts/dankoe/public/favicon.png"
+type = "image"
+title = "Aboupreneur Logo (AP Icon)"
