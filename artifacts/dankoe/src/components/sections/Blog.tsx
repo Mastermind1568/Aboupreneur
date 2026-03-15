@@ -22,9 +22,9 @@ const blogPosts = [
 
 export function Blog() {
   return (
-    <section className="py-32 bg-secondary/20 relative z-10 border-t border-border/30">
+    <section className="py-20 md:py-32 bg-secondary/20 relative z-10 border-t border-border/30">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-16 md:flex md:items-end justify-between">
+        <div className="mb-10 md:mb-16 md:flex md:items-end justify-between">
           <FadeIn className="max-w-2xl">
             <h5 className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase mb-4 flex items-center gap-2">
               <BookOpen className="w-4 h-4" /> THE BLOG

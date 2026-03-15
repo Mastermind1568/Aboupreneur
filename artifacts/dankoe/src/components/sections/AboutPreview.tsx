@@ -4,9 +4,9 @@ import SocialButtons from "@/components/ui/SocialButtons";
 
 export function AboutPreview() {
   return (
-    <section className="py-32 bg-secondary/30 relative z-10 border-t border-border/30">
+    <section className="py-20 md:py-32 bg-secondary/30 relative z-10 border-t border-border/30">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
           <FadeIn>
             <h5 className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase mb-4">
               ABOUT ME

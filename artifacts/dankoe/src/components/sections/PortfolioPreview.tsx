@@ -24,9 +24,9 @@ const projects = [
 
 export function PortfolioPreview() {
   return (
-    <section id="portfolio" className="py-32 bg-background relative z-10 border-t border-border/30">
+    <section id="portfolio" className="py-20 md:py-32 bg-background relative z-10 border-t border-border/30">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-16">
+        <div className="mb-10 md:mb-16">
           <FadeIn>
             <h5 className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase mb-4">
               PORTFOLIO
