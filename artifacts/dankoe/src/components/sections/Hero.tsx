@@ -36,32 +36,10 @@ export function Hero() {
           className="font-serif font-bold leading-[1.05] tracking-tighter mb-8"
           style={{ fontSize: "clamp(3rem, 9vw, 7.5rem)" }}
         >
-          I Build Brands<br />
-          <span className="text-muted-foreground/60 italic">That Actually</span><br />
-          Grow.
+          Crafting Digital<br />
+          Strategies That<br />
+          <span className="text-muted-foreground/60 italic">Move People.</span>
         </motion.h1>
-
-        {/* Thin divider with stats */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-0 mb-10 border-t border-border/40 pt-8"
-        >
-          {[
-            { value: "5+", label: "Brands Grown" },
-            { value: "12", label: "Certifications" },
-            { value: "3", label: "Content Channels" },
-          ].map((stat, i) => (
-            <div key={i} className="flex items-center gap-0">
-              <div className="pr-8 sm:pr-10">
-                <div className="text-2xl md:text-3xl font-serif font-bold text-foreground">{stat.value}</div>
-                <div className="text-xs font-bold tracking-widest text-muted-foreground uppercase mt-0.5">{stat.label}</div>
-              </div>
-              {i < 2 && <div className="hidden sm:block w-px h-10 bg-border/50 mr-8 sm:mr-10"></div>}
-            </div>
-          ))}
-        </motion.div>
 
         {/* Sub copy + CTAs */}
         <motion.div
