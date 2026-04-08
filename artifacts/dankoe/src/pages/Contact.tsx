@@ -4,8 +4,14 @@ import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { MapPin, Mail, Linkedin } from "lucide-react";
 import SocialButtons from "@/components/ui/SocialButtons";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function Contact() {
+  useSEO({
+    title: "Work With Me | Contact Aboupreneur — Alberta Growth Marketer & Web Designer",
+    description: "Ready to grow your brand? Contact Aboubakar Moussa to discuss web design, digital marketing strategy, paid advertising, or AI automation for your business.",
+    canonical: "https://aboupreneur.page/contact",
+  });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [formData, setFormData] = useState({
     name: "",

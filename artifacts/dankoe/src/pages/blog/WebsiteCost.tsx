@@ -3,8 +3,15 @@ import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function WebsiteCost() {
+  useSEO({
+    title: "The Real Cost of a Bad Website | Aboupreneur Blog",
+    description: "A slow, outdated website isn't just an aesthetic problem — it's a revenue problem. Learn what a bad website is really costing your business and how to fix it.",
+    canonical: "https://aboupreneur.page/blog/real-cost-of-bad-website",
+  });
+
   return (
     <main className="min-h-screen bg-background pt-24">
       <Navbar />

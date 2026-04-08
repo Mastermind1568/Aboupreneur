@@ -4,6 +4,7 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 
 const services = [
   {
@@ -132,6 +133,12 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 export default function Services() {
+  useSEO({
+    title: "Services | Web Design, Digital Marketing & AI Automation — Aboupreneur",
+    description: "Aboupreneur offers web design, Google & Meta Ads, SEO, AI automation workflows, and full growth strategy for small businesses and personal brands in Canada and beyond.",
+    canonical: "https://aboupreneur.page/services",
+  });
+
   return (
     <main className="min-h-screen bg-background pt-24">
       <Navbar />

@@ -3,8 +3,15 @@ import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function FoodBrandGTM() {
+  useSEO({
+    title: "Why Every Food Brand Needs a GTM Strategy Before Scaling | Aboupreneur Blog",
+    description: "Most food brands rush to sell before knowing who they're selling to. Learn the 4 pillars of a food brand go-to-market strategy from growth marketer Aboubakar Moussa.",
+    canonical: "https://aboupreneur.page/blog/food-brand-gtm-strategy",
+  });
+
   return (
     <main className="min-h-screen bg-background pt-24">
       <Navbar />

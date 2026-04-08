@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
+import { useSEO } from "@/hooks/useSEO";
 
 const onSiteArticles = [
   {
@@ -26,6 +27,34 @@ const onSiteArticles = [
     excerpt: "A slow, outdated, or confusing website isn't just an aesthetic problem. It's a revenue problem — and most owners don't calculate the true cost.",
     readTime: "5 min read",
   },
+  {
+    slug: "/blog/choosing-the-right-marketing-channel",
+    category: "Growth Marketing",
+    title: "How to Choose the Right Marketing Channel for Your Business",
+    excerpt: "Stop copying what worked for someone else. Learn how to match the right channel to your stage, your audience, and your offer.",
+    readTime: "6 min read",
+  },
+  {
+    slug: "/blog/google-ads-vs-meta-ads",
+    category: "Paid Advertising",
+    title: "Google Ads vs. Meta Ads: Which One Is Right for Your Business?",
+    excerpt: "Both platforms work — but they work completely differently. Here's how to decide where to put your ad spend first.",
+    readTime: "7 min read",
+  },
+  {
+    slug: "/blog/why-personal-brand-matters",
+    category: "Personal Branding",
+    title: "Why Your Personal Brand Is Your Most Valuable Business Asset",
+    excerpt: "Companies can copy your offer. They can't copy you. Here's why building a personal brand is the highest-ROI investment an entrepreneur can make.",
+    readTime: "6 min read",
+  },
+  {
+    slug: "/blog/homepage-that-converts",
+    category: "Web Design & Copy",
+    title: "How to Write a Homepage That Converts (Without Sounding Like a Robot)",
+    excerpt: "Most homepages talk about the business. The best ones talk about the visitor. Here's a five-section framework that actually works.",
+    readTime: "7 min read",
+  },
 ];
 
 const channels = [
@@ -41,15 +70,15 @@ const channels = [
     link: "https://aboupreneur.substack.com/",
     cta: "Read Essays"
   },
-  {
-    title: "Abou Speaks on YouTube",
-    description: "Self-development, motivation, and elevation. Everything is possible, so long as you put your mind to it. Visual content for growth.",
-    link: "https://youtube.com/@aboupreneur?si=sF-M-FLRM8BMrNRN",
-    cta: "Watch Videos"
-  }
 ];
 
 export default function BlogPage() {
+  useSEO({
+    title: "Blog | Growth Marketing, AI & Web Design Insights — Aboupreneur",
+    description: "Articles on growth marketing, AI automation, web design, personal branding, and food brand strategy by Aboubakar Moussa. Practical insights from the Aboupreneur blog.",
+    canonical: "https://aboupreneur.page/blog",
+  });
+
   return (
     <main className="min-h-screen bg-background pt-24">
       <Navbar />
@@ -76,7 +105,7 @@ export default function BlogPage() {
         </FadeIn>
         <div className="space-y-4 mb-24">
           {onSiteArticles.map((article, i) => (
-            <FadeIn key={i} delay={i * 0.08}>
+            <FadeIn key={i} delay={i * 0.06}>
               <Link
                 href={article.slug}
                 className="group block bg-card border border-border/50 rounded-2xl p-7 md:p-9 hover-card-effect relative overflow-hidden"
@@ -100,10 +129,24 @@ export default function BlogPage() {
           ))}
         </div>
 
+        {/* CTA */}
+        <FadeIn>
+          <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-12 text-center mb-24">
+            <h2 className="text-2xl md:text-3xl font-serif font-bold mb-4">Want to work together?</h2>
+            <p className="text-muted-foreground mb-6 max-w-md mx-auto">If you found this useful and want this kind of thinking applied to your business, let's talk.</p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+            >
+              Start a Conversation <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </FadeIn>
+
         {/* External channels */}
         <FadeIn>
           <h2 className="text-xs font-bold tracking-[0.2em] text-muted-foreground uppercase mb-8">
-            Where I Publish
+            Where I Also Publish
           </h2>
         </FadeIn>
         <div className="space-y-8">

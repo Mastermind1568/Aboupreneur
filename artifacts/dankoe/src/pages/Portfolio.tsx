@@ -3,13 +3,14 @@ import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { useState } from "react";
+import { useSEO } from "@/hooks/useSEO";
 
 const projects = [
   {
     name: "The Bitcoin Kids",
     client: "Nzonda Fotsing",
     url: "thebitcoinkids.com",
-    screenshot: "https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fthebitcoinkids.com?w=900&h=675",
+    screenshot: "https://api.microlink.io/?url=https%3A%2F%2Fthebitcoinkids.com&screenshot=true&meta=false&embed=screenshot.url",
     services: ["Digital Marketing", "Demand Generation", "Content Strategy", "International Outreach"],
     oneLiner: "Led the full sales and promotion strategy for a youth-focused financial literacy comic book, achieving 1,000+ copies sold across 12+ countries.",
     testimonial: "Abou turned a complex idea into a parent-friendly brand and funnel. The site is fast, trustworthy, and the ads brought real sign-ups, not vanity clicks."
@@ -18,7 +19,7 @@ const projects = [
     name: "Asabis",
     client: "Niba Emmanuel",
     url: "asabis.ca",
-    screenshot: "https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fasabis.ca?w=900&h=675",
+    screenshot: "https://api.microlink.io/?url=https%3A%2F%2Fasabis.ca&screenshot=true&meta=false&embed=screenshot.url",
     services: ["Web Design", "Social Content", "Google Ads", "GA4", "Email"],
     oneLiner: "Modern small-business site with a social-to-booking funnel.",
     testimonial: "Clean design, clear story, and a funnel that turns social traffic into bookings. Exactly what we needed."
@@ -27,16 +28,16 @@ const projects = [
     name: "Miratus Ltd",
     client: "Mirabelle Nchangwi",
     url: "miratusltd.ca",
-    screenshot: "https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fmiratusltd.ca?w=900&h=675",
+    screenshot: "https://api.microlink.io/?url=https%3A%2F%2Fmiratusltd.ca&screenshot=true&meta=false&embed=screenshot.url",
     services: ["Web Design", "Meta Ads", "Google Ads", "GA4", "SEO"],
     oneLiner: "Service website for a household support agency with clear packages.",
     testimonial: "Our inquiries went from sporadic to steady. The packages, intake forms, and ads captured the right families, not random traffic."
   },
   {
-    name: "FA Law Offices",
+    name: "FA Law Office",
     client: "Ferdinand N. Anomah",
-    url: "falawoffices.com",
-    screenshot: "https://s0.wordpress.com/mshots/v1/https%3A%2F%2Ffalawoffices.com?w=900&h=675",
+    url: "falawoffice.com",
+    screenshot: "https://api.microlink.io/?url=https%3A%2F%2Ffalawoffice.com&screenshot=true&meta=false&embed=screenshot.url",
     services: ["Web Design"],
     oneLiner: "Professional law-firm website with practice pages and credibility elements.",
     testimonial: "Professional sites, focused practice pages, and ads that bring qualified inquiries, plus tracking we actually trust."
@@ -45,7 +46,7 @@ const projects = [
     name: "FA Global Energy",
     client: "Ferdinand N. Anomah",
     url: "faglobalenergy.com",
-    screenshot: "https://s0.wordpress.com/mshots/v1/https%3A%2F%2Ffaglobalenergy.com?w=900&h=675",
+    screenshot: "https://api.microlink.io/?url=https%3A%2F%2Ffaglobalenergy.com&screenshot=true&meta=false&embed=screenshot.url",
     services: ["Web Design"],
     oneLiner: "Corporate energy company site with professional presence.",
     testimonial: null
@@ -57,24 +58,27 @@ function ProjectImage({ screenshot, name, url }: { screenshot: string; name: str
   const [error, setError] = useState(false);
 
   return (
-    <div className="w-full aspect-[4/3] bg-card border border-border/50 rounded-2xl overflow-hidden shadow-xl relative">
+    <div className="w-full aspect-[4/3] bg-card border border-border/50 rounded-2xl overflow-hidden shadow-xl relative group">
       {!error ? (
         <>
           {!loaded && (
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10">
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-3 relative z-10">{name}</h3>
-              <p className="text-muted-foreground relative z-10">{url}</p>
+              <div className="w-8 h-8 border-2 border-accent/40 border-t-accent rounded-full animate-spin mb-4 relative z-10"></div>
+              <p className="text-sm text-muted-foreground relative z-10">Loading preview…</p>
             </div>
           )}
           <img
             src={screenshot}
             alt={`${name} website screenshot`}
-            className={`w-full h-full object-cover object-top transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+            className={`w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-[1.02] ${loaded ? "opacity-100" : "opacity-0"}`}
             onLoad={() => setLoaded(true)}
             onError={() => setError(true)}
           />
+          {loaded && (
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
+          )}
         </>
       ) : (
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
@@ -89,6 +93,12 @@ function ProjectImage({ screenshot, name, url }: { screenshot: string; name: str
 }
 
 export default function Portfolio() {
+  useSEO({
+    title: "Portfolio | Selected Work by Aboupreneur — Real Brands, Real Results",
+    description: "Browse Aboupreneur's portfolio of web design, digital marketing, and AI automation projects. Real results for small businesses and entrepreneurs across Canada and beyond.",
+    canonical: "https://aboupreneur.page/portfolio",
+  });
+
   return (
     <main className="min-h-screen bg-background pt-24">
       <Navbar />

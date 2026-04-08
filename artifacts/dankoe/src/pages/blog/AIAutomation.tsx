@@ -3,8 +3,15 @@ import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function AIAutomation() {
+  useSEO({
+    title: "5 Ways AI Automation Is Changing Small Business Marketing | Aboupreneur Blog",
+    description: "Discover 5 practical AI automation workflows that help small businesses market smarter without hiring more people — from growth marketer Aboubakar Moussa.",
+    canonical: "https://aboupreneur.page/blog/ai-automation-small-business",
+  });
+
   return (
     <main className="min-h-screen bg-background pt-24">
       <Navbar />

@@ -4,8 +4,14 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import SocialButtons from "@/components/ui/SocialButtons";
 import { ArrowRight, GraduationCap } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function About() {
+  useSEO({
+    title: "About Aboupreneur | The Story of Aboubakar Moussa — Growth Marketer Alberta",
+    description: "From importing phones in Cameroon to building digital brands in Canada. Learn the story behind Aboupreneur — growth marketer, web designer, and AI automation strategist based in Alberta.",
+    canonical: "https://aboupreneur.page/about",
+  });
   const currentServices = [
     "Brand Strategy & Positioning",
     "Web Design & Development (WordPress + AI-built sites)",
