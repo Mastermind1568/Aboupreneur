@@ -21,7 +21,7 @@ const projects = [
     url: "asabis.ca",
     screenshot: "https://api.microlink.io/?url=https%3A%2F%2Fasabis.ca&screenshot=true&meta=false&embed=screenshot.url",
     services: ["Web Design", "Social Content", "Google Ads", "GA4", "Email"],
-    oneLiner: "Modern small-business site with a social-to-booking funnel.",
+    oneLiner: "Professional website for an accounting firm with a social-to-client funnel.",
     testimonial: "Clean design, clear story, and a funnel that turns social traffic into bookings. Exactly what we needed."
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     url: "miratusltd.ca",
     screenshot: "/images/miratus-screenshot.png",
     services: ["Web Design", "Meta Ads", "Google Ads", "GA4", "SEO"],
-    oneLiner: "Service website for a household support agency with clear packages.",
+    oneLiner: "Professional website for a staffing agency, built with clear service packages and an intake funnel.",
     testimonial: "Our inquiries went from sporadic to steady. The packages, intake forms, and ads captured the right families, not random traffic."
   },
   {
