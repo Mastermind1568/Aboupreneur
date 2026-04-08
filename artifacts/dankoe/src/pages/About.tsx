@@ -47,16 +47,41 @@ export default function About() {
       <Navbar />
 
       {/* Section 1 - Hero */}
-      <section className="relative py-24 md:py-32 flex flex-col items-center justify-center text-center px-6 border-b border-border/50 bg-gradient-to-b from-background to-secondary/20">
+      <section className="relative border-b border-border/50 bg-gradient-to-b from-background to-secondary/20 overflow-hidden">
         <div className="absolute inset-0 z-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI24pIi8+PC9zdmc+')] mix-blend-overlay opacity-[0.03]"></div>
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <FadeIn>
-            <h5 className="text-xs font-bold tracking-[0.2em] text-accent uppercase mb-6">ABOUT</h5>
-            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-glow">The Story Behind Aboupreneur</h1>
-            <p className="text-xl md:text-2xl text-muted-foreground/90 max-w-2xl mx-auto font-light italic">
-              From importing phones in Cameroon to building digital empires in Canada.
-            </p>
-          </FadeIn>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 md:py-28">
+          <div className="flex flex-col md:flex-row md:items-center gap-12 md:gap-16">
+
+            {/* Photo */}
+            <FadeIn className="flex justify-center md:justify-start shrink-0">
+              <div className="relative">
+                <div className="absolute inset-0 rounded-2xl bg-accent/10 blur-[40px] scale-110 pointer-events-none"></div>
+                <div className="relative w-56 md:w-64 lg:w-72 aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                  <img
+                    src="/images/headshot.jpg"
+                    alt="Aboubakar Moussa — Aboupreneur"
+                    className="w-full h-full object-cover object-top"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background/50 to-transparent pointer-events-none"></div>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Text */}
+            <FadeIn delay={0.15}>
+              <h5 className="text-xs font-bold tracking-[0.2em] text-accent uppercase mb-5">ABOUT</h5>
+              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-5 leading-tight">The Story Behind Aboupreneur</h1>
+              <p className="text-lg md:text-xl text-muted-foreground/90 max-w-xl font-light italic mb-8">
+                From importing phones in Cameroon to building digital empires in Canada.
+              </p>
+              <Link href="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300">
+                Work With Me <ArrowRight className="w-4 h-4" />
+              </Link>
+            </FadeIn>
+
+          </div>
         </div>
       </section>
 
