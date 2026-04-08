@@ -44,36 +44,19 @@ export function Hero() {
               <span className="text-muted-foreground/60 italic">Move People.</span>
             </motion.h1>
 
-            {/* Sub copy + CTAs */}
+            {/* CTA */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.65 }}
-              className="flex flex-col md:flex-row md:items-center gap-8 md:gap-12"
             >
-              <p className="text-base md:text-lg text-muted-foreground max-w-sm leading-relaxed">
-                Growth marketing, web design, and AI automation — built for brands ready to stop guessing and start scaling.
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 shrink-0">
-                <a
-                  href="https://www.linkedin.com/newsletters/farm-to-funnel-7409350357295923200"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 px-7 py-3.5 bg-foreground text-background text-sm font-bold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 whitespace-nowrap"
-                >
-                  Read Farm to Funnel
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </a>
-
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
-                >
-                  Work With Me
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background text-sm font-bold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.08)]"
+              >
+                Work With Me
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             </motion.div>
           </div>
 
