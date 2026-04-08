@@ -28,7 +28,7 @@ const projects = [
     name: "Miratus Ltd",
     client: "Mirabelle Nchangwi",
     url: "miratusltd.ca",
-    screenshot: "https://api.microlink.io/?url=https%3A%2F%2Fmiratusltd.ca&screenshot=true&meta=false&embed=screenshot.url",
+    screenshot: "/images/miratus-screenshot.png",
     services: ["Web Design", "Meta Ads", "Google Ads", "GA4", "SEO"],
     oneLiner: "Service website for a household support agency with clear packages.",
     testimonial: "Our inquiries went from sporadic to steady. The packages, intake forms, and ads captured the right families, not random traffic."
