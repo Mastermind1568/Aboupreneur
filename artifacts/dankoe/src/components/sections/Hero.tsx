@@ -52,7 +52,7 @@ export function Hero() {
             >
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background text-sm font-bold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300 shadow-[0_0_40px_rgba(255,255,255,0.08)]"
+                className="group inline-flex items-center gap-3 px-9 py-4 bg-accent text-accent-foreground text-sm font-bold rounded-full hover:brightness-110 transition-all duration-300 shadow-[0_0_32px_rgba(212,175,55,0.25)]"
               >
                 Work With Me
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -67,29 +67,40 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="lg:w-[380px] xl:w-[420px] shrink-0 flex justify-center lg:justify-end"
           >
-            <div className="relative">
+            <div className="relative w-72 md:w-80 lg:w-full">
               {/* Glow behind photo */}
-              <div className="absolute inset-0 rounded-2xl bg-accent/10 blur-[40px] scale-110 pointer-events-none"></div>
+              <div className="absolute inset-0 rounded-2xl bg-accent/8 blur-[50px] scale-105 pointer-events-none"></div>
+
               {/* Photo */}
-              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl w-72 md:w-80 lg:w-full aspect-[3/4]">
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl aspect-[3/4]">
                 <img
                   src="/images/headshot.jpg"
                   alt="Aboubakar Moussa — Aboupreneur, Growth Marketer & Web Designer based in Alberta, Canada"
                   className="w-full h-full object-cover object-top"
                 />
-                {/* Subtle bottom gradient so it blends into page */}
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background/60 to-transparent pointer-events-none"></div>
+                {/* Gradient for card readability */}
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none"></div>
+
+                {/* Name card — overlaid at bottom of photo */}
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="absolute bottom-4 left-4 right-4 flex items-center justify-between"
+                >
+                  <div>
+                    <p className="text-sm font-bold text-white leading-tight">Aboubakar Moussa</p>
+                    <p className="text-xs text-white/60 mt-0.5">Growth Marketer · Web Builder · AI Strategist</p>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-400 shrink-0 ml-3 bg-black/40 rounded-full px-2.5 py-1">
+                    <span className="relative flex h-1.5 w-1.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
+                    </span>
+                    Available
+                  </div>
+                </motion.div>
               </div>
-              {/* Floating name card */}
-              <motion.div
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 }}
-                className="absolute -bottom-4 -left-4 bg-card border border-border/60 rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm"
-              >
-                <p className="text-sm font-bold text-foreground">Aboubakar Moussa</p>
-                <p className="text-xs text-accent font-medium">Growth Marketer · Web Builder · AI Strategist</p>
-              </motion.div>
             </div>
           </motion.div>
 
