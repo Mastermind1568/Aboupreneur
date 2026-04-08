@@ -8,6 +8,10 @@ import About from "@/pages/About";
 import Portfolio from "@/pages/Portfolio";
 import BlogPage from "@/pages/BlogPage";
 import Contact from "@/pages/Contact";
+import Services from "@/pages/Services";
+import FoodBrandGTM from "@/pages/blog/FoodBrandGTM";
+import AIAutomation from "@/pages/blog/AIAutomation";
+import WebsiteCost from "@/pages/blog/WebsiteCost";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient({
@@ -26,6 +30,10 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/portfolio" component={Portfolio} />
       <Route path="/blog" component={BlogPage} />
+      <Route path="/blog/food-brand-gtm-strategy" component={FoodBrandGTM} />
+      <Route path="/blog/ai-automation-small-business" component={AIAutomation} />
+      <Route path="/blog/real-cost-of-bad-website" component={WebsiteCost} />
+      <Route path="/services" component={Services} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>

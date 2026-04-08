@@ -2,12 +2,14 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
+import { useState } from "react";
 
 const projects = [
   {
     name: "The Bitcoin Kids",
     client: "Nzonda Fotsing",
     url: "thebitcoinkids.com",
+    screenshot: "https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fthebitcoinkids.com?w=900&h=675",
     services: ["Digital Marketing", "Demand Generation", "Content Strategy", "International Outreach"],
     oneLiner: "Led the full sales and promotion strategy for a youth-focused financial literacy comic book, achieving 1,000+ copies sold across 12+ countries.",
     testimonial: "Abou turned a complex idea into a parent-friendly brand and funnel. The site is fast, trustworthy, and the ads brought real sign-ups, not vanity clicks."
@@ -16,6 +18,7 @@ const projects = [
     name: "Asabis",
     client: "Niba Emmanuel",
     url: "asabis.ca",
+    screenshot: "https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fasabis.ca?w=900&h=675",
     services: ["Web Design", "Social Content", "Google Ads", "GA4", "Email"],
     oneLiner: "Modern small-business site with a social-to-booking funnel.",
     testimonial: "Clean design, clear story, and a funnel that turns social traffic into bookings. Exactly what we needed."
@@ -24,6 +27,7 @@ const projects = [
     name: "Miratus Ltd",
     client: "Mirabelle Nchangwi",
     url: "miratusltd.ca",
+    screenshot: "https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fmiratusltd.ca?w=900&h=675",
     services: ["Web Design", "Meta Ads", "Google Ads", "GA4", "SEO"],
     oneLiner: "Service website for a household support agency with clear packages.",
     testimonial: "Our inquiries went from sporadic to steady. The packages, intake forms, and ads captured the right families, not random traffic."
@@ -32,6 +36,7 @@ const projects = [
     name: "FA Law Offices",
     client: "Ferdinand N. Anomah",
     url: "falawoffices.com",
+    screenshot: "https://s0.wordpress.com/mshots/v1/https%3A%2F%2Ffalawoffices.com?w=900&h=675",
     services: ["Web Design"],
     oneLiner: "Professional law-firm website with practice pages and credibility elements.",
     testimonial: "Professional sites, focused practice pages, and ads that bring qualified inquiries, plus tracking we actually trust."
@@ -40,11 +45,48 @@ const projects = [
     name: "FA Global Energy",
     client: "Ferdinand N. Anomah",
     url: "faglobalenergy.com",
+    screenshot: "https://s0.wordpress.com/mshots/v1/https%3A%2F%2Ffaglobalenergy.com?w=900&h=675",
     services: ["Web Design"],
     oneLiner: "Corporate energy company site with professional presence.",
     testimonial: null
   }
 ];
+
+function ProjectImage({ screenshot, name, url }: { screenshot: string; name: string; url: string }) {
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
+
+  return (
+    <div className="w-full aspect-[4/3] bg-card border border-border/50 rounded-2xl overflow-hidden shadow-xl relative">
+      {!error ? (
+        <>
+          {!loaded && (
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-3 relative z-10">{name}</h3>
+              <p className="text-muted-foreground relative z-10">{url}</p>
+            </div>
+          )}
+          <img
+            src={screenshot}
+            alt={`${name} website screenshot`}
+            className={`w-full h-full object-cover object-top transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+            onLoad={() => setLoaded(true)}
+            onError={() => setError(true)}
+          />
+        </>
+      ) : (
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
+          <h3 className="text-3xl md:text-4xl font-serif font-bold mb-3 relative z-10">{name}</h3>
+          <p className="text-muted-foreground relative z-10">{url}</p>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Portfolio() {
   return (
@@ -69,12 +111,11 @@ export default function Portfolio() {
             <FadeIn key={i} delay={0.1}>
               <div className="flex flex-col lg:flex-row gap-12 items-start">
                 <div className="w-full lg:w-3/5">
-                  <div className="w-full aspect-[4/3] bg-card border border-border/50 rounded-2xl flex flex-col items-center justify-center text-center p-8 relative overflow-hidden shadow-xl">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
-                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
-                    <h3 className="text-3xl md:text-5xl font-serif font-bold mb-4 relative z-10">{project.name}</h3>
-                    <p className="text-lg text-muted-foreground relative z-10">{project.url}</p>
-                  </div>
+                  <ProjectImage
+                    screenshot={project.screenshot}
+                    name={project.name}
+                    url={project.url}
+                  />
                 </div>
                 
                 <div className="w-full lg:w-2/5 flex flex-col justify-center h-full pt-4">
