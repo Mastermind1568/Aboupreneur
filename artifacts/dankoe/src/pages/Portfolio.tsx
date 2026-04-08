@@ -58,36 +58,48 @@ function ProjectImage({ screenshot, name, url }: { screenshot: string; name: str
   const [error, setError] = useState(false);
 
   return (
-    <div className="w-full aspect-[4/3] bg-card border border-border/50 rounded-2xl overflow-hidden shadow-xl relative group">
-      {!error ? (
-        <>
-          {!loaded && (
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
-              <div className="w-8 h-8 border-2 border-accent/40 border-t-accent rounded-full animate-spin mb-4 relative z-10"></div>
-              <p className="text-sm text-muted-foreground relative z-10">Loading preview…</p>
-            </div>
-          )}
-          <img
-            src={screenshot}
-            alt={`${name} website screenshot`}
-            className={`w-full h-full object-cover object-top transition-all duration-700 group-hover:scale-[1.02] ${loaded ? "opacity-100" : "opacity-0"}`}
-            onLoad={() => setLoaded(true)}
-            onError={() => setError(true)}
-          />
-          {loaded && (
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
-          )}
-        </>
-      ) : (
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
-          <h3 className="text-3xl md:text-4xl font-serif font-bold mb-3 relative z-10">{name}</h3>
-          <p className="text-muted-foreground relative z-10">{url}</p>
+    <div className="w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-zinc-900 group">
+      {/* Browser chrome bar */}
+      <div className="flex items-center gap-2 px-4 py-3 bg-zinc-800 border-b border-white/10 shrink-0">
+        <span className="w-3 h-3 rounded-full bg-red-500/70"></span>
+        <span className="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+        <span className="w-3 h-3 rounded-full bg-green-500/70"></span>
+        <div className="flex-1 mx-3 bg-zinc-700 rounded-md px-3 py-1 text-xs text-zinc-400 truncate">
+          {url}
         </div>
-      )}
+      </div>
+
+      {/* Screenshot area — fixed height, scroll-style overflow */}
+      <div className="relative w-full overflow-hidden" style={{ height: "280px" }}>
+        {!error ? (
+          <>
+            {!loaded && (
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 z-10 bg-zinc-900">
+                <div className="w-7 h-7 border-2 border-accent/40 border-t-accent rounded-full animate-spin mb-3"></div>
+                <p className="text-xs text-muted-foreground">Loading preview…</p>
+              </div>
+            )}
+            <img
+              src={screenshot}
+              alt={`${name} website screenshot`}
+              className={`w-full object-cover object-top transition-all duration-700 group-hover:scale-[1.02] origin-top ${loaded ? "opacity-100" : "opacity-0"}`}
+              style={{ height: "280px" }}
+              onLoad={() => setLoaded(true)}
+              onError={() => setError(true)}
+            />
+            {loaded && (
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+            )}
+          </>
+        ) : (
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-zinc-900">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2"></div>
+            <h3 className="text-2xl font-serif font-bold mb-2 relative z-10">{name}</h3>
+            <p className="text-muted-foreground text-sm relative z-10">{url}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
