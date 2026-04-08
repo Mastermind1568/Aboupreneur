@@ -162,16 +162,6 @@ export default function Portfolio() {
                     </div>
                   )}
                   
-                  <div>
-                    <a 
-                      href={`https://${project.url}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
-                    >
-                      Visit Site →
-                    </a>
-                  </div>
                 </div>
               </div>
             </FadeIn>
