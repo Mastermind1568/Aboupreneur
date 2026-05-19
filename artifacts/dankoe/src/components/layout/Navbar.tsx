@@ -1,93 +1,87 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Linkedin, Youtube, BookOpen } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import { cn } from "@/lib/utils";
-import SocialButtons from "@/components/ui/SocialButtons";
-
-function XLogo({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-  );
-}
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [location] = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [isOpen]);
 
   const navLinks = [
-    { href: "/about", label: "About" },
-    { href: "/services", label: "Services" },
-    { href: "/portfolio", label: "Portfolio" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact" },
+    { href: "/story", label: "STORY" },
+    { href: "/ecosystem", label: "ECOSYSTEM" },
+    { href: "/writing", label: "WRITING" },
   ];
 
+  const isActive = (href: string) => location === href;
+
   return (
-    <motion.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-background/80 backdrop-blur-md border-b border-border/50 py-4" : "bg-transparent py-6"
-      )}
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]"
+      style={{ height: "64px", borderBottom: "1px solid #1A1A1A" }}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="h-full max-w-7xl mx-auto px-10 flex items-center justify-between">
+
         <Link
           href="/"
-          className="font-serif text-2xl md:text-3xl tracking-wide font-bold hover:text-accent transition-colors duration-300"
+          className="font-display text-white font-bold text-lg hover:text-accent transition-colors duration-200"
+          style={{ letterSpacing: "0.04em" }}
         >
           ABOUPRENEUR
         </Link>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          <nav className="flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "text-sm font-medium uppercase tracking-widest hover:text-accent transition-colors",
-                  location === link.href ? "text-accent" : "text-muted-foreground"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-          
-          <div className="w-px h-6 bg-border/50"></div>
-          
-          <div className="flex items-center gap-4">
-            <a href="https://www.linkedin.com/in/aboupreneur" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-[#0A66C2] transition-colors" aria-label="LinkedIn">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="https://x.com/aboupreneur" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="X">
-              <XLogo className="w-5 h-5" />
-            </a>
-            <a href="https://youtube.com/@aboupreneur" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-[#FF0000] transition-colors" aria-label="YouTube">
-              <Youtube className="w-5 h-5" />
-            </a>
-            <a href="https://aboupreneur.substack.com/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-[#FF6719] transition-colors" aria-label="Substack">
-              <BookOpen className="w-5 h-5" />
-            </a>
-          </div>
+        <nav className="hidden md:flex items-center gap-10">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium transition-colors duration-200"
+              style={{
+                color: isActive(link.href) ? "#F2A900" : "#888888",
+                letterSpacing: "0.06em",
+              }}
+              onMouseEnter={(e) => { if (!isActive(link.href)) (e.target as HTMLAnchorElement).style.color = "#FFFFFF"; }}
+              onMouseLeave={(e) => { if (!isActive(link.href)) (e.target as HTMLAnchorElement).style.color = "#888888"; }}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="hidden md:block">
+          <Link
+            href="/ecosystem"
+            className="text-sm font-bold transition-all duration-200 px-5 py-2"
+            style={{
+              border: "1px solid #F2A900",
+              color: "#F2A900",
+              letterSpacing: "0.06em",
+            }}
+            onMouseEnter={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "#F2A900";
+              el.style.color = "#0A0A0A";
+            }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "transparent";
+              el.style.color = "#F2A900";
+            }}
+          >
+            THE BLUEPRINT
+          </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-foreground hover:text-accent transition-colors"
+          className="md:hidden text-white hover:text-accent transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -95,39 +89,34 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Nav */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border/50 overflow-hidden"
+      {isOpen && (
+        <div
+          className="md:hidden fixed inset-0 top-[64px] bg-[#0A0A0A] flex flex-col items-center justify-center gap-10 z-40"
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsOpen(false)}
+              className="text-2xl font-display font-bold transition-colors duration-200"
+              style={{
+                color: isActive(link.href) ? "#F2A900" : "#888888",
+                letterSpacing: "0.08em",
+              }}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="/ecosystem"
+            onClick={() => setIsOpen(false)}
+            className="mt-4 text-sm font-bold px-8 py-3"
+            style={{ border: "1px solid #F2A900", color: "#F2A900", letterSpacing: "0.06em" }}
           >
-            <div className="flex flex-col items-center gap-6 py-8 px-6">
-              <nav className="flex flex-col items-center gap-6">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={cn(
-                      "text-lg font-medium uppercase tracking-widest hover:text-accent transition-colors",
-                      location === link.href ? "text-accent" : "text-muted-foreground"
-                    )}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-              
-              <div className="w-full h-px bg-border/50 my-2"></div>
-              
-              <SocialButtons variant="icon-label" className="justify-center" />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+            THE BLUEPRINT
+          </Link>
+        </div>
+      )}
+    </header>
   );
 }

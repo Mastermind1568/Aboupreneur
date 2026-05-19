@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: 'DM Sans', sans-serif;
-  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
 
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -23,85 +23,95 @@
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
+  --color-bitcoin: #F2A900;
 
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
+  --radius-lg: 0px;
+  --radius-md: 0px;
+  --radius-sm: 0px;
+  --radius: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
 }
 
 :root {
-  /* Dark, minimal, editorial theme */
   --background: 0 0% 4%;
-  --foreground: 40 15% 95%;
-  
-  --card: 0 0% 6%;
-  --card-foreground: 40 15% 95%;
-  
-  --popover: 0 0% 6%;
-  --popover-foreground: 40 15% 95%;
-  
-  --primary: 40 15% 95%;
+  --foreground: 0 0% 100%;
+
+  --card: 0 0% 7%;
+  --card-foreground: 0 0% 100%;
+
+  --popover: 0 0% 7%;
+  --popover-foreground: 0 0% 100%;
+
+  --primary: 0 0% 100%;
   --primary-foreground: 0 0% 4%;
-  
-  --secondary: 0 0% 10%;
-  --secondary-foreground: 40 15% 95%;
-  
-  --muted: 0 0% 12%;
-  --muted-foreground: 0 0% 60%;
-  
-  /* Amber/Gold accent for a premium feel */
-  --accent: 35 100% 75%;
+
+  --secondary: 0 0% 13%;
+  --secondary-foreground: 0 0% 53%;
+
+  --muted: 0 0% 13%;
+  --muted-foreground: 0 0% 53%;
+
+  --accent: 39 100% 47%;
   --accent-foreground: 0 0% 4%;
-  
+
   --destructive: 0 84% 60%;
-  --destructive-foreground: 210 40% 98%;
-  
-  --border: 0 0% 15%;
-  --input: 0 0% 15%;
-  --ring: 35 100% 75%;
-  
-  --radius: 0.5rem;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 0 0% 13%;
+  --input: 0 0% 13%;
+  --ring: 39 100% 47%;
+
+  --radius: 0px;
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply font-sans antialiased bg-background text-foreground selection:bg-accent selection:text-accent-foreground overflow-x-hidden;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight;
-  }
-  
-  /* Custom scrollbar for premium feel */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    @apply bg-background;
-  }
-  ::-webkit-scrollbar-thumb {
-    @apply bg-muted rounded-full;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground;
-  }
+* {
+  border-color: hsl(var(--border));
+  box-sizing: border-box;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  .glass-nav {
-    @apply bg-background/80 backdrop-blur-md border-b border-border/50;
-  }
-  .hover-card-effect {
-    @apply transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/50 hover:border-border/80;
-  }
-  .text-glow {
-    text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
-  }
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+@keyframes scrollDown {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(8px); opacity: 0.4; }
+}
+
+.animate-scroll {
+  animation: scrollDown 1.6s ease-in-out infinite;
 }

@@ -33,7 +33,7 @@ export function useSEO({ title, description, canonical, ogImage }: SEOOptions) {
     }
 
     return () => {
-      document.title = "Aboupreneur | Growth Marketer, Web Builder & AI Strategist";
+      document.title = "ABOUPRENEUR | Build. Stack. Sovereign.";
     };
   }, [title, description, canonical, ogImage]);
 }
