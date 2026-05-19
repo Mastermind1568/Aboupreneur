@@ -106,7 +106,7 @@ const phaseToTab: Record<string, Tab[]> = {
 export default function Ecosystem() {
   useSEO({
     title: "The Ecosystem | ABOUPRENEUR",
-    description: "Moneyverse, Mindbloom, Farm to Funnel, Consulting every project built around one system: Make. Multiply. Protect.",
+    description: "Moneyverse, Mindbloom, Farm to Funnel, Consulting every project built around one system. Make. Multiply. Protect.",
     canonical: "https://aboupreneur.page/ecosystem",
   });
 

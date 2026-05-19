@@ -16,13 +16,13 @@ const recentPosts = [
   },
   {
     date: "APR 2026",
-    title: "AI Automation for Small Business: What's Actually Worth Building",
+    title: "AI Automation for Small Business. What's Actually Worth Building",
     excerpt: "AI is everywhere. Most of it is noise. Here's what actually saves time and compounds.",
     href: "/blog/ai-automation-small-business",
   },
   {
     date: "APR 2026",
-    title: "Farm to Funnel: A Go-to-Market Strategy for a Food Brand Launching in Canada",
+    title: "Farm to Funnel. A Go-to-Market Strategy for a Food Brand Launching in Canada",
     excerpt: "Most food brands build a great product and hope for the best. Here's how to build the funnel first.",
     href: "/blog/food-brand-gtm-strategy",
   },
@@ -32,7 +32,7 @@ export default function Home() {
   useSEO({
     title: "ABOUPRENEUR | Build. Stack. Sovereign.",
     description:
-      "Aboubakar Moussa entrepreneur, agribusiness strategist, and sound money advocate. The Sovereignty Loop: Make. Multiply. Protect. Built for those who start with nothing.",
+      "Aboubakar Moussa entrepreneur, agribusiness strategist, and sound money advocate. The Sovereignty Loop. Make. Multiply. Protect. Built for those who start with nothing.",
     canonical: "https://aboupreneur.page/",
   });
 
@@ -179,7 +179,7 @@ export default function Home() {
                 </p>
                 <p>
                   The move to Canada wasn't a coincidence. I came to study agribusiness at Lakeland
-                  College to anchor digital wealth in the most enduring asset class there is: land
+                  College to anchor digital wealth in the most enduring asset class there is. Land
                   and food systems. Everything I build now runs on a single framework. Make money
                   with skills. Multiply it with sound money. Protect it with physical assets. I call
                   it the Sovereignty Loop.
