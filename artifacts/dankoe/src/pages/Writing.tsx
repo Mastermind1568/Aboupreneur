@@ -16,7 +16,7 @@ const posts = [
   {
     date: "APR 2026",
     theme: "BUILD FROM ZERO" as Theme,
-    title: "Choosing the Right Marketing Channel. A Framework for Businesses That Can't Afford to Guess",
+    title: "Choosing the Right Marketing Channel / A Framework for Businesses That Can't Afford to Guess",
     excerpt: "Stop copying what worked for someone else. Here's a framework for finding the channel that actually fits your business.",
     href: "/blog/choosing-the-right-marketing-channel",
   },
@@ -30,28 +30,28 @@ const posts = [
   {
     date: "APR 2026",
     theme: "BUILD FROM ZERO" as Theme,
-    title: "Google Ads vs. Meta Ads. Which One Should You Actually Use?",
+    title: "Google Ads vs Meta Ads / Which One Should You Actually Use?",
     excerpt: "Both platforms work. Both platforms waste money. Which one fits your stage and offer right now?",
     href: "/blog/google-ads-vs-meta-ads",
   },
   {
     date: "APR 2026",
     theme: "BUILD FROM ZERO" as Theme,
-    title: "AI Automation for Small Business. What's Actually Worth Building",
+    title: "AI Automation for Small Business / What's Actually Worth Building",
     excerpt: "AI is everywhere. Most of it is noise. Here's what actually saves time and compounds for small operators.",
     href: "/blog/ai-automation-small-business",
   },
   {
     date: "APR 2026",
     theme: "AGRIBUSINESS" as Theme,
-    title: "Farm to Funnel. A Go-to-Market Strategy for a Food Brand Launching in Canada",
+    title: "Farm to Funnel / A Go-to-Market Strategy for a Food Brand Launching in Canada",
     excerpt: "Most food brands build a great product and hope for the best. Here's how to build the funnel first.",
     href: "/blog/food-brand-gtm-strategy",
   },
   {
     date: "APR 2026",
     theme: "BUILD FROM ZERO" as Theme,
-    title: "The Homepage That Converts. What Your Website's First 5 Seconds Must Do",
+    title: "The Homepage That Converts / What Your Website's First 5 Seconds Must Do",
     excerpt: "Most homepages answer the wrong question. Here's what visitors actually need to see to stay.",
     href: "/blog/homepage-that-converts",
   },
@@ -99,8 +99,8 @@ export default function Writing() {
           className="font-display font-bold text-white mb-6"
           style={{ fontSize: "clamp(2.5rem, 6vw, 3.5rem)", letterSpacing: "-0.03em", lineHeight: "1.05" }}
         >
-          "The thinking is public.<br />
-          The standards are not negotiable."
+          "The thinking is public<br />
+          The standards are not negotiable"
         </h1>
         <p style={{ color: "#888888", fontSize: "18px", maxWidth: "480px", lineHeight: "1.7" }}>
           Everything published here is built to compound written with the standard

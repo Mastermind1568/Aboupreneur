@@ -68,7 +68,7 @@ export default function Story() {
           className="font-display font-bold text-white mb-6"
           style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", letterSpacing: "-0.03em", lineHeight: "1.05" }}
         >
-          From Zero to System:<br />
+          From Zero to System<br />
           The Architecture of<br />a Sovereign Life
         </h1>
 

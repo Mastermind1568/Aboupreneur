@@ -233,7 +233,7 @@ export default function Ecosystem() {
           className="font-display font-bold text-white mb-6"
           style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", letterSpacing: "-0.03em", lineHeight: "1.05" }}
         >
-          "Every project exists to move<br />someone closer to sovereign."
+          "Every project exists to move<br />someone closer to sovereign"
         </h1>
         <p style={{ color: "#888888", fontSize: "18px", maxWidth: "520px", lineHeight: "1.7" }}>
           Not a portfolio. Not a collection of side projects.
@@ -418,7 +418,7 @@ export default function Ecosystem() {
             className="font-display font-bold text-white mb-4"
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
           >
-            Real brands. Real results.
+            Real brands / Real results
           </h2>
           <p className="mb-16" style={{ color: "#888888", fontSize: "16px", lineHeight: "1.7", maxWidth: "520px" }}>
             Every engagement is a system build, not a deliverable. Here's what that looks like in practice.

@@ -16,13 +16,13 @@ const recentPosts = [
   },
   {
     date: "APR 2026",
-    title: "AI Automation for Small Business. What's Actually Worth Building",
+    title: "AI Automation for Small Business / What's Actually Worth Building",
     excerpt: "AI is everywhere. Most of it is noise. Here's what actually saves time and compounds.",
     href: "/blog/ai-automation-small-business",
   },
   {
     date: "APR 2026",
-    title: "Farm to Funnel. A Go-to-Market Strategy for a Food Brand Launching in Canada",
+    title: "Farm to Funnel / A Go-to-Market Strategy for a Food Brand Launching in Canada",
     excerpt: "Most food brands build a great product and hope for the best. Here's how to build the funnel first.",
     href: "/blog/food-brand-gtm-strategy",
   },
@@ -73,8 +73,8 @@ export default function Home() {
           style={{ fontSize: "clamp(3.5rem, 10vw, 7rem)", letterSpacing: "-0.04em", lineHeight: "1.02" }}
         >
           <span className="block text-white">Sovereignty</span>
-          <span className="block text-white">isn't given.</span>
-          <span className="block" style={{ color: "#F2A900" }}>It's built.</span>
+          <span className="block text-white">isn't given</span>
+          <span className="block" style={{ color: "#F2A900" }}>It's built</span>
         </h1>
 
         <p
@@ -209,7 +209,7 @@ export default function Home() {
             className="font-display font-bold text-white mb-4"
             style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
           >
-            "Three phases. One system.<br />No shortcuts."
+            "Three phases / One system<br />No shortcuts"
           </h2>
           <p className="mb-16" style={{ color: "#888888", fontSize: "18px", maxWidth: "540px", lineHeight: "1.7" }}>
             This isn't theory. It's the exact sequence I followed and the one I teach through
@@ -277,7 +277,7 @@ export default function Home() {
             className="font-display font-bold text-[#0A0A0A] mb-16"
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
           >
-            "Everything I build<br />points to one outcome."
+            "Everything I build<br />points to one outcome"
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -379,13 +379,13 @@ export default function Home() {
               className="font-display font-bold text-white"
               style={{ fontSize: "clamp(2rem, 4vw, 2.5rem)", letterSpacing: "-0.03em" }}
             >
-              The signal.
+              The signal
             </h2>
             <h2
               className="font-display font-bold"
               style={{ fontSize: "clamp(2rem, 4vw, 2.5rem)", letterSpacing: "-0.03em", color: "#F2A900" }}
             >
-              Not noise.
+              Not noise
             </h2>
           </div>
 
