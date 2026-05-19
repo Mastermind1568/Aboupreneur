@@ -3,7 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 
-type Tab = "ALL" | "MAKE" | "MULTIPLY" | "IN BUILD";
+type Tab = "ALL" | "MAKE" | "MULTIPLY" | "STAY CONNECTED";
 
 interface ConsultingForm {
   name: string;
@@ -159,7 +159,7 @@ export default function Ecosystem() {
   });
 
   const [activeTab, setActiveTab] = useState<Tab>("ALL");
-  const tabs: Tab[] = ["ALL", "MAKE", "MULTIPLY", "IN BUILD"];
+  const tabs: Tab[] = ["ALL", "MAKE", "MULTIPLY", "STAY CONNECTED"];
   const formRef = useRef<HTMLElement>(null);
 
   const [form, setForm] = useState<ConsultingForm>({
@@ -263,7 +263,7 @@ export default function Ecosystem() {
       </div>
 
       <div>
-        {activeTab === "IN BUILD" ? (
+        {activeTab === "STAY CONNECTED" ? (
           <div
             style={{ background: "#0A0A0A", padding: "80px 40px", borderTop: "1px solid #1A1A1A" }}
             className="max-w-7xl mx-auto"
