@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/site-audit/"
+title = "Aboupreneur Site Audit"
+version = "1.0.0"
+id = "artifacts/site-audit"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/site-audit/" ]
+localPort = 22702
+
+[services.development]
+run = "pnpm --filter @workspace/site-audit run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/site-audit", "run", "build" ]
+publicDir = "artifacts/site-audit/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22702"
+BASE_PATH = "/site-audit/"
