@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 
 type Tab = "ALL" | "MAKE" | "MULTIPLY" | "PROTECT" | "IN BUILD";
+
+interface ConsultingForm {
+  name: string;
+  email: string;
+  company: string;
+  service: string;
+  message: string;
+}
 
 const products = [
   {
@@ -84,8 +92,8 @@ const products = [
       "Digital strategy for agribusiness and food companies",
     ],
     listLabel: "SERVICE AREAS",
-    ctaLabel: "INQUIRE",
-    ctaHref: "https://formspree.io/f/xojkwbvq",
+    ctaLabel: "INQUIRE →",
+    ctaHref: "#consulting-form",
     ctaPrimary: true,
   },
 ];
@@ -105,6 +113,53 @@ export default function Ecosystem() {
 
   const [activeTab, setActiveTab] = useState<Tab>("ALL");
   const tabs: Tab[] = ["ALL", "MAKE", "MULTIPLY", "PROTECT", "IN BUILD"];
+  const formRef = useRef<HTMLElement>(null);
+
+  const [form, setForm] = useState<ConsultingForm>({
+    name: "", email: "", company: "", service: "", message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formSuccess, setFormSuccess] = useState(false);
+  const [formError, setFormError] = useState("");
+
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleConsultingSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setFormError("");
+    try {
+      const res = await fetch("https://formspree.io/f/xojkwbvq", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          service: form.service,
+          message: form.message,
+          _subject: `Consulting inquiry from ${form.name}`,
+        }),
+      });
+      const data = await res.json();
+      if (data.ok) {
+        setFormSuccess(true);
+        setForm({ name: "", email: "", company: "", service: "", message: "" });
+      } else {
+        setFormError("Something went wrong. Please try again or email hello@aboupreneur.page.");
+      }
+    } catch {
+      setFormError("Network error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const visible = products.filter((p) => {
     if (activeTab === "ALL") return true;
@@ -267,19 +322,29 @@ export default function Ecosystem() {
                       ))}
                     </ul>
 
-                    <a
-                      href={product.ctaHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-bold px-8 py-4 transition-all duration-200"
-                      style={
-                        product.ctaPrimary
-                          ? { background: "#F2A900", color: "#0A0A0A" }
-                          : { border: "1px solid #F2A900", color: "#F2A900" }
-                      }
-                    >
-                      {product.ctaLabel} →
-                    </a>
+                    {product.ctaHref.startsWith("#") ? (
+                      <button
+                        onClick={scrollToForm}
+                        className="inline-flex items-center gap-2 text-sm font-bold px-8 py-4 transition-all duration-200"
+                        style={{ background: "#F2A900", color: "#0A0A0A" }}
+                      >
+                        {product.ctaLabel}
+                      </button>
+                    ) : (
+                      <a
+                        href={product.ctaHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-bold px-8 py-4 transition-all duration-200"
+                        style={
+                          product.ctaPrimary
+                            ? { background: "#F2A900", color: "#0A0A0A" }
+                            : { border: "1px solid #F2A900", color: "#F2A900" }
+                        }
+                      >
+                        {product.ctaLabel} →
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -287,6 +352,151 @@ export default function Ecosystem() {
           ))
         )}
       </div>
+
+      {/* ── CONSULTING FORM ── */}
+      <section
+        id="consulting-form"
+        ref={formRef}
+        style={{ background: "#0A0A0A", padding: "100px 40px", borderTop: "1px solid #1A1A1A" }}
+      >
+        <div className="max-w-3xl mx-auto">
+          <span className="text-xs font-bold block mb-6" style={{ color: "#F2A900", letterSpacing: "0.12em" }}>
+            START A CONVERSATION
+          </span>
+          <h2
+            className="font-display font-bold text-white mb-4"
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
+          >
+            Tell me what you're building.
+          </h2>
+          <p className="mb-12" style={{ color: "#888888", fontSize: "16px", lineHeight: "1.7" }}>
+            I'll review your situation and respond within 48 hours if there's a fit.
+          </p>
+
+          {formSuccess ? (
+            <div className="py-12" style={{ borderLeft: "3px solid #F2A900", paddingLeft: "24px" }}>
+              <p className="font-display font-bold text-white text-2xl mb-3">Message received.</p>
+              <p style={{ color: "#888888", fontSize: "16px", lineHeight: "1.7" }}>
+                I'll be in touch within 48 hours. In the meantime, explore the ecosystem or read the writing.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleConsultingSubmit} className="space-y-0">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                <div>
+                  <label className="block text-xs font-bold mb-2" style={{ color: "#888888", letterSpacing: "0.08em" }}>
+                    NAME *
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleFormChange}
+                    required
+                    placeholder="Aboubakar Moussa"
+                    className="w-full px-5 py-4 text-sm text-white outline-none mb-4"
+                    style={{ background: "#111111", border: "1px solid #222222" }}
+                    onFocus={(e) => { (e.target as HTMLInputElement).style.borderColor = "#F2A900"; }}
+                    onBlur={(e) => { (e.target as HTMLInputElement).style.borderColor = "#222222"; }}
+                  />
+                </div>
+                <div className="md:ml-4">
+                  <label className="block text-xs font-bold mb-2" style={{ color: "#888888", letterSpacing: "0.08em" }}>
+                    EMAIL *
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleFormChange}
+                    required
+                    placeholder="you@example.com"
+                    className="w-full px-5 py-4 text-sm text-white outline-none mb-4"
+                    style={{ background: "#111111", border: "1px solid #222222" }}
+                    onFocus={(e) => { (e.target as HTMLInputElement).style.borderColor = "#F2A900"; }}
+                    onBlur={(e) => { (e.target as HTMLInputElement).style.borderColor = "#222222"; }}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold mb-2" style={{ color: "#888888", letterSpacing: "0.08em" }}>
+                  COMPANY / WEBSITE (OPTIONAL)
+                </label>
+                <input
+                  type="text"
+                  name="company"
+                  value={form.company}
+                  onChange={handleFormChange}
+                  placeholder="yourcompany.com"
+                  className="w-full px-5 py-4 text-sm text-white outline-none mb-4"
+                  style={{ background: "#111111", border: "1px solid #222222" }}
+                  onFocus={(e) => { (e.target as HTMLInputElement).style.borderColor = "#F2A900"; }}
+                  onBlur={(e) => { (e.target as HTMLInputElement).style.borderColor = "#222222"; }}
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold mb-2" style={{ color: "#888888", letterSpacing: "0.08em" }}>
+                  WHAT DO YOU NEED HELP WITH? *
+                </label>
+                <select
+                  name="service"
+                  value={form.service}
+                  onChange={handleFormChange}
+                  required
+                  className="w-full px-5 py-4 text-sm text-white outline-none mb-4 appearance-none"
+                  style={{ background: "#111111", border: "1px solid #222222", cursor: "pointer" }}
+                  onFocus={(e) => { (e.target as HTMLSelectElement).style.borderColor = "#F2A900"; }}
+                  onBlur={(e) => { (e.target as HTMLSelectElement).style.borderColor = "#222222"; }}
+                >
+                  <option value="" disabled>Select a service area</option>
+                  <option value="AI Automation">AI workflow automation and pipeline design</option>
+                  <option value="Web Development">Web development and platform architecture</option>
+                  <option value="SEO Systems">SEO systems and performance marketing</option>
+                  <option value="Digital Strategy">Digital strategy for agribusiness / food companies</option>
+                  <option value="Other">Other — I'll explain below</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold mb-2" style={{ color: "#888888", letterSpacing: "0.08em" }}>
+                  TELL ME MORE *
+                </label>
+                <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleFormChange}
+                  required
+                  rows={5}
+                  placeholder="What are you building? What's the problem you're trying to solve? Where are you right now?"
+                  className="w-full px-5 py-4 text-sm text-white outline-none mb-6 resize-none"
+                  style={{ background: "#111111", border: "1px solid #222222", lineHeight: "1.7" }}
+                  onFocus={(e) => { (e.target as HTMLTextAreaElement).style.borderColor = "#F2A900"; }}
+                  onBlur={(e) => { (e.target as HTMLTextAreaElement).style.borderColor = "#222222"; }}
+                />
+              </div>
+
+              {formError && (
+                <p className="mb-4 text-sm" style={{ color: "#FF4444" }}>{formError}</p>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="text-sm font-bold px-10 py-4 transition-all duration-200"
+                style={{
+                  background: isSubmitting ? "#555" : "#F2A900",
+                  color: "#0A0A0A",
+                  cursor: isSubmitting ? "not-allowed" : "pointer",
+                }}
+              >
+                {isSubmitting ? "SENDING..." : "SEND INQUIRY →"}
+              </button>
+            </form>
+          )}
+        </div>
+      </section>
 
       <Footer />
     </main>

@@ -73,9 +73,21 @@ export default function Writing() {
 
   const featuredPost = posts[2];
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const [subscribeSuccess, setSubscribeSuccess] = useState(false);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    window.open("https://aboupreneur.substack.com", "_blank");
+    if (!email) return;
+    try {
+      await fetch("https://aboupreneur.substack.com/api/v1/free", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `email=${encodeURIComponent(email)}`,
+      });
+    } catch {}
+    setSubscribeSuccess(true);
+    setEmail("");
   };
 
   return (
@@ -218,28 +230,40 @@ export default function Writing() {
           <p className="mb-8" style={{ color: "#0A0A0A", fontSize: "16px", maxWidth: "400px", lineHeight: "1.6" }}>
             The Mindbloom dispatch — weekly. No noise.
           </p>
-          <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-0" style={{ maxWidth: "520px" }}>
-            <input
-              type="email"
-              placeholder="Your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 px-5 py-4 text-sm outline-none"
-              style={{ background: "#0A0A0A", color: "#FFFFFF", border: "none" }}
-            />
-            <button
-              type="submit"
-              className="text-sm font-bold px-6 py-4 transition-all duration-200 whitespace-nowrap"
-              style={{ background: "#0A0A0A", color: "#F2A900" }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "#FFFFFF"; (e.currentTarget as HTMLButtonElement).style.color = "#0A0A0A"; }}
-              onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "#0A0A0A"; (e.currentTarget as HTMLButtonElement).style.color = "#F2A900"; }}
-            >
-              JOIN THE SIGNAL
-            </button>
-          </form>
-          <p className="mt-4 text-xs" style={{ color: "#0A0A0A", opacity: 0.6 }}>
-            No spam. No fluff. Unsubscribe anytime.
-          </p>
+          {subscribeSuccess ? (
+            <div className="py-6" style={{ maxWidth: "520px" }}>
+              <p className="font-display font-bold text-[#0A0A0A] text-xl mb-1">You're in.</p>
+              <p style={{ color: "#0A0A0A", opacity: 0.7, fontSize: "15px" }}>
+                Check your inbox — confirm your subscription to start receiving the dispatch.
+              </p>
+            </div>
+          ) : (
+            <>
+              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-0" style={{ maxWidth: "520px" }}>
+                <input
+                  type="email"
+                  placeholder="Your email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="flex-1 px-5 py-4 text-sm outline-none"
+                  style={{ background: "#0A0A0A", color: "#FFFFFF", border: "none" }}
+                />
+                <button
+                  type="submit"
+                  className="text-sm font-bold px-6 py-4 transition-all duration-200 whitespace-nowrap"
+                  style={{ background: "#0A0A0A", color: "#F2A900" }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "#FFFFFF"; (e.currentTarget as HTMLButtonElement).style.color = "#0A0A0A"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = "#0A0A0A"; (e.currentTarget as HTMLButtonElement).style.color = "#F2A900"; }}
+                >
+                  JOIN THE SIGNAL
+                </button>
+              </form>
+              <p className="mt-4 text-xs" style={{ color: "#0A0A0A", opacity: 0.6 }}>
+                No spam. No fluff. Unsubscribe anytime.
+              </p>
+            </>
+          )}
         </div>
       </section>
 
