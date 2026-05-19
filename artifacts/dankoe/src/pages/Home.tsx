@@ -4,9 +4,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Link } from "wouter";
 import { useSEO } from "@/hooks/useSEO";
 
-const TICKER_TEXT =
-  "SOUND MONEY IS NOT OPTIONAL  ·  PHYSICAL ASSETS ANCHOR DIGITAL WEALTH  ·  THE SOVEREIGN INDIVIDUAL IS BUILT, NOT BORN  ·  SKILLS BEFORE CAPITAL  ·  BUILD IN PUBLIC, PROTECT IN PRIVATE  ·  ";
-
 const recentPosts = [
   {
     date: "APR 2026",
@@ -122,21 +119,6 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
-          <div className="w-px h-10 animate-scroll" style={{ background: "#F2A900" }} />
-        </div>
-      </section>
-
-      {/* ── SIGNAL BAR ── */}
-      <section className="overflow-hidden" style={{ background: "#F2A900", padding: "18px 0" }}>
-        <div className="animate-marquee">
-          <span
-            className="font-bold whitespace-nowrap"
-            style={{ color: "#0A0A0A", fontSize: "13px", letterSpacing: "0.1em" }}
-          >
-            {TICKER_TEXT.repeat(6)}
-          </span>
-        </div>
       </section>
 
       {/* ── THE MAN BEHIND THE BRAND ── */}
