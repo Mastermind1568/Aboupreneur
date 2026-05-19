@@ -32,7 +32,7 @@ export default function Home() {
   useSEO({
     title: "ABOUPRENEUR | Build. Stack. Sovereign.",
     description:
-      "Aboubakar Moussa — entrepreneur, agribusiness strategist, and sound money advocate. The Sovereignty Loop: Make. Multiply. Protect. Built for those who start with nothing.",
+      "Aboubakar Moussa entrepreneur, agribusiness strategist, and sound money advocate. The Sovereignty Loop: Make. Multiply. Protect. Built for those who start with nothing.",
     canonical: "https://aboupreneur.page/",
   });
 
@@ -89,7 +89,7 @@ export default function Home() {
           style={{ color: "#888888", fontSize: "clamp(1rem, 2vw, 1.2rem)", maxWidth: "560px", lineHeight: "1.7" }}
         >
           From Cameroon to Canada. From a teenage trader to a systems architect.
-          I built the blueprint I wish I had — and I'm sharing every layer of it here.
+          I built the blueprint I wish I had and I'm sharing every layer of it here.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 relative">
@@ -166,20 +166,20 @@ export default function Home() {
               <div className="space-y-5" style={{ color: "#444444", fontSize: "16px", lineHeight: "1.8" }}>
                 <p>
                   Before I understood systems, I understood arbitrage. As a teenager in Cameroon,
-                  I was sourcing electronics from China, the USA, and Canada — moving goods across
+                  I was sourcing electronics from China, the USA, and Canada moving goods across
                   markets that most people thought were disconnected. That's where I learned that
                   money flows toward whoever understands the gap between two prices.
                 </p>
                 <p>
                   In 2016, when Bitcoin first entered African markets, I was there. I became a
-                  liquidity bridge — a middleman in a network that didn't yet have infrastructure.
+                  liquidity bridge a middleman in a network that didn't yet have infrastructure.
                   I watched currencies fluctuate violently. I watched savings evaporate. I developed
                   a conviction about sound money that no textbook could have given me: hard assets
                   preserve what soft systems destroy.
                 </p>
                 <p>
                   The move to Canada wasn't a coincidence. I came to study agribusiness at Lakeland
-                  College — to anchor digital wealth in the most enduring asset class there is: land
+                  College to anchor digital wealth in the most enduring asset class there is: land
                   and food systems. Everything I build now runs on a single framework. Make money
                   with skills. Multiply it with sound money. Protect it with physical assets. I call
                   it the Sovereignty Loop.
@@ -197,7 +197,7 @@ export default function Home() {
             <div className="w-full overflow-hidden" style={{ aspectRatio: "3/4", background: "#111111" }}>
               <img
                 src="/images/headshot.jpg"
-                alt="Aboubakar Moussa — Aboupreneur"
+                alt="Aboubakar Moussa Aboupreneur"
                 className="w-full h-full object-cover object-top"
                 style={{ filter: "grayscale(15%)" }}
               />
@@ -219,7 +219,7 @@ export default function Home() {
             "Three phases. One system.<br />No shortcuts."
           </h2>
           <p className="mb-16" style={{ color: "#888888", fontSize: "18px", maxWidth: "540px", lineHeight: "1.7" }}>
-            This isn't theory. It's the exact sequence I followed — and the one I teach through
+            This isn't theory. It's the exact sequence I followed and the one I teach through
             everything I build.
           </p>
 
@@ -464,7 +464,7 @@ export default function Home() {
             className="mb-10"
             style={{ color: "#0A0A0A", fontSize: "18px", maxWidth: "520px", lineHeight: "1.7" }}
           >
-            If you're building from zero and refusing to accept dependence as permanent —
+            If you're building from zero and refusing to accept dependence as permanent 
             the weekly dispatch is where the real work happens. No noise. No motivational
             garbage. Just the system, live.
           </p>
@@ -473,7 +473,7 @@ export default function Home() {
             <div className="py-6" style={{ maxWidth: "520px" }}>
               <p className="font-display font-bold text-[#0A0A0A] text-xl mb-1">You're in.</p>
               <p style={{ color: "#0A0A0A", opacity: 0.7, fontSize: "15px" }}>
-                Check your inbox — confirm your subscription to start receiving the dispatch.
+                Check your inbox confirm your subscription to start receiving the dispatch.
               </p>
             </div>
           ) : (

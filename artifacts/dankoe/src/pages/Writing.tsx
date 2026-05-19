@@ -60,7 +60,7 @@ const posts = [
 export default function Writing() {
   useSEO({
     title: "Writing | ABOUPRENEUR",
-    description: "Frameworks on building from zero, sound money, and sovereign thinking — published on Mindbloom.",
+    description: "Frameworks on building from zero, sound money, and sovereign thinking published on Mindbloom.",
     canonical: "https://aboupreneur.page/writing",
   });
 
@@ -103,7 +103,7 @@ export default function Writing() {
           The standards are not negotiable."
         </h1>
         <p style={{ color: "#888888", fontSize: "18px", maxWidth: "480px", lineHeight: "1.7" }}>
-          Everything published here is built to compound — written with the standard
+          Everything published here is built to compound written with the standard
           of something worth reading long after it was posted.
         </p>
       </section>
@@ -159,7 +159,7 @@ export default function Writing() {
       <section className="max-w-7xl mx-auto px-10 mb-20">
         {filtered.length === 0 ? (
           <div style={{ padding: "60px 0", textAlign: "center" }}>
-            <p style={{ color: "#888888" }}>Nothing in this category yet — more coming soon.</p>
+            <p style={{ color: "#888888" }}>Nothing in this category yet more coming soon.</p>
           </div>
         ) : (
           <div>
@@ -228,13 +228,13 @@ export default function Writing() {
             Don't miss the next one.
           </h2>
           <p className="mb-8" style={{ color: "#0A0A0A", fontSize: "16px", maxWidth: "400px", lineHeight: "1.6" }}>
-            The Mindbloom dispatch — weekly. No noise.
+            The Mindbloom dispatch weekly. No noise.
           </p>
           {subscribeSuccess ? (
             <div className="py-6" style={{ maxWidth: "520px" }}>
               <p className="font-display font-bold text-[#0A0A0A] text-xl mb-1">You're in.</p>
               <p style={{ color: "#0A0A0A", opacity: 0.7, fontSize: "15px" }}>
-                Check your inbox — confirm your subscription to start receiving the dispatch.
+                Check your inbox confirm your subscription to start receiving the dispatch.
               </p>
             </div>
           ) : (

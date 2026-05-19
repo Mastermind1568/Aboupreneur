@@ -69,7 +69,7 @@ function ProjectImage({ screenshot, name, url }: { screenshot: string; name: str
         </div>
       </div>
 
-      {/* Screenshot area — fixed height, scroll-style overflow */}
+      {/* Screenshot area fixed height, scroll-style overflow */}
       <div className="relative w-full overflow-hidden" style={{ height: "280px" }}>
         {!error ? (
           <>
@@ -106,7 +106,7 @@ function ProjectImage({ screenshot, name, url }: { screenshot: string; name: str
 
 export default function Portfolio() {
   useSEO({
-    title: "Portfolio | Selected Work by Aboupreneur — Real Brands, Real Results",
+    title: "Portfolio | Selected Work by Aboupreneur Real Brands, Real Results",
     description: "Browse Aboupreneur's portfolio of web design, digital marketing, and AI automation projects. Real results for small businesses and entrepreneurs across Canada and beyond.",
     canonical: "https://aboupreneur.page/portfolio",
   });

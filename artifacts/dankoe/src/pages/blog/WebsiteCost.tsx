@@ -8,7 +8,7 @@ import { useSEO } from "@/hooks/useSEO";
 export default function WebsiteCost() {
   useSEO({
     title: "The Real Cost of a Bad Website | Aboupreneur Blog",
-    description: "A slow, outdated website isn't just an aesthetic problem — it's a revenue problem. Learn what a bad website is really costing your business and how to fix it.",
+    description: "A slow, outdated website isn't just an aesthetic problem it's a revenue problem. Learn what a bad website is really costing your business and how to fix it.",
     canonical: "https://aboupreneur.page/blog/real-cost-of-bad-website",
   });
 
@@ -47,17 +47,17 @@ export default function WebsiteCost() {
           <div className="space-y-8 text-foreground">
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Most business owners know their website isn't great. They'll tell you "it's on the list" or "we're planning a redesign next quarter." What they don't always calculate is what that delay is costing them right now — in leads never captured, in trust never built, in visitors who left and never came back.
+              Most business owners know their website isn't great. They'll tell you "it's on the list" or "we're planning a redesign next quarter." What they don't always calculate is what that delay is costing them right now in leads never captured, in trust never built, in visitors who left and never came back.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A bad website isn't free. It has a cost — it's just hidden.
+              A bad website isn't free. It has a cost it's just hidden.
             </p>
 
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">The trust problem</h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Before a visitor reads your copy, they've already made a judgment. Research from Stanford consistently shows that 75% of people judge a company's credibility based on its website design. In the first 0.05 seconds — before a single word is processed — a visitor has formed a first impression.
+              Before a visitor reads your copy, they've already made a judgment. Research from Stanford consistently shows that 75% of people judge a company's credibility based on its website design. In the first 0.05 seconds before a single word is processed a visitor has formed a first impression.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -67,17 +67,17 @@ export default function WebsiteCost() {
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">The speed problem</h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Google has been clear: page speed is a ranking factor. But beyond SEO, slow sites drive away real people. A one-second delay in page load time reduces conversions by 7%. A three-second delay loses half your mobile visitors before they've seen anything. If your site takes four seconds to load — which is common for unoptimized WordPress sites with bloated themes — you're running ads and doing outreach to fill a leaking bucket.
+              Google has been clear: page speed is a ranking factor. But beyond SEO, slow sites drive away real people. A one-second delay in page load time reduces conversions by 7%. A three-second delay loses half your mobile visitors before they've seen anything. If your site takes four seconds to load which is common for unoptimized WordPress sites with bloated themes you're running ads and doing outreach to fill a leaking bucket.
             </p>
 
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">The clarity problem</h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The most common problem I find when auditing a client's website isn't design — it's clarity. Visitors can't figure out what you do, who it's for, or what to do next. Three services buried in a dropdown. A hero section that talks about your company values instead of the visitor's problem. A contact form with 11 required fields.
+              The most common problem I find when auditing a client's website isn't design it's clarity. Visitors can't figure out what you do, who it's for, or what to do next. Three services buried in a dropdown. A hero section that talks about your company values instead of the visitor's problem. A contact form with 11 required fields.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A website's job is not to explain everything about your business. It's to move the right visitor to the next step. Every element that doesn't serve that goal is friction — and friction costs you conversions.
+              A website's job is not to explain everything about your business. It's to move the right visitor to the next step. Every element that doesn't serve that goal is friction and friction costs you conversions.
             </p>
 
             <div className="bg-card border border-border/50 rounded-2xl p-8 mt-10">
@@ -94,11 +94,11 @@ export default function WebsiteCost() {
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">When to redesign vs. refresh</h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Not every bad website needs to be rebuilt from scratch. Sometimes a refresh — new photography, tightened copy, restructured navigation, and a speed audit — can recover 70% of the value at 30% of the cost. Other times, the structure is so outdated that rebuilding is the honest answer.
+              Not every bad website needs to be rebuilt from scratch. Sometimes a refresh new photography, tightened copy, restructured navigation, and a speed audit can recover 70% of the value at 30% of the cost. Other times, the structure is so outdated that rebuilding is the honest answer.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              When I work with a client, the first conversation is always about what's actually broken and what the goal is. Not every business needs a $10,000 custom build. Some need a fast, clear, credible website that converts — and that can be done efficiently with the right approach.
+              When I work with a client, the first conversation is always about what's actually broken and what the goal is. Not every business needs a $10,000 custom build. Some need a fast, clear, credible website that converts and that can be done efficiently with the right approach.
             </p>
 
             <div className="border-t border-border/40 pt-10 mt-10">

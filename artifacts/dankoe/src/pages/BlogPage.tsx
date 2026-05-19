@@ -24,7 +24,7 @@ const onSiteArticles = [
     slug: "/blog/real-cost-of-bad-website",
     category: "Web Design",
     title: "The Real Cost of a Bad Website (It's Not What You Think)",
-    excerpt: "A slow, outdated, or confusing website isn't just an aesthetic problem. It's a revenue problem — and most owners don't calculate the true cost.",
+    excerpt: "A slow, outdated, or confusing website isn't just an aesthetic problem. It's a revenue problem and most owners don't calculate the true cost.",
     readTime: "5 min read",
   },
   {
@@ -38,7 +38,7 @@ const onSiteArticles = [
     slug: "/blog/google-ads-vs-meta-ads",
     category: "Paid Advertising",
     title: "Google Ads vs. Meta Ads: Which One Is Right for Your Business?",
-    excerpt: "Both platforms work — but they work completely differently. Here's how to decide where to put your ad spend first.",
+    excerpt: "Both platforms work but they work completely differently. Here's how to decide where to put your ad spend first.",
     readTime: "7 min read",
   },
   {
@@ -74,7 +74,7 @@ const channels = [
 
 export default function BlogPage() {
   useSEO({
-    title: "Blog | Growth Marketing, AI & Web Design Insights — Aboupreneur",
+    title: "Blog | Growth Marketing, AI & Web Design Insights Aboupreneur",
     description: "Articles on growth marketing, AI automation, web design, personal branding, and food brand strategy by Aboubakar Moussa. Practical insights from the Aboupreneur blog.",
     canonical: "https://aboupreneur.page/blog",
   });

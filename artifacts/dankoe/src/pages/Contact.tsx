@@ -8,7 +8,7 @@ import { useSEO } from "@/hooks/useSEO";
 
 export default function Contact() {
   useSEO({
-    title: "Work With Me | Contact Aboupreneur — Alberta Growth Marketer & Web Designer",
+    title: "Work With Me | Contact Aboupreneur Alberta Growth Marketer & Web Designer",
     description: "Ready to grow your brand? Contact Aboubakar Moussa to discuss web design, digital marketing strategy, paid advertising, or AI automation for your business.",
     canonical: "https://aboupreneur.page/contact",
   });

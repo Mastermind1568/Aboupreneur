@@ -8,7 +8,7 @@ import { useSEO } from "@/hooks/useSEO";
 export default function MarketingChannel() {
   useSEO({
     title: "How to Choose the Right Marketing Channel for Your Business | Aboupreneur Blog",
-    description: "Not every channel works for every business. Learn how to match the right marketing channel to your stage, audience, and offer — and stop wasting budget on the wrong platforms.",
+    description: "Not every channel works for every business. Learn how to match the right marketing channel to your stage, audience, and offer and stop wasting budget on the wrong platforms.",
     canonical: "https://aboupreneur.page/blog/choosing-the-right-marketing-channel",
   });
 
@@ -51,13 +51,13 @@ export default function MarketingChannel() {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              That's not a strategy. That's imitation. And it's one of the most expensive marketing mistakes a business can make — not in dollars, necessarily, but in time and momentum.
+              That's not a strategy. That's imitation. And it's one of the most expensive marketing mistakes a business can make not in dollars, necessarily, but in time and momentum.
             </p>
 
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">The channel is not the strategy</h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Marketing channels — Instagram, Google Ads, email, LinkedIn, TikTok, SEO, podcast, YouTube — are distribution tools. They get your message in front of people. But the channel is only as good as the clarity of the message, the precision of the targeting, and the relevance to the audience at that exact moment.
+              Marketing channels Instagram, Google Ads, email, LinkedIn, TikTok, SEO, podcast, YouTube are distribution tools. They get your message in front of people. But the channel is only as good as the clarity of the message, the precision of the targeting, and the relevance to the audience at that exact moment.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -72,15 +72,15 @@ export default function MarketingChannel() {
 
             <div className="bg-card border border-border/50 rounded-2xl p-8 space-y-6">
               <div>
-                <h3 className="font-bold text-foreground mb-2">Stage 1 — Finding your first customers</h3>
-                <p className="text-muted-foreground">Direct outreach (LinkedIn, email), referrals, and community participation. Not ads. You haven't yet proven your offer converts — spending on ads before this is premature.</p>
+                <h3 className="font-bold text-foreground mb-2">Stage 1 Finding your first customers</h3>
+                <p className="text-muted-foreground">Direct outreach (LinkedIn, email), referrals, and community participation. Not ads. You haven't yet proven your offer converts spending on ads before this is premature.</p>
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-2">Stage 2 — Proving the model</h3>
+                <h3 className="font-bold text-foreground mb-2">Stage 2 Proving the model</h3>
                 <p className="text-muted-foreground">A focused channel where your audience is active. One platform, done consistently. This is where you build proof of concept for your messaging and offers.</p>
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-2">Stage 3 — Scaling what works</h3>
+                <h3 className="font-bold text-foreground mb-2">Stage 3 Scaling what works</h3>
                 <p className="text-muted-foreground">Paid traffic (Google, Meta) amplifying an already-proven message. Email to retain and upsell. SEO for long-term inbound. Only add channels when you have bandwidth to do them well.</p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function MarketingChannel() {
 
             <ul className="space-y-4 text-muted-foreground">
               <li className="flex items-start gap-3"><span className="text-accent mt-1 font-bold">→</span><span><strong className="text-foreground">Google Search:</strong> High intent. People searching for solutions. Best for services with clear search volume ("web designer Edmonton", "lawyer for small business").</span></li>
-              <li className="flex items-start gap-3"><span className="text-accent mt-1 font-bold">→</span><span><strong className="text-foreground">Meta (Facebook/Instagram):</strong> Interruption-based. Users aren't looking for you — you appear in their feed. Best for visually compelling offers and retargeting.</span></li>
+              <li className="flex items-start gap-3"><span className="text-accent mt-1 font-bold">→</span><span><strong className="text-foreground">Meta (Facebook/Instagram):</strong> Interruption-based. Users aren't looking for you you appear in their feed. Best for visually compelling offers and retargeting.</span></li>
               <li className="flex items-start gap-3"><span className="text-accent mt-1 font-bold">→</span><span><strong className="text-foreground">LinkedIn:</strong> Professional context. Best for B2B, professional services, thought leadership. Decision-makers are here, but they're skeptical of hard sells.</span></li>
               <li className="flex items-start gap-3"><span className="text-accent mt-1 font-bold">→</span><span><strong className="text-foreground">Email:</strong> Owned audience. The most direct, most personal, highest ROI channel for businesses with an existing list. Build this early.</span></li>
               <li className="flex items-start gap-3"><span className="text-accent mt-1 font-bold">→</span><span><strong className="text-foreground">SEO/Blog:</strong> Long game. Takes 6–12 months to show results, but compounding traffic that doesn't cost per click. Critical for sustainable inbound.</span></li>
@@ -106,7 +106,7 @@ export default function MarketingChannel() {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              If you can't answer all three clearly, don't invest in that channel yet. Do the research first — your budget will thank you.
+              If you can't answer all three clearly, don't invest in that channel yet. Do the research first your budget will thank you.
             </p>
 
             <div className="bg-card border border-accent/30 border-l-4 rounded-r-xl p-6 mt-8">

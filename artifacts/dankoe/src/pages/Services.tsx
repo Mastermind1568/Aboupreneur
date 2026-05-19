@@ -10,7 +10,7 @@ const services = [
   {
     category: "Web Design & Build",
     tagline: "Sites that look sharp and convert.",
-    description: "From strategy to launch. I design and build websites that reflect your brand, load fast, and guide visitors toward action — whether that's a booking, a purchase, or a message.",
+    description: "From strategy to launch. I design and build websites that reflect your brand, load fast, and guide visitors toward action whether that's a booking, a purchase, or a message.",
     deliverables: [
       "Brand-aligned design (WordPress or AI-built)",
       "Mobile-first, fast-loading build",
@@ -24,7 +24,7 @@ const services = [
   {
     category: "Paid Advertising",
     tagline: "Ads that bring the right people, not just traffic.",
-    description: "Google Ads, Meta Ads, LinkedIn, TikTok, Pinterest, and Snapchat campaigns built around your goals — not vanity metrics. I handle setup, copy, targeting, and ongoing optimization.",
+    description: "Google Ads, Meta Ads, LinkedIn, TikTok, Pinterest, and Snapchat campaigns built around your goals not vanity metrics. I handle setup, copy, targeting, and ongoing optimization.",
     deliverables: [
       "Campaign strategy and audience research",
       "Ad copy and creative direction",
@@ -82,11 +82,11 @@ const services = [
 const faqs = [
   {
     q: "Do you work with small businesses?",
-    a: "Yes. Most of my clients are small businesses, independent professionals, and growing startups. I prefer working with brands that have a real offer and want a real strategy — not just a pretty website.",
+    a: "Yes. Most of my clients are small businesses, independent professionals, and growing startups. I prefer working with brands that have a real offer and want a real strategy not just a pretty website.",
   },
   {
     q: "Where are you based, and do you work remotely?",
-    a: "I'm based in Alberta, Canada and work with clients remotely across Canada, the US, and internationally. Everything is done online — calls, files, and delivery.",
+    a: "I'm based in Alberta, Canada and work with clients remotely across Canada, the US, and internationally. Everything is done online calls, files, and delivery.",
   },
   {
     q: "How long does a website take?",
@@ -102,11 +102,11 @@ const faqs = [
   },
   {
     q: "Do you work with e-commerce brands?",
-    a: "Yes — I work with product brands on web design, ads, and email. If you're on Shopify or WooCommerce, I can work within your existing setup.",
+    a: "Yes I work with product brands on web design, ads, and email. If you're on Shopify or WooCommerce, I can work within your existing setup.",
   },
   {
     q: "What is your pricing like?",
-    a: "Pricing varies by scope. A basic website starts from $1,500 CAD. Ad management starts from $500/month. AI automation projects are scoped per engagement. Reach out for a custom quote — I'll always be upfront about costs before we start.",
+    a: "Pricing varies by scope. A basic website starts from $1,500 CAD. Ad management starts from $500/month. AI automation projects are scoped per engagement. Reach out for a custom quote I'll always be upfront about costs before we start.",
   },
   {
     q: "Do you sign contracts?",
@@ -134,7 +134,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function Services() {
   useSEO({
-    title: "Services | Web Design, Digital Marketing & AI Automation — Aboupreneur",
+    title: "Services | Web Design, Digital Marketing & AI Automation Aboupreneur",
     description: "Aboupreneur offers web design, Google & Meta Ads, SEO, AI automation workflows, and full growth strategy for small businesses and personal brands in Canada and beyond.",
     canonical: "https://aboupreneur.page/services",
   });

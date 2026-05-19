@@ -51,7 +51,7 @@ const SovereigntyCards = () => (
 export default function Story() {
   useSEO({
     title: "The Story | ABOUPRENEUR",
-    description: "From Cameroon to Canada. The journey from global trader to Bitcoin conviction to agribusiness — and the system that connects it all.",
+    description: "From Cameroon to Canada. The journey from global trader to Bitcoin conviction to agribusiness and the system that connects it all.",
     canonical: "https://aboupreneur.page/story",
   });
 
@@ -88,7 +88,7 @@ export default function Story() {
       <section className="bg-white" style={{ padding: "80px 40px" }}>
         <div style={{ maxWidth: "680px", margin: "0 auto" }}>
           <span className="text-xs font-bold block mb-8" style={{ color: "#F2A900", letterSpacing: "0.12em" }}>
-            ACT I — THE TRADER
+            ACT I THE TRADER
           </span>
           <h2
             className="font-display font-bold text-[#0A0A0A] mb-8"
@@ -101,7 +101,7 @@ export default function Story() {
               Before I understood frameworks, I understood friction. Cameroon had needs
               that suppliers in China and Canada hadn't bothered to meet efficiently.
               The gap between what things cost to source and what people were willing
-              to pay at home — that was my first classroom.
+              to pay at home that was my first classroom.
             </p>
             <p>
               I started moving electronics. Phones, accessories, components. Sourcing
@@ -121,7 +121,7 @@ export default function Story() {
       <section className="bg-white" style={{ padding: "80px 40px", borderTop: "1px solid #E5E5E5" }}>
         <div style={{ maxWidth: "680px", margin: "0 auto" }}>
           <span className="text-xs font-bold block mb-8" style={{ color: "#F2A900", letterSpacing: "0.12em" }}>
-            ACT II — THE CONVICTION
+            ACT II THE CONVICTION
           </span>
           <h2
             className="font-display font-bold text-[#0A0A0A] mb-8"
@@ -132,7 +132,7 @@ export default function Story() {
           <div className="space-y-5 text-base" style={{ color: "#444444", lineHeight: "1.8" }}>
             <p>
               Most people in the West discovered Bitcoin in 2017, when the price
-              made headlines. I found it earlier — during the year it began penetrating
+              made headlines. I found it earlier during the year it began penetrating
               African markets. And what I saw was not a speculative instrument.
               I saw a lifeline.
             </p>
@@ -151,7 +151,7 @@ export default function Story() {
             </p>
             <p>
               I didn't trade in and out. I built conviction. I held through the bear
-              markets. I liquidated a small fraction at $14,000 — enough to buy my
+              markets. I liquidated a small fraction at $14,000 enough to buy my
               first car. The rest stays. Not because I'm a maximalist, but because
               sound money is the foundation every other phase of wealth-building
               requires to stand on.
@@ -163,7 +163,7 @@ export default function Story() {
       <section className="bg-white" style={{ padding: "80px 40px", borderTop: "1px solid #E5E5E5" }}>
         <div style={{ maxWidth: "680px", margin: "0 auto" }}>
           <span className="text-xs font-bold block mb-8" style={{ color: "#F2A900", letterSpacing: "0.12em" }}>
-            ACT III — THE SYSTEM
+            ACT III THE SYSTEM
           </span>
           <h2
             className="font-display font-bold text-[#0A0A0A] mb-8"
@@ -174,7 +174,7 @@ export default function Story() {
           <div className="space-y-5 text-base" style={{ color: "#444444", lineHeight: "1.8" }}>
             <p>
               The decision to come to Canada wasn't random. Lakeland College in
-              Alberta — one of the few places in North America where you can study
+              Alberta one of the few places in North America where you can study
               agribusiness marketing with real operational depth. I came to learn
               land systems. Food infrastructure. The physical layer of wealth that
               no digital market can fully replace.
@@ -190,8 +190,8 @@ export default function Story() {
               Three phases. One loop. The Sovereignty Loop.
             </p>
             <p>
-              Everything I build now — the platforms, the writing, the consulting,
-              the ventures — is an expression of that framework. And everything I
+              Everything I build now the platforms, the writing, the consulting,
+              the ventures is an expression of that framework. And everything I
               publish is the blueprint I'm handing to the next version of the person
               I used to be.
             </p>
@@ -227,7 +227,7 @@ export default function Story() {
             Farm to Funnel is in operation. The consulting practice is active.
           </p>
           <p className="text-base mb-10" style={{ color: "#444444", lineHeight: "1.8" }}>
-            The story isn't finished — it's being built in public. Follow the
+            The story isn't finished it's being built in public. Follow the
             ecosystem, subscribe to the writing, or come back to this page in
             twelve months and see how far the loop has run.
           </p>

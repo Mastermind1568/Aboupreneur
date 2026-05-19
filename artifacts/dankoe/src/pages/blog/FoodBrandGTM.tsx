@@ -31,7 +31,7 @@ export default function FoodBrandGTM() {
           </h1>
 
           <p className="text-xl text-muted-foreground italic mb-4">
-            Most food brands rush to sell before they've figured out who they're selling to — and why those people should care.
+            Most food brands rush to sell before they've figured out who they're selling to and why those people should care.
           </p>
 
           <div className="flex items-center gap-4 text-sm text-muted-foreground border-t border-border/40 pt-6 mb-16">
@@ -47,7 +47,7 @@ export default function FoodBrandGTM() {
           <div className="prose prose-invert prose-lg max-w-none space-y-8 text-foreground">
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I've watched a lot of food brands launch with beautiful packaging and no plan. They post on Instagram, maybe run a few ads, and wonder why nothing sticks. The product is good. The visuals are good. But the brand is invisible — because there's no go-to-market strategy underneath it.
+              I've watched a lot of food brands launch with beautiful packaging and no plan. They post on Instagram, maybe run a few ads, and wonder why nothing sticks. The product is good. The visuals are good. But the brand is invisible because there's no go-to-market strategy underneath it.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -61,7 +61,7 @@ export default function FoodBrandGTM() {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The brands that win — from small-batch hot sauces to specialty grains — aren't necessarily the ones with the best product. They're the ones who understood their customer deeply enough to speak directly to them, in the right place, at the right time.
+              The brands that win from small-batch hot sauces to specialty grains aren't necessarily the ones with the best product. They're the ones who understood their customer deeply enough to speak directly to them, in the right place, at the right time.
             </p>
 
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">The four pillars of a food brand GTM</h2>
@@ -77,7 +77,7 @@ export default function FoodBrandGTM() {
               </div>
               <div>
                 <h3 className="font-bold text-foreground mb-2">2. Channel selection</h3>
-                <p className="text-muted-foreground">Not all channels are equal for every product. A premium olive oil probably doesn't belong on TikTok first. A fun, affordable condiment might. Choose where your customer already spends time — not where you feel comfortable.</p>
+                <p className="text-muted-foreground">Not all channels are equal for every product. A premium olive oil probably doesn't belong on TikTok first. A fun, affordable condiment might. Choose where your customer already spends time not where you feel comfortable.</p>
               </div>
               <div>
                 <h3 className="font-bold text-foreground mb-2">3. The conversion path</h3>
@@ -92,7 +92,7 @@ export default function FoodBrandGTM() {
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">When to build vs. when to scale</h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              One of the most expensive mistakes in food is spending on ads before the foundation is ready. If your website converts at 0.5%, spending $3,000 a month on Google Ads is burning money. The GTM strategy builds the foundation — the website, the offer, the messaging — before it scales with paid traffic.
+              One of the most expensive mistakes in food is spending on ads before the foundation is ready. If your website converts at 0.5%, spending $3,000 a month on Google Ads is burning money. The GTM strategy builds the foundation the website, the offer, the messaging before it scales with paid traffic.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -102,7 +102,7 @@ export default function FoodBrandGTM() {
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">The agriculture angle</h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm particularly interested in food brands with a production origin — farms, cooperatives, small processors. These brands have an enormous trust advantage that most consumer brands spend years trying to manufacture. Transparency, traceability, story. But most of them don't know how to package that story for a modern consumer who shops online.
+              I'm particularly interested in food brands with a production origin farms, cooperatives, small processors. These brands have an enormous trust advantage that most consumer brands spend years trying to manufacture. Transparency, traceability, story. But most of them don't know how to package that story for a modern consumer who shops online.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">

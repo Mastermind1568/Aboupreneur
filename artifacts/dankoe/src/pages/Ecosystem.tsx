@@ -3,7 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
 
-type Tab = "ALL" | "MAKE" | "MULTIPLY" | "PROTECT" | "IN BUILD";
+type Tab = "ALL" | "MAKE" | "MULTIPLY" | "IN BUILD";
 
 interface ConsultingForm {
   name: string;
@@ -23,12 +23,12 @@ const products = [
     sub: "The sound money education platform",
     bg: "#0A0A0A",
     textColor: "#FFFFFF",
-    description: `Bitcoin entered African markets in 2016. I was there. I spent years developing the conviction that sound money is not optional for anyone who wants to build lasting wealth — especially those starting in economies where currency erosion is a lived reality, not a textbook warning.\n\nMoneyverse is the platform I built to share that conviction at scale. 11 modules. A structured DCA masterclass. The macroeconomic framework behind why holding hard assets is the rational move for the ambitious entrepreneur operating from a developing-world baseline.`,
+    description: `Bitcoin entered African markets in 2016. I was there. I spent years developing the conviction that sound money is not optional for anyone who wants to build lasting wealth especially those starting in economies where currency erosion is a lived reality, not a textbook warning.\n\nMoneyverse is the platform I built to share that conviction at scale. 11 modules. A structured DCA masterclass. The macroeconomic framework behind why holding hard assets is the rational move for the ambitious entrepreneur operating from a developing-world baseline.`,
     list: [
       "11 core modules on Bitcoin fundamentals and wealth preservation",
       "DCA (Dollar Cost Averaging) masterclass and calculator",
-      "Macroeconomic framework — why fiat fails the entrepreneur",
-      "Sound money philosophy — conviction over speculation",
+      "Macroeconomic framework why fiat fails the entrepreneur",
+      "Sound money philosophy conviction over speculation",
     ],
     ctaLabel: "ENTER MONEYVERSE",
     ctaHref: "https://moneyverse.network",
@@ -40,10 +40,10 @@ const products = [
     status: "LIVE",
     statusStyle: { background: "#F2A900", color: "#0A0A0A" },
     title: "MINDBLOOM",
-    sub: "The writing engine — published on Substack",
+    sub: "The writing engine published on Substack",
     bg: "#FFFFFF",
     textColor: "#0A0A0A",
-    description: `There's a version of content creation that performs. There's another version that accumulates. Mindbloom is the latter.\n\nEvery piece published here is a framework, a perspective, or a documented decision — written with the standard of something worth reading three years from now. No trending takes. No motivational noise. Just the thinking behind building sovereignty from zero.`,
+    description: `There's a version of content creation that performs. There's another version that accumulates. Mindbloom is the latter.\n\nEvery piece published here is a framework, a perspective, or a documented decision written with the standard of something worth reading three years from now. No trending takes. No motivational noise. Just the thinking behind building sovereignty from zero.`,
     list: [
       "Weekly frameworks on execution, money, and building",
       "Raw documentation of the Aboupreneur journey",
@@ -63,7 +63,7 @@ const products = [
     sub: "Where agribusiness meets digital marketing",
     bg: "#0A0A0A",
     textColor: "#FFFFFF",
-    description: `Most agribusiness operators are world-class at growing, raising, and producing. Most are invisible online.\n\nFarm to Funnel is the newsletter that bridges the gap — translating the language of modern digital marketing into systems that make sense for the land operator, the commodity trader, and the agribusiness professional who understands soil better than social media.`,
+    description: `Most agribusiness operators are world-class at growing, raising, and producing. Most are invisible online.\n\nFarm to Funnel is the newsletter that bridges the gap translating the language of modern digital marketing into systems that make sense for the land operator, the commodity trader, and the agribusiness professional who understands soil better than social media.`,
     list: [
       "Agribusiness marketers and operators",
       "Farm operators building direct-to-consumer channels",
@@ -84,7 +84,7 @@ const products = [
     sub: "Systems architecture for ambitious operators",
     bg: "#FFFFFF",
     textColor: "#0A0A0A",
-    description: `Most digital strategy advice is tactics dressed up as strategy. What ambitious operators need isn't another tactic — it's infrastructure that compounds.\n\nAboupreneur Consulting designs the digital systems, AI automation pipelines, and web architecture that let operators focus on the work that actually moves the needle.`,
+    description: `Most digital strategy advice is tactics dressed up as strategy. What ambitious operators need isn't another tactic it's infrastructure that compounds.\n\nAboupreneur Consulting designs the digital systems, AI automation pipelines, and web architecture that let operators focus on the work that actually moves the needle.`,
     list: [
       "AI workflow automation and pipeline design",
       "Web development and platform architecture",
@@ -101,18 +101,17 @@ const products = [
 const phaseToTab: Record<string, Tab[]> = {
   MAKE: ["ALL", "MAKE"],
   MULTIPLY: ["ALL", "MULTIPLY"],
-  PROTECT: ["ALL", "PROTECT"],
 };
 
 export default function Ecosystem() {
   useSEO({
     title: "The Ecosystem | ABOUPRENEUR",
-    description: "Moneyverse, Mindbloom, Farm to Funnel, Consulting — every project built around one system: Make. Multiply. Protect.",
+    description: "Moneyverse, Mindbloom, Farm to Funnel, Consulting every project built around one system: Make. Multiply. Protect.",
     canonical: "https://aboupreneur.page/ecosystem",
   });
 
   const [activeTab, setActiveTab] = useState<Tab>("ALL");
-  const tabs: Tab[] = ["ALL", "MAKE", "MULTIPLY", "PROTECT", "IN BUILD"];
+  const tabs: Tab[] = ["ALL", "MAKE", "MULTIPLY", "IN BUILD"];
   const formRef = useRef<HTMLElement>(null);
 
   const [form, setForm] = useState<ConsultingForm>({
@@ -182,7 +181,7 @@ export default function Ecosystem() {
         </h1>
         <p style={{ color: "#888888", fontSize: "18px", maxWidth: "520px", lineHeight: "1.7" }}>
           Not a portfolio. Not a collection of side projects.
-          A coordinated system — each piece feeds the loop.
+          A coordinated system each piece feeds the loop.
         </p>
       </section>
 
@@ -252,7 +251,7 @@ export default function Ecosystem() {
           </div>
         ) : visible.length === 0 ? (
           <div style={{ padding: "80px 40px", textAlign: "center" }}>
-            <p style={{ color: "#888888" }}>Nothing in this phase yet — check back soon.</p>
+            <p style={{ color: "#888888" }}>Nothing in this phase yet check back soon.</p>
           </div>
         ) : (
           visible.map((product, i) => (
@@ -270,7 +269,7 @@ export default function Ecosystem() {
                     className="text-xs font-bold px-3 py-1"
                     style={{ border: "1px solid #F2A900", color: "#F2A900", letterSpacing: "0.1em" }}
                   >
-                    {product.phase} — {product.phaseNum}
+                    {product.phase} / {product.phaseNum}
                   </span>
                   <span
                     className="text-xs font-bold px-3 py-1"
@@ -316,7 +315,7 @@ export default function Ecosystem() {
                           className="flex items-start gap-3 text-sm"
                           style={{ color: product.bg === "#FFFFFF" ? "#444444" : "#888888", lineHeight: "1.6" }}
                         >
-                          <span style={{ color: "#F2A900", marginTop: "2px" }}>—</span>
+                          <span style={{ color: "#F2A900", marginTop: "2px" }}></span>
                           {item}
                         </li>
                       ))}
@@ -352,6 +351,106 @@ export default function Ecosystem() {
           ))
         )}
       </div>
+
+      {/* ── NEWSLETTERS & CHANNELS ── */}
+      <section style={{ background: "#0A0A0A", padding: "100px 40px", borderTop: "1px solid #1A1A1A" }}>
+        <div className="max-w-7xl mx-auto">
+          <span className="text-xs font-bold block mb-6" style={{ color: "#F2A900", letterSpacing: "0.12em" }}>
+            FOLLOW THE WORK
+          </span>
+          <h2
+            className="font-display font-bold text-white mb-4"
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
+          >
+            My Newsletters &amp; Channels
+          </h2>
+          <p className="mb-16" style={{ color: "#888888", fontSize: "16px", lineHeight: "1.7", maxWidth: "520px" }}>
+            Every channel is an extension of the loop. Pick your preferred medium and stay inside the process.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px" style={{ border: "1px solid #222222" }}>
+            {/* Substack */}
+            <div style={{ background: "#111111", padding: "48px 40px", borderBottom: "1px solid #222222" }}>
+              <span className="text-xs font-bold block mb-3" style={{ color: "#888888", letterSpacing: "0.1em" }}>NEWSLETTER / SUBSTACK</span>
+              <h3 className="font-display font-bold text-white mb-3" style={{ fontSize: "1.75rem", letterSpacing: "-0.02em" }}>
+                MINDBLOOM
+              </h3>
+              <p className="mb-8" style={{ color: "#888888", fontSize: "15px", lineHeight: "1.7" }}>
+                Weekly frameworks on execution, sound money, and building from zero. No trending takes. No motivational noise.
+              </p>
+              <a
+                href="https://aboupreneur.substack.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-bold px-7 py-3 transition-all duration-200"
+                style={{ background: "#F2A900", color: "#0A0A0A" }}
+              >
+                SUBSCRIBE ON SUBSTACK →
+              </a>
+            </div>
+
+            {/* LinkedIn */}
+            <div style={{ background: "#111111", padding: "48px 40px", borderBottom: "1px solid #222222", borderLeft: "1px solid #222222" }}>
+              <span className="text-xs font-bold block mb-3" style={{ color: "#888888", letterSpacing: "0.1em" }}>NEWSLETTER / LINKEDIN</span>
+              <h3 className="font-display font-bold text-white mb-3" style={{ fontSize: "1.75rem", letterSpacing: "-0.02em" }}>
+                FARM TO FUNNEL
+              </h3>
+              <p className="mb-8" style={{ color: "#888888", fontSize: "15px", lineHeight: "1.7" }}>
+                Where agribusiness meets digital marketing. Built for operators who know soil better than social media.
+              </p>
+              <a
+                href="https://www.linkedin.com/newsletters/farm-to-funnel-7409350357295923200"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-bold px-7 py-3 transition-all duration-200"
+                style={{ background: "#F2A900", color: "#0A0A0A" }}
+              >
+                SUBSCRIBE ON LINKEDIN →
+              </a>
+            </div>
+
+            {/* Instagram */}
+            <div style={{ background: "#111111", padding: "48px 40px" }}>
+              <span className="text-xs font-bold block mb-3" style={{ color: "#888888", letterSpacing: "0.1em" }}>SOCIAL / INSTAGRAM</span>
+              <h3 className="font-display font-bold text-white mb-3" style={{ fontSize: "1.75rem", letterSpacing: "-0.02em" }}>
+                @ABOUPRENEUR
+              </h3>
+              <p className="mb-8" style={{ color: "#888888", fontSize: "15px", lineHeight: "1.7" }}>
+                Behind the build. Behind the brand. Real-time documentation of the sovereignty journey in short form.
+              </p>
+              <a
+                href="https://instagram.com/aboupreneur"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-bold px-7 py-3 transition-all duration-200"
+                style={{ background: "#F2A900", color: "#0A0A0A" }}
+              >
+                FOLLOW ON INSTAGRAM →
+              </a>
+            </div>
+
+            {/* YouTube */}
+            <div style={{ background: "#111111", padding: "48px 40px", borderLeft: "1px solid #222222" }}>
+              <span className="text-xs font-bold block mb-3" style={{ color: "#888888", letterSpacing: "0.1em" }}>VIDEO / YOUTUBE</span>
+              <h3 className="font-display font-bold text-white mb-3" style={{ fontSize: "1.75rem", letterSpacing: "-0.02em" }}>
+                @ABOUPRENEUR
+              </h3>
+              <p className="mb-8" style={{ color: "#888888", fontSize: "15px", lineHeight: "1.7" }}>
+                Long-form. Strategy walkthroughs, system breakdowns, and the thinking behind the build made public.
+              </p>
+              <a
+                href="https://youtube.com/@aboupreneur"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-bold px-7 py-3 transition-all duration-200"
+                style={{ background: "#F2A900", color: "#0A0A0A" }}
+              >
+                SUBSCRIBE ON YOUTUBE →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ── CONSULTING FORM ── */}
       <section
@@ -455,7 +554,7 @@ export default function Ecosystem() {
                   <option value="Web Development">Web development and platform architecture</option>
                   <option value="SEO Systems">SEO systems and performance marketing</option>
                   <option value="Digital Strategy">Digital strategy for agribusiness / food companies</option>
-                  <option value="Other">Other — I'll explain below</option>
+                  <option value="Other">Other I'll explain below</option>
                 </select>
               </div>
 

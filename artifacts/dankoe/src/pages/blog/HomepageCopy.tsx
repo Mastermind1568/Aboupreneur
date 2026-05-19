@@ -55,7 +55,7 @@ export default function HomepageCopy() {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The problem isn't the design. It's that the page is written for the wrong person — it talks about the company when it should be talking about the visitor.
+              The problem isn't the design. It's that the page is written for the wrong person it talks about the company when it should be talking about the visitor.
             </p>
 
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">The five-second test</h2>
@@ -72,23 +72,23 @@ export default function HomepageCopy() {
 
             <div className="bg-card border border-border/50 rounded-2xl p-8 space-y-6">
               <div>
-                <h3 className="font-bold text-foreground mb-2">1. The hero — clarity over cleverness</h3>
+                <h3 className="font-bold text-foreground mb-2">1. The hero clarity over cleverness</h3>
                 <p className="text-muted-foreground">State what you do, who you do it for, and what outcome they get. "I help [audience] achieve [outcome] without [pain]." Variations of this formula convert. Generic taglines do not.</p>
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-2">2. The problem — name what they're experiencing</h3>
+                <h3 className="font-bold text-foreground mb-2">2. The problem name what they're experiencing</h3>
                 <p className="text-muted-foreground">Before you talk about your solution, describe the problem accurately enough that the visitor thinks "how do they know that?" This builds instant resonance. When people feel understood, they trust.</p>
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-2">3. The solution — briefly, then move on</h3>
-                <p className="text-muted-foreground">Explain what you do to solve it — concisely. This is not a services page. It's a bridge between the problem and the proof. Keep it simple. Detail comes later.</p>
+                <h3 className="font-bold text-foreground mb-2">3. The solution briefly, then move on</h3>
+                <p className="text-muted-foreground">Explain what you do to solve it concisely. This is not a services page. It's a bridge between the problem and the proof. Keep it simple. Detail comes later.</p>
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-2">4. The proof — let others speak for you</h3>
+                <h3 className="font-bold text-foreground mb-2">4. The proof let others speak for you</h3>
                 <p className="text-muted-foreground">Testimonials, case study snippets, logos, numbers. Proof reduces the perceived risk of choosing you. The more specific, the better. "Results improved" is weak. "Our leads went up 40% in 60 days" is strong.</p>
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-2">5. The call to action — one clear next step</h3>
+                <h3 className="font-bold text-foreground mb-2">5. The call to action one clear next step</h3>
                 <p className="text-muted-foreground">Don't offer a menu. Choose one action you want them to take and make it obvious. "Book a free call." "Get your audit." "Start a project." One CTA, repeated at logical scroll points.</p>
               </div>
             </div>

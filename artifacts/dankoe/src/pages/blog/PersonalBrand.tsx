@@ -47,7 +47,7 @@ export default function PersonalBrand() {
           <div className="space-y-8 text-foreground">
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At some point in the last decade, "personal brand" became a buzzword — something influencers talked about, something that felt optional for serious business people. That thinking has aged poorly.
+              At some point in the last decade, "personal brand" became a buzzword something influencers talked about, something that felt optional for serious business people. That thinking has aged poorly.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -57,21 +57,21 @@ export default function PersonalBrand() {
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">What a personal brand actually is</h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Your personal brand is not your logo. It's not your Instagram aesthetic. It's not your LinkedIn headline. Those are outputs of a personal brand — not the brand itself.
+              Your personal brand is not your logo. It's not your Instagram aesthetic. It's not your LinkedIn headline. Those are outputs of a personal brand not the brand itself.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Your personal brand is the answer to: what do people say about you when you're not in the room? What do they think you're the best at? When a problem comes up, does your name come to mind? That's your brand — and it exists whether you've built it deliberately or not. The question is whether you're shaping it or leaving it to chance.
+              Your personal brand is the answer to: what do people say about you when you're not in the room? What do they think you're the best at? When a problem comes up, does your name come to mind? That's your brand and it exists whether you've built it deliberately or not. The question is whether you're shaping it or leaving it to chance.
             </p>
 
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">The trust gap that personal brands close</h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Every business has a trust problem. A stranger lands on your website with no prior relationship and is asked to part with money — for a service they can't see, from a person they've never met, with no guarantee of outcome. The conversion is an act of faith.
+              Every business has a trust problem. A stranger lands on your website with no prior relationship and is asked to part with money for a service they can't see, from a person they've never met, with no guarantee of outcome. The conversion is an act of faith.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A strong personal brand shortens that trust gap dramatically. When someone has been reading your content for three months before they need your services, they don't arrive as a skeptical stranger — they arrive as a warm lead who already believes in your expertise. They've seen how you think. They've read your opinions. They've watched how you solve problems. That relationship has real commercial value.
+              A strong personal brand shortens that trust gap dramatically. When someone has been reading your content for three months before they need your services, they don't arrive as a skeptical stranger they arrive as a warm lead who already believes in your expertise. They've seen how you think. They've read your opinions. They've watched how you solve problems. That relationship has real commercial value.
             </p>
 
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">Where to start</h2>
@@ -87,7 +87,7 @@ export default function PersonalBrand() {
               </div>
               <div>
                 <h3 className="font-bold text-foreground mb-2">2. A consistent medium</h3>
-                <p className="text-muted-foreground">One platform. One format. Done well. Writing on LinkedIn, a newsletter, short-form video, a podcast — pick the one that plays to your natural strengths and commit to it for a year before adding more.</p>
+                <p className="text-muted-foreground">One platform. One format. Done well. Writing on LinkedIn, a newsletter, short-form video, a podcast pick the one that plays to your natural strengths and commit to it for a year before adding more.</p>
               </div>
               <div>
                 <h3 className="font-bold text-foreground mb-2">3. A professional digital home</h3>
@@ -106,7 +106,7 @@ export default function PersonalBrand() {
             </p>
 
             <div className="border-t border-border/40 pt-10 mt-10">
-              <p className="text-muted-foreground mb-6">If you're ready to build your digital presence deliberately — website, content strategy, and all — let's talk.</p>
+              <p className="text-muted-foreground mb-6">If you're ready to build your digital presence deliberately website, content strategy, and all let's talk.</p>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"

@@ -8,8 +8,8 @@ import { useSEO } from "@/hooks/useSEO";
 
 export default function About() {
   useSEO({
-    title: "About Aboupreneur | The Story of Aboubakar Moussa — Growth Marketer Alberta",
-    description: "From importing phones in Cameroon to building digital brands in Canada. Learn the story behind Aboupreneur — growth marketer, web designer, and AI automation strategist based in Alberta.",
+    title: "About Aboupreneur | The Story of Aboubakar Moussa Growth Marketer Alberta",
+    description: "From importing phones in Cameroon to building digital brands in Canada. Learn the story behind Aboupreneur growth marketer, web designer, and AI automation strategist based in Alberta.",
     canonical: "https://aboupreneur.page/about",
   });
   const currentServices = [
@@ -61,7 +61,7 @@ export default function About() {
                 <div className="relative w-56 md:w-64 lg:w-72 aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                   <img
                     src="/images/headshot.jpg"
-                    alt="Aboubakar Moussa — Aboupreneur"
+                    alt="Aboubakar Moussa Aboupreneur"
                     className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background/50 to-transparent pointer-events-none"></div>

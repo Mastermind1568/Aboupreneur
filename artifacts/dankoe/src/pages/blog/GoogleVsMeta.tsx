@@ -8,7 +8,7 @@ import { useSEO } from "@/hooks/useSEO";
 export default function GoogleVsMeta() {
   useSEO({
     title: "Google Ads vs. Meta Ads: Which One Is Right for Your Business? | Aboupreneur Blog",
-    description: "Google Ads and Meta Ads work very differently. Learn which platform fits your offer, budget, and goals — and how to decide where to put your ad spend first.",
+    description: "Google Ads and Meta Ads work very differently. Learn which platform fits your offer, budget, and goals and how to decide where to put your ad spend first.",
     canonical: "https://aboupreneur.page/blog/google-ads-vs-meta-ads",
   });
 
@@ -31,7 +31,7 @@ export default function GoogleVsMeta() {
           </h1>
 
           <p className="text-xl text-muted-foreground italic mb-4">
-            Both platforms work. But they work differently — and choosing wrong is expensive.
+            Both platforms work. But they work differently and choosing wrong is expensive.
           </p>
 
           <div className="flex items-center gap-4 text-sm text-muted-foreground border-t border-border/40 pt-6 mb-16">
@@ -51,7 +51,7 @@ export default function GoogleVsMeta() {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              In most of these cases, the problem wasn't the platform. It was picking the wrong platform for the wrong offer at the wrong time. Google Ads and Meta Ads are both powerful — but they operate on fundamentally different principles, and understanding that difference determines everything.
+              In most of these cases, the problem wasn't the platform. It was picking the wrong platform for the wrong offer at the wrong time. Google Ads and Meta Ads are both powerful but they operate on fundamentally different principles, and understanding that difference determines everything.
             </p>
 
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">The core difference: intent vs. interruption</h2>
@@ -88,17 +88,17 @@ export default function GoogleVsMeta() {
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">When Meta Ads wins</h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              If your customer doesn't know they need your product yet, or if your product needs to be seen to be understood, Meta is your platform. A visually compelling product, a before-and-after transformation, or a story-driven video ad — these work in an interruption environment.
+              If your customer doesn't know they need your product yet, or if your product needs to be seen to be understood, Meta is your platform. A visually compelling product, a before-and-after transformation, or a story-driven video ad these work in an interruption environment.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Meta also excels at retargeting — showing ads to people who already visited your website, watched your video, or engaged with your content. The intent wasn't there originally, but you've built enough familiarity to create it.
+              Meta also excels at retargeting showing ads to people who already visited your website, watched your video, or engaged with your content. The intent wasn't there originally, but you've built enough familiarity to create it.
             </p>
 
             <h2 className="text-3xl font-serif font-bold text-foreground mt-12 mb-4">The budget question</h2>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Google Ads tends to be more expensive per click, especially in competitive industries, but the intent is higher — so conversions are more likely. Meta tends to have lower CPCs but requires more creative testing and a longer conversion path.
+              Google Ads tends to be more expensive per click, especially in competitive industries, but the intent is higher so conversions are more likely. Meta tends to have lower CPCs but requires more creative testing and a longer conversion path.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -106,7 +106,7 @@ export default function GoogleVsMeta() {
             </p>
 
             <div className="bg-card border border-accent/30 border-l-4 rounded-r-xl p-6 mt-8">
-              <p className="text-muted-foreground italic">The worst outcome in paid advertising isn't failing — it's spreading $300/month across two platforms and learning nothing. Pick one. Go deep. Learn fast.</p>
+              <p className="text-muted-foreground italic">The worst outcome in paid advertising isn't failing it's spreading $300/month across two platforms and learning nothing. Pick one. Go deep. Learn fast.</p>
             </div>
 
             <div className="border-t border-border/40 pt-10 mt-10">
