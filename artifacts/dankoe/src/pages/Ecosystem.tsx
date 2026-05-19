@@ -98,6 +98,54 @@ const products = [
   },
 ];
 
+const clientWork = [
+  {
+    name: "The Bitcoin Kids",
+    client: "Nzonda Fotsing",
+    url: "thebitcoinkids.com",
+    href: "https://thebitcoinkids.com",
+    services: ["Digital Marketing", "Demand Generation", "Content Strategy", "International Outreach"],
+    result: "Led the full sales and promotion strategy for a youth-focused financial literacy comic book, achieving 1,000+ copies sold across 12+ countries.",
+    testimonial: "Abou turned a complex idea into a parent-friendly brand and funnel. The site is fast, trustworthy, and the ads brought real sign-ups, not vanity clicks.",
+  },
+  {
+    name: "Asabis",
+    client: "Niba Emmanuel",
+    url: "asabis.ca",
+    href: "https://asabis.ca",
+    services: ["Web Design", "Social Content", "Google Ads", "GA4", "Email"],
+    result: "Professional website for an accounting firm with a social-to-client funnel that converts.",
+    testimonial: "Clean design, clear story, and a funnel that turns social traffic into bookings. Exactly what we needed.",
+  },
+  {
+    name: "Miratus Ltd",
+    client: "Mirabelle Nchangwi",
+    url: "miratusltd.ca",
+    href: "https://miratusltd.ca",
+    services: ["Web Design", "Meta Ads", "Google Ads", "GA4", "SEO"],
+    result: "Professional website for a staffing agency built with clear service packages and an intake funnel.",
+    testimonial: "Our inquiries went from sporadic to steady. The packages, intake forms, and ads captured the right families, not random traffic.",
+  },
+  {
+    name: "FA Law Office",
+    client: "Ferdinand N. Anomah",
+    url: "falawoffice.com",
+    href: "https://falawoffice.com",
+    services: ["Web Design"],
+    result: "Professional law-firm website with practice pages, credibility elements, and qualified inquiry tracking.",
+    testimonial: "Professional site, focused practice pages, and ads that bring qualified inquiries — plus tracking we actually trust.",
+  },
+  {
+    name: "FA Global Energy",
+    client: "Ferdinand N. Anomah",
+    url: "faglobalenergy.com",
+    href: "https://faglobalenergy.com",
+    services: ["Web Design"],
+    result: "Corporate energy company site with a clean, authoritative digital presence.",
+    testimonial: null,
+  },
+];
+
 const phaseToTab: Record<string, Tab[]> = {
   MAKE: ["ALL", "MAKE"],
   MULTIPLY: ["ALL", "MULTIPLY"],
@@ -359,6 +407,102 @@ export default function Ecosystem() {
           ))
         )}
       </div>
+
+      {/* ── SELECTED CLIENT WORK ── */}
+      <section style={{ background: "#111111", padding: "100px 40px", borderTop: "1px solid #1A1A1A" }}>
+        <div className="max-w-7xl mx-auto">
+          <span className="text-xs font-bold block mb-6" style={{ color: "#F2A900", letterSpacing: "0.12em" }}>
+            SELECTED WORK
+          </span>
+          <h2
+            className="font-display font-bold text-white mb-4"
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
+          >
+            Real brands. Real results.
+          </h2>
+          <p className="mb-16" style={{ color: "#888888", fontSize: "16px", lineHeight: "1.7", maxWidth: "520px" }}>
+            Every engagement is a system build, not a deliverable. Here's what that looks like in practice.
+          </p>
+
+          <div className="space-y-0">
+            {clientWork.map((project, i) => (
+              <div
+                key={project.name}
+                className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-0"
+                style={{ borderTop: i === 0 ? "1px solid #222222" : "none", borderBottom: "1px solid #222222" }}
+              >
+                {/* Left: identity */}
+                <div
+                  className="flex flex-col justify-between"
+                  style={{ padding: "40px 40px 40px 0", borderRight: "1px solid #222222" }}
+                >
+                  <div>
+                    <span className="text-xs font-bold block mb-2" style={{ color: "#888888", letterSpacing: "0.1em" }}>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <h3
+                      className="font-display font-bold text-white mb-1"
+                      style={{ fontSize: "1.5rem", letterSpacing: "-0.02em" }}
+                    >
+                      {project.name}
+                    </h3>
+                    <p className="text-sm mb-4" style={{ color: "#888888" }}>
+                      {project.client}
+                    </p>
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs font-bold transition-colors duration-200"
+                      style={{ color: "#F2A900", letterSpacing: "0.06em" }}
+                    >
+                      {project.url} →
+                    </a>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mt-6">
+                    {project.services.map((s) => (
+                      <span
+                        key={s}
+                        className="text-xs font-bold px-2 py-1"
+                        style={{ border: "1px solid #333333", color: "#888888", letterSpacing: "0.04em" }}
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right: result + testimonial */}
+                <div style={{ padding: "40px 0 40px 40px" }}>
+                  <p
+                    className="mb-6"
+                    style={{ color: "#CCCCCC", fontSize: "16px", lineHeight: "1.8", maxWidth: "600px" }}
+                  >
+                    {project.result}
+                  </p>
+                  {project.testimonial && (
+                    <div style={{ borderLeft: "3px solid #F2A900", paddingLeft: "20px" }}>
+                      <p className="italic text-sm" style={{ color: "#888888", lineHeight: "1.8" }}>
+                        "{project.testimonial}"
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12">
+            <button
+              onClick={scrollToForm}
+              className="inline-flex items-center gap-2 text-sm font-bold px-8 py-4 transition-all duration-200"
+              style={{ background: "#F2A900", color: "#0A0A0A" }}
+            >
+              START A PROJECT →
+            </button>
+          </div>
+        </div>
+      </section>
 
       {/* ── NEWSLETTERS & CHANNELS ── */}
       <section style={{ background: "#0A0A0A", padding: "100px 40px", borderTop: "1px solid #1A1A1A" }}>
