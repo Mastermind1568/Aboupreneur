@@ -11,6 +11,7 @@ export default function PersonalBrand() {
     title: "Why Your Personal Brand Is Your Most Valuable Business Asset | Aboupreneur Blog",
     description: "In a world full of competing offers, your personal brand is the reason someone chooses you over anyone else. Here's why it matters and how to start building one deliberately.",
     canonical: "https://aboupreneur.page/blog/why-personal-brand-matters",
+    ogImage: "https://aboupreneur.page/images/og/why-personal-brand-matters.jpg",
   });
 
   useArticleSchema({

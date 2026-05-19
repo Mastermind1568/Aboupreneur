@@ -11,6 +11,7 @@ export default function GoogleVsMeta() {
     title: "Google Ads vs Meta Ads. Which One Is Right for Your Business? | Aboupreneur Blog",
     description: "Google Ads and Meta Ads work very differently. Learn which platform fits your offer, budget, and goals and how to decide where to put your ad spend first.",
     canonical: "https://aboupreneur.page/blog/google-ads-vs-meta-ads",
+    ogImage: "https://aboupreneur.page/images/og/google-ads-vs-meta-ads.jpg",
   });
 
   useArticleSchema({

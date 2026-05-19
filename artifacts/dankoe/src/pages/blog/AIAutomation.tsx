@@ -11,6 +11,7 @@ export default function AIAutomation() {
     title: "5 Ways AI Automation Is Changing Small Business Marketing | Aboupreneur Blog",
     description: "Discover 5 practical AI automation workflows that help small businesses market smarter without hiring more people from growth marketer Aboubakar Moussa.",
     canonical: "https://aboupreneur.page/blog/ai-automation-small-business",
+    ogImage: "https://aboupreneur.page/images/og/ai-automation-small-business.jpg",
   });
 
   useArticleSchema({

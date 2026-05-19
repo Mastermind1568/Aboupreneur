@@ -45,6 +45,7 @@ const routes = [
     title: "5 Ways AI Automation Is Changing Small Business Marketing Right Now | Aboupreneur",
     description: "Discover 5 practical AI automation workflows that help small businesses market smarter without hiring more people.",
     canonical: `${BASE}/blog/ai-automation-small-business`,
+    ogImage: `${BASE}/images/og/ai-automation-small-business.jpg`,
     schema: {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -61,6 +62,7 @@ const routes = [
     title: "Why Every Food Brand Needs a Go-To-Market Strategy Before They Scale | Aboupreneur",
     description: "Most food brands rush to sell before knowing who they are selling to. Learn the 4 pillars of a food brand go-to-market strategy.",
     canonical: `${BASE}/blog/food-brand-gtm-strategy`,
+    ogImage: `${BASE}/images/og/food-brand-gtm-strategy.jpg`,
     schema: {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -77,6 +79,7 @@ const routes = [
     title: "The Real Cost of a Bad Website | Aboupreneur",
     description: "A slow, outdated website is a revenue problem. Learn what a bad website is really costing your business and how to fix it.",
     canonical: `${BASE}/blog/real-cost-of-bad-website`,
+    ogImage: `${BASE}/images/og/real-cost-of-bad-website.jpg`,
     schema: {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -93,6 +96,7 @@ const routes = [
     title: "How to Choose the Right Marketing Channel for Your Business | Aboupreneur",
     description: "Not every channel works for every business. Learn how to match the right marketing channel to your stage, audience, and offer.",
     canonical: `${BASE}/blog/choosing-the-right-marketing-channel`,
+    ogImage: `${BASE}/images/og/choosing-the-right-marketing-channel.jpg`,
     schema: {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -109,6 +113,7 @@ const routes = [
     title: "Google Ads vs Meta Ads. Which One Is Right for Your Business? | Aboupreneur",
     description: "Google Ads and Meta Ads work very differently. Learn which platform fits your offer, budget, and goals.",
     canonical: `${BASE}/blog/google-ads-vs-meta-ads`,
+    ogImage: `${BASE}/images/og/google-ads-vs-meta-ads.jpg`,
     schema: {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -125,6 +130,7 @@ const routes = [
     title: "Why Your Personal Brand Is Your Most Valuable Business Asset | Aboupreneur",
     description: "In a world full of competing offers, your personal brand is the reason someone chooses you over anyone else.",
     canonical: `${BASE}/blog/why-personal-brand-matters`,
+    ogImage: `${BASE}/images/og/why-personal-brand-matters.jpg`,
     schema: {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -141,6 +147,7 @@ const routes = [
     title: "How to Write a Homepage That Converts | Aboupreneur",
     description: "Most homepages talk about the business instead of the visitor. Learn the five-section framework that turns your homepage into a client-generating machine.",
     canonical: `${BASE}/blog/homepage-that-converts`,
+    ogImage: `${BASE}/images/og/homepage-that-converts.jpg`,
     schema: {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -196,6 +203,17 @@ function buildHtml(route) {
     /(<meta name="twitter:description" content=")[^"]*"/,
     `$1${route.description}"`
   );
+
+  if (route.ogImage) {
+    html = html.replace(
+      /(<meta property="og:image" content=")[^"]*"/,
+      `$1${route.ogImage}"`
+    );
+    html = html.replace(
+      /(<meta name="twitter:image" content=")[^"]*"/,
+      `$1${route.ogImage}"`
+    );
+  }
 
   if (route.schema) {
     const schemaTag = `<script type="application/ld+json">${JSON.stringify(route.schema)}</script>`;

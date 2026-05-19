@@ -11,6 +11,7 @@ export default function HomepageCopy() {
     title: "How to Write a Homepage That Converts (Without Sounding Like a Robot) | Aboupreneur Blog",
     description: "Most homepages talk about the business instead of the visitor. Learn the five-section framework that turns your homepage into a client-generating machine.",
     canonical: "https://aboupreneur.page/blog/homepage-that-converts",
+    ogImage: "https://aboupreneur.page/images/og/homepage-that-converts.jpg",
   });
 
   useArticleSchema({

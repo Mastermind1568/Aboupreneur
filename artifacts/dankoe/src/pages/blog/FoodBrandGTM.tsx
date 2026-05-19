@@ -11,6 +11,7 @@ export default function FoodBrandGTM() {
     title: "Why Every Food Brand Needs a GTM Strategy Before Scaling | Aboupreneur Blog",
     description: "Most food brands rush to sell before knowing who they're selling to. Learn the 4 pillars of a food brand go-to-market strategy from growth marketer Aboubakar Moussa.",
     canonical: "https://aboupreneur.page/blog/food-brand-gtm-strategy",
+    ogImage: "https://aboupreneur.page/images/og/food-brand-gtm-strategy.jpg",
   });
 
   useArticleSchema({

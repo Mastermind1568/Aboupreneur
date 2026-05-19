@@ -11,6 +11,7 @@ export default function MarketingChannel() {
     title: "How to Choose the Right Marketing Channel for Your Business | Aboupreneur Blog",
     description: "Not every channel works for every business. Learn how to match the right marketing channel to your stage, audience, and offer and stop wasting budget on the wrong platforms.",
     canonical: "https://aboupreneur.page/blog/choosing-the-right-marketing-channel",
+    ogImage: "https://aboupreneur.page/images/og/choosing-the-right-marketing-channel.jpg",
   });
 
   useArticleSchema({

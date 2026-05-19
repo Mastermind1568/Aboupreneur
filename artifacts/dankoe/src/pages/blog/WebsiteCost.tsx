@@ -11,6 +11,7 @@ export default function WebsiteCost() {
     title: "The Real Cost of a Bad Website | Aboupreneur Blog",
     description: "A slow, outdated website isn't just an aesthetic problem it's a revenue problem. Learn what a bad website is really costing your business and how to fix it.",
     canonical: "https://aboupreneur.page/blog/real-cost-of-bad-website",
+    ogImage: "https://aboupreneur.page/images/og/real-cost-of-bad-website.jpg",
   });
 
   useArticleSchema({
