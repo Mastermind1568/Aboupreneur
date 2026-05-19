@@ -133,7 +133,7 @@ const clientWork = [
     href: "https://falawoffice.com",
     services: ["Web Design"],
     result: "Professional law-firm website with practice pages, credibility elements, and qualified inquiry tracking.",
-    testimonial: "Professional site, focused practice pages, and ads that bring qualified inquiries — plus tracking we actually trust.",
+    testimonial: "Professional site, focused practice pages, and ads that bring qualified inquiries. Plus tracking we actually trust.",
   },
   {
     name: "FA Global Energy",
@@ -211,6 +211,14 @@ export default function Ecosystem() {
       }, 150);
     }
   }, []);
+
+  useEffect(() => {
+    if (formSuccess) {
+      setTimeout(() => {
+        formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    }
+  }, [formSuccess]);
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth" });

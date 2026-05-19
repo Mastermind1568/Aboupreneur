@@ -4,12 +4,19 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useArticleSchema } from "@/hooks/useArticleSchema";
 
 export default function FoodBrandGTM() {
   useSEO({
     title: "Why Every Food Brand Needs a GTM Strategy Before Scaling | Aboupreneur Blog",
     description: "Most food brands rush to sell before knowing who they're selling to. Learn the 4 pillars of a food brand go-to-market strategy from growth marketer Aboubakar Moussa.",
     canonical: "https://aboupreneur.page/blog/food-brand-gtm-strategy",
+  });
+
+  useArticleSchema({
+    headline: "Why Every Food Brand Needs a Go-To-Market Strategy Before They Scale",
+    description: "Most food brands rush to sell before knowing who they're selling to. Learn the 4 pillars of a food brand go-to-market strategy.",
+    url: "https://aboupreneur.page/blog/food-brand-gtm-strategy",
   });
 
   return (
@@ -112,7 +119,7 @@ export default function FoodBrandGTM() {
             <div className="border-t border-border/40 pt-10 mt-10">
               <p className="text-muted-foreground mb-6">If you're building a food or agriculture brand and want to talk strategy, I'd love to hear what you're working on.</p>
               <Link
-                href="/contact"
+                href="/ecosystem#consulting-form"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
               >
                 Let's Talk <ArrowRight className="w-4 h-4" />

@@ -4,12 +4,19 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useArticleSchema } from "@/hooks/useArticleSchema";
 
 export default function HomepageCopy() {
   useSEO({
     title: "How to Write a Homepage That Converts (Without Sounding Like a Robot) | Aboupreneur Blog",
     description: "Most homepages talk about the business instead of the visitor. Learn the five-section framework that turns your homepage into a client-generating machine.",
     canonical: "https://aboupreneur.page/blog/homepage-that-converts",
+  });
+
+  useArticleSchema({
+    headline: "How to Write a Homepage That Converts (Without Sounding Like a Robot)",
+    description: "Most homepages talk about the business instead of the visitor. Learn the five-section framework that turns your homepage into a client-generating machine.",
+    url: "https://aboupreneur.page/blog/homepage-that-converts",
   });
 
   return (
@@ -109,7 +116,7 @@ export default function HomepageCopy() {
             <div className="border-t border-border/40 pt-10 mt-10">
               <p className="text-muted-foreground mb-6">Want me to take a look at your homepage and tell you honestly what's working and what isn't?</p>
               <Link
-                href="/contact"
+                href="/ecosystem#consulting-form"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
               >
                 Request a Free Homepage Review <ArrowRight className="w-4 h-4" />

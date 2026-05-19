@@ -4,12 +4,19 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useArticleSchema } from "@/hooks/useArticleSchema";
 
 export default function GoogleVsMeta() {
   useSEO({
-    title: "Google Ads vs. Meta Ads: Which One Is Right for Your Business? | Aboupreneur Blog",
+    title: "Google Ads vs Meta Ads. Which One Is Right for Your Business? | Aboupreneur Blog",
     description: "Google Ads and Meta Ads work very differently. Learn which platform fits your offer, budget, and goals and how to decide where to put your ad spend first.",
     canonical: "https://aboupreneur.page/blog/google-ads-vs-meta-ads",
+  });
+
+  useArticleSchema({
+    headline: "Google Ads vs Meta Ads. Which One Is Right for Your Business?",
+    description: "Google Ads and Meta Ads work very differently. Learn which platform fits your offer, budget, and goals.",
+    url: "https://aboupreneur.page/blog/google-ads-vs-meta-ads",
   });
 
   return (
@@ -27,7 +34,7 @@ export default function GoogleVsMeta() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-serif font-bold leading-tight mb-6">
-            Google Ads vs. Meta Ads: Which One Is Right for Your Business?
+            Google Ads vs Meta Ads. Which One Is Right for Your Business?
           </h1>
 
           <p className="text-xl text-muted-foreground italic mb-4">
@@ -112,7 +119,7 @@ export default function GoogleVsMeta() {
             <div className="border-t border-border/40 pt-10 mt-10">
               <p className="text-muted-foreground mb-6">Not sure which platform fits your offer? I run both and can give you an honest recommendation based on your specific situation.</p>
               <Link
-                href="/contact"
+                href="/ecosystem#consulting-form"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
               >
                 Get a Recommendation <ArrowRight className="w-4 h-4" />

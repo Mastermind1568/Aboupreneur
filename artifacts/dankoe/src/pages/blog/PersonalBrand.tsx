@@ -4,12 +4,19 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useArticleSchema } from "@/hooks/useArticleSchema";
 
 export default function PersonalBrand() {
   useSEO({
     title: "Why Your Personal Brand Is Your Most Valuable Business Asset | Aboupreneur Blog",
     description: "In a world full of competing offers, your personal brand is the reason someone chooses you over anyone else. Here's why it matters and how to start building one deliberately.",
     canonical: "https://aboupreneur.page/blog/why-personal-brand-matters",
+  });
+
+  useArticleSchema({
+    headline: "Why Your Personal Brand Is Your Most Valuable Business Asset",
+    description: "In a world full of competing offers, your personal brand is the reason someone chooses you over anyone else.",
+    url: "https://aboupreneur.page/blog/why-personal-brand-matters",
   });
 
   return (
@@ -108,7 +115,7 @@ export default function PersonalBrand() {
             <div className="border-t border-border/40 pt-10 mt-10">
               <p className="text-muted-foreground mb-6">If you're ready to build your digital presence deliberately website, content strategy, and all let's talk.</p>
               <Link
-                href="/contact"
+                href="/ecosystem#consulting-form"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
               >
                 Start Building Your Brand <ArrowRight className="w-4 h-4" />

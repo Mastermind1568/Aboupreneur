@@ -51,7 +51,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
+  
+  <!-- Structured Data: Person + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://aboupreneur.page/#person",
+        "name": "Aboubakar Moussa",
+        "alternateName": "Aboupreneur",
+        "url": "https://aboupreneur.page",
+        "jobTitle": "Entrepreneur and Sovereignty Strategist",
+        "description": "Aboubakar Moussa is an entrepreneur, agribusiness strategist, and sound money advocate based in Alberta, Canada. He built the Sovereignty Loop framework covering Make, Multiply, and Protect.",
+        "knowsAbout": ["agribusiness", "digital marketing", "Bitcoin", "sound money", "entrepreneurship", "go-to-market strategy"],
+        "nationality": "Cameroonian-Canadian",
+        "workLocation": { "@type": "Place", "addressCountry": "CA", "addressRegion": "Alberta" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://aboupreneur.page/#website",
+        "url": "https://aboupreneur.page",
+        "name": "ABOUPRENEUR",
+        "description": "Build. Stack. Sovereign. The Sovereignty Loop framework for entrepreneurs who start with nothing.",
+        "author": { "@id": "https://aboupreneur.page/#person" },
+        "inLanguage": "en-CA"
+      }
+    ]
+  }
+  </script>
+</head>
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GT-MKRZMHFV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

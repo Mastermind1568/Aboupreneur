@@ -4,12 +4,19 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useArticleSchema } from "@/hooks/useArticleSchema";
 
 export default function AIAutomation() {
   useSEO({
     title: "5 Ways AI Automation Is Changing Small Business Marketing | Aboupreneur Blog",
     description: "Discover 5 practical AI automation workflows that help small businesses market smarter without hiring more people from growth marketer Aboubakar Moussa.",
     canonical: "https://aboupreneur.page/blog/ai-automation-small-business",
+  });
+
+  useArticleSchema({
+    headline: "5 Ways AI Automation Is Changing Small Business Marketing Right Now",
+    description: "Discover 5 practical AI automation workflows that help small businesses market smarter without hiring more people.",
+    url: "https://aboupreneur.page/blog/ai-automation-small-business",
   });
 
   return (
@@ -94,7 +101,7 @@ export default function AIAutomation() {
             <div className="border-t border-border/40 pt-10 mt-10">
               <p className="text-muted-foreground mb-6">If you want to explore what automation could look like for your business, I build these systems for clients regularly.</p>
               <Link
-                href="/contact"
+                href="/ecosystem#consulting-form"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
               >
                 Let's Talk <ArrowRight className="w-4 h-4" />

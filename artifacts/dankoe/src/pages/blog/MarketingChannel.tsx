@@ -4,12 +4,19 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useArticleSchema } from "@/hooks/useArticleSchema";
 
 export default function MarketingChannel() {
   useSEO({
     title: "How to Choose the Right Marketing Channel for Your Business | Aboupreneur Blog",
     description: "Not every channel works for every business. Learn how to match the right marketing channel to your stage, audience, and offer and stop wasting budget on the wrong platforms.",
     canonical: "https://aboupreneur.page/blog/choosing-the-right-marketing-channel",
+  });
+
+  useArticleSchema({
+    headline: "How to Choose the Right Marketing Channel for Your Business",
+    description: "Not every channel works for every business. Learn how to match the right marketing channel to your stage, audience, and offer.",
+    url: "https://aboupreneur.page/blog/choosing-the-right-marketing-channel",
   });
 
   return (
@@ -47,7 +54,7 @@ export default function MarketingChannel() {
           <div className="space-y-8 text-foreground">
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              One of the most common conversations I have with new clients goes something like this: "We've been posting on Instagram for eight months and nothing is happening." When I ask why they chose Instagram, the answer is almost always the same: "Because everyone else in our industry is doing it."
+              One of the most common conversations I have with new clients starts the same way. They have been posting on Instagram for eight months with nothing to show for it. When I ask why they chose Instagram, the answer is almost always the same. Because everyone else in the industry is doing it.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -116,7 +123,7 @@ export default function MarketingChannel() {
             <div className="border-t border-border/40 pt-10 mt-10">
               <p className="text-muted-foreground mb-6">Not sure which channels are right for where you are? I can help you map that out.</p>
               <Link
-                href="/contact"
+                href="/ecosystem#consulting-form"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
               >
                 Let's Figure It Out Together <ArrowRight className="w-4 h-4" />

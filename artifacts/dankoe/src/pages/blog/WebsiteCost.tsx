@@ -4,12 +4,19 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useArticleSchema } from "@/hooks/useArticleSchema";
 
 export default function WebsiteCost() {
   useSEO({
     title: "The Real Cost of a Bad Website | Aboupreneur Blog",
     description: "A slow, outdated website isn't just an aesthetic problem it's a revenue problem. Learn what a bad website is really costing your business and how to fix it.",
     canonical: "https://aboupreneur.page/blog/real-cost-of-bad-website",
+  });
+
+  useArticleSchema({
+    headline: "The Real Cost of a Bad Website (It's Not What You Think)",
+    description: "A slow, outdated website isn't just an aesthetic problem. It's a revenue problem. Learn what a bad website is really costing your business.",
+    url: "https://aboupreneur.page/blog/real-cost-of-bad-website",
   });
 
   return (
@@ -104,7 +111,7 @@ export default function WebsiteCost() {
             <div className="border-t border-border/40 pt-10 mt-10">
               <p className="text-muted-foreground mb-6">If you suspect your website is costing you leads, I'm happy to take a look and give you an honest opinion.</p>
               <Link
-                href="/contact"
+                href="/ecosystem#consulting-form"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
               >
                 Get a Free Audit <ArrowRight className="w-4 h-4" />
