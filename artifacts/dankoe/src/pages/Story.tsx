@@ -34,7 +34,7 @@ const SovereigntyCards = () => (
         style={{ borderLeft: "3px solid #F2A900", background: "#111111" }}
       >
         <span className="text-xs font-bold" style={{ color: "#F2A900", letterSpacing: "0.14em" }}>
-          {card.num} / {card.phase}
+          {card.phase}
         </span>
         <h3 className="text-2xl font-display font-bold text-white" style={{ letterSpacing: "-0.02em" }}>
           {card.title}

@@ -325,7 +325,7 @@ export default function Ecosystem() {
                     className="text-xs font-bold px-3 py-1"
                     style={{ border: "1px solid #F2A900", color: "#F2A900", letterSpacing: "0.1em" }}
                   >
-                    {product.phase} / {product.phaseNum}
+                    {product.phase}
                   </span>
                   <span
                     className="text-xs font-bold px-3 py-1"
@@ -437,9 +437,6 @@ export default function Ecosystem() {
                   style={{ padding: "40px 40px 40px 0", borderRight: "1px solid #222222" }}
                 >
                   <div>
-                    <span className="text-xs font-bold block mb-2" style={{ color: "#888888", letterSpacing: "0.1em" }}>
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
                     <h3
                       className="font-display font-bold text-white mb-1"
                       style={{ fontSize: "1.5rem", letterSpacing: "-0.02em" }}

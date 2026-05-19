@@ -249,7 +249,7 @@ export default function Home() {
                   className="text-xs font-bold"
                   style={{ color: "#F2A900", letterSpacing: "0.14em" }}
                 >
-                  {card.num} / {card.phase}
+                  {card.phase}
                 </span>
                 <h3
                   className="font-display font-bold text-white"
