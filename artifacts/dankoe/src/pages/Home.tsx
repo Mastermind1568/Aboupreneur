@@ -68,13 +68,6 @@ export default function Home() {
           style={{ background: "radial-gradient(ellipse at center, rgba(242,169,0,0.05) 0%, transparent 65%)" }}
         />
 
-        <p
-          className="font-bold mb-8 relative"
-          style={{ color: "#F2A900", fontSize: "13px", letterSpacing: "0.12em" }}
-        >
-          ABOUBAKAR MOUSSA · ENTREPRENEUR · ALBERTA, CANADA
-        </p>
-
         <h1
           className="font-display font-bold mb-8 relative"
           style={{ fontSize: "clamp(3.5rem, 10vw, 7rem)", letterSpacing: "-0.04em", lineHeight: "1.02" }}
