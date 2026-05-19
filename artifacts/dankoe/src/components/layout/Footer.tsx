@@ -31,6 +31,7 @@ export function Footer() {
               { href: "/story", label: "STORY" },
               { href: "/ecosystem", label: "ECOSYSTEM" },
               { href: "/writing", label: "WRITING" },
+              { href: "/ecosystem#consulting-form", label: "WORK WITH ME" },
             ].map((link) => (
               <Link
                 key={link.href}

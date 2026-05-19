@@ -322,7 +322,7 @@ export default function Home() {
                 title: "Consulting",
                 body: "Systems architecture, AI automation, and web pipelines for operators who want infrastructure, not just tactics. Built for ambitious builders.",
                 link: "Work with me →",
-                href: "/ecosystem",
+                href: "/ecosystem#consulting-form",
                 external: false,
               },
             ].map((card) => (

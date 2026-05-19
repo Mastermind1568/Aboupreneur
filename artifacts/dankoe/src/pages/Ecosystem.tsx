@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { useSEO } from "@/hooks/useSEO";
@@ -155,6 +155,14 @@ export default function Ecosystem() {
       setIsSubmitting(false);
     }
   };
+
+  useEffect(() => {
+    if (window.location.hash === "#consulting-form") {
+      setTimeout(() => {
+        formRef.current?.scrollIntoView({ behavior: "smooth" });
+      }, 150);
+    }
+  }, []);
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth" });
