@@ -27,29 +27,11 @@ const recentPosts = [
 
 export default function Home() {
   useSEO({
-    title: "ABOUPRENEUR | Build. Stack. Sovereign.",
+    title: "ABOUPRENEUR | Digital Infrastructure for the Real Economy",
     description:
-      "Aboubakar Moussa entrepreneur, agribusiness strategist, and sound money advocate. The Sovereignty Loop. Make. Multiply. Protect. Built for those who start with nothing.",
+      "Websites, local search visibility, paid acquisition, and AI automation for home services, trades, and agribusiness. One accountable operator.",
     canonical: "https://aboupreneur.page/",
   });
-
-  const [email, setEmail] = useState("");
-  const [subscribeSuccess, setSubscribeSuccess] = useState(false);
-
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    try {
-      await fetch("https://aboupreneur.substack.com/api/v1/free", {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: `email=${encodeURIComponent(email)}`,
-      });
-    } catch {}
-    setSubscribeSuccess(true);
-    setEmail("");
-  };
 
   return (
     <main className="bg-[#0A0A0A]">
@@ -67,38 +49,38 @@ export default function Home() {
 
         <h1
           className="font-display font-bold mb-8 relative"
-          style={{ fontSize: "clamp(3.5rem, 10vw, 7rem)", letterSpacing: "-0.04em", lineHeight: "1.02" }}
+          style={{ fontSize: "clamp(3rem, 8vw, 6rem)", letterSpacing: "-0.04em", lineHeight: "1.02" }}
         >
-          <span className="block text-white">Sovereignty</span>
-          <span className="block text-white">isn't given</span>
-          <span className="block" style={{ color: "#F2A900" }}>It's built</span>
+          <span className="block text-white">Digital infrastructure</span>
+          <span className="block text-white">for the</span>
+          <span className="block" style={{ color: "#F2A900" }}>real economy</span>
         </h1>
 
         <p
           className="mb-12 relative"
-          style={{ color: "#888888", fontSize: "clamp(1rem, 2vw, 1.2rem)", maxWidth: "560px", lineHeight: "1.7" }}
+          style={{ color: "#888888", fontSize: "clamp(1rem, 2vw, 1.2rem)", maxWidth: "600px", lineHeight: "1.7" }}
         >
-          From Cameroon to Canada. From a teenage trader to a systems architect.
-          I built the blueprint I wish I had and I'm sharing every layer of it here.
+          Websites, local visibility, paid acquisition, and practical AI automation for home services, 
+          trades, and agribusiness. Stop fighting your tech stack. Start booking more work.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 relative">
           <Link
-            href="/story"
+            href="/contact"
             className="text-sm font-bold px-8 py-4 transition-all duration-200"
-            style={{ border: "1px solid #F2A900", color: "#F2A900" }}
+            style={{ border: "1px solid #F2A900", color: "#0A0A0A", background: "#F2A900" }}
             onMouseEnter={(e) => {
-              const el = e.currentTarget as HTMLAnchorElement;
-              el.style.background = "#F2A900";
-              el.style.color = "#0A0A0A";
-            }}
-            onMouseLeave={(e) => {
               const el = e.currentTarget as HTMLAnchorElement;
               el.style.background = "transparent";
               el.style.color = "#F2A900";
             }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget as HTMLAnchorElement;
+              el.style.background = "#F2A900";
+              el.style.color = "#0A0A0A";
+            }}
           >
-            READ MY STORY →
+            START A PROJECT →
           </Link>
           <Link
             href="/ecosystem"
@@ -115,49 +97,141 @@ export default function Home() {
               el.style.color = "#888888";
             }}
           >
-            ENTER THE ECOSYSTEM
+            EXPLORE SERVICES
           </Link>
         </div>
-
       </section>
 
-      {/* ── THE MAN BEHIND THE BRAND ── */}
+      {/* ── WHO I WORK WITH ── */}
       <section className="bg-white" style={{ padding: "100px 40px" }}>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-16 lg:gap-24 items-start">
-            <div>
-              <span
-                className="text-xs font-bold block mb-6"
-                style={{ color: "#F2A900", letterSpacing: "0.12em" }}
+          <span className="text-xs font-bold block mb-6" style={{ color: "#F2A900", letterSpacing: "0.12em" }}>
+            THE AUDIENCE
+          </span>
+          <h2
+            className="font-display font-bold text-[#0A0A0A] mb-16"
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
+          >
+            "Built for operators who<br />do the actual work"
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/home-services-trades" className="group p-8 flex flex-col gap-4 transition-colors hover:bg-[#F7F7F7]" style={{ border: "1px solid #E5E5E5" }}>
+              <h3 className="font-display font-bold text-[#0A0A0A] text-2xl">Home Services & Trades</h3>
+              <p className="text-sm text-[#444444] leading-relaxed">
+                Plumbers, HVAC technicians, electricians, roofers, and landscapers across Canada and the US, with a strong focus on Edmonton and Alberta. I build systems designed to turn local visibility into more qualified calls.
+              </p>
+              <span className="mt-auto text-xs font-bold text-[#B77F00]">EXPLORE HOME SERVICES →</span>
+            </Link>
+            <Link href="/newcomer-owned-businesses" className="group p-8 flex flex-col gap-4 transition-colors hover:bg-[#F7F7F7]" style={{ border: "1px solid #E5E5E5" }}>
+              <h3 className="font-display font-bold text-[#0A0A0A] text-2xl">Newcomer-Owned SMBs</h3>
+              <p className="text-sm text-[#444444] leading-relaxed">
+                Immigrant and newcomer entrepreneurs in Western Canada who need a credible first professional web presence. You brought the ambition. I provide the practical digital infrastructure to compete.
+              </p>
+              <span className="mt-auto text-xs font-bold text-[#B77F00]">BUILD YOUR FIRST PRESENCE →</span>
+            </Link>
+            <Link href="/agri-food-marketing" className="group p-8 flex flex-col gap-4 transition-colors hover:bg-[#F7F7F7]" style={{ border: "1px solid #E5E5E5" }}>
+              <h3 className="font-display font-bold text-[#0A0A0A] text-2xl">Agri-food & Specialty</h3>
+              <p className="text-sm text-[#444444] leading-relaxed">
+                Canadian agribusinesses and specialty food companies. Backed by a verified agribusiness diploma, I bridge the gap between operations and digital growth without the empty agency jargon.
+              </p>
+              <span className="mt-auto text-xs font-bold text-[#B77F00]">EXPLORE AGRI-FOOD GROWTH →</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── THE SYSTEM ── */}
+      <section className="bg-[#0A0A0A]" style={{ padding: "100px 40px" }}>
+        <div className="max-w-7xl mx-auto">
+          <span className="text-xs font-bold block mb-6" style={{ color: "#F2A900", letterSpacing: "0.12em" }}>
+            THE OFFERS
+          </span>
+          <h2
+            className="font-display font-bold text-white mb-4"
+            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
+          >
+            "Three pillars of growth.<br />One accountable operator"
+          </h2>
+          <p className="mb-16" style={{ color: "#888888", fontSize: "18px", maxWidth: "600px", lineHeight: "1.7" }}>
+            I don't sell bloated retainers. I build project-based infrastructure and offer ongoing engagement models when they actually make sense for your business.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                num: "01",
+                title: "Launch the Presence",
+                body: "A credible, fast, mobile-ready website that answers exactly what you do, who you serve, and how to contact you. Designed to turn traffic into direct inquiries.",
+                tags: "Websites · Landing Pages",
+              },
+              {
+                num: "02",
+                title: "Generate Demand",
+                body: "Help customers find you when they need you. Measurable local search visibility, Google Ads, and targeted campaigns designed to support more qualified inquiries.",
+                tags: "Local SEO · Paid Ads",
+              },
+              {
+                num: "03",
+                title: "Automate Operations",
+                body: "Stop dropping leads. Practical AI automation for lead intake, follow-ups, and backend workflows so you can focus on the tools, not the keyboard.",
+                tags: "AI Workflows · CRM",
+              },
+            ].map((card) => (
+              <div
+                key={card.num}
+                className="p-8 flex flex-col gap-4"
+                style={{ borderLeft: "3px solid #F2A900", background: "#111111" }}
               >
-                THE ORIGIN
+                <span className="text-xs font-bold" style={{ color: "#F2A900", letterSpacing: "0.14em" }}>
+                  PHASE {card.num}
+                </span>
+                <h3 className="font-display font-bold text-white" style={{ fontSize: "1.75rem", letterSpacing: "-0.02em" }}>
+                  {card.title}
+                </h3>
+                <p className="text-sm flex-1" style={{ color: "#888888", lineHeight: "1.7" }}>
+                  {card.body}
+                </p>
+                <span className="text-xs" style={{ color: "#F2A900" }}>→ {card.tags}</span>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-12">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 text-sm font-bold px-8 py-4 transition-all duration-200"
+              style={{ border: "1px solid #F2A900", color: "#F2A900" }}
+            >
+              INQUIRE ABOUT SERVICES →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── THE OPERATOR ── */}
+      <section className="bg-white" style={{ padding: "100px 40px" }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-[55fr_45fr] gap-16 lg:gap-24 items-center">
+            <div>
+              <span className="text-xs font-bold block mb-6" style={{ color: "#F2A900", letterSpacing: "0.12em" }}>
+                THE OPERATOR
               </span>
               <h2
                 className="font-display font-bold text-[#0A0A0A] mb-8"
                 style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
               >
-                "I didn't read about building from zero. I lived it."
+                "I didn't learn accountability from a textbook"
               </h2>
               <div className="space-y-5" style={{ color: "#444444", fontSize: "16px", lineHeight: "1.8" }}>
                 <p>
-                  Before I understood systems, I understood arbitrage. As a teenager in Cameroon,
-                  I was sourcing electronics from China, the USA, and Canada moving goods across
-                  markets that most people thought were disconnected. That's where I learned that
-                  money flows toward whoever understands the gap between two prices.
+                  From building my first business in Cameroon to studying agribusiness at Lakeland College in Alberta, I've always understood that results matter more than jargon.
                 </p>
                 <p>
-                  In 2016, when Bitcoin first entered African markets, I was there. I became a
-                  liquidity bridge a middleman in a network that didn't yet have infrastructure.
-                  I watched currencies fluctuate violently. I watched savings evaporate. I developed
-                  a conviction about sound money that no textbook could have given me: hard assets
-                  preserve what soft systems destroy.
+                  I'm currently pursuing the Chartered Marketer designation, but my approach is built on practical reality. You don't need a massive agency playing guessing games with your budget. You need one accountable, AI-fluent operator who understands both digital systems and physical operations.
                 </p>
                 <p>
-                  The move to Canada wasn't a coincidence. I came to study agribusiness at Lakeland
-                  College to anchor digital wealth in the most enduring asset class there is. Land
-                  and food systems. Everything I build now runs on a single framework. Make money
-                  with skills. Multiply it with sound money. Protect it with physical assets. I call
-                  it the Sovereignty Loop.
+                  I build digital infrastructure for operators who refuse to lose local market share. We measure success in calls, inquiries, and booked work.
                 </p>
               </div>
               <Link
@@ -178,175 +252,6 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ── THE SOVEREIGNTY LOOP ── */}
-      <section className="bg-[#0A0A0A]" style={{ padding: "100px 40px" }}>
-        <div className="max-w-7xl mx-auto">
-          <span className="text-xs font-bold block mb-6" style={{ color: "#F2A900", letterSpacing: "0.12em" }}>
-            THE FRAMEWORK
-          </span>
-          <h2
-            className="font-display font-bold text-white mb-4"
-            style={{ fontSize: "clamp(2rem, 4vw, 3.25rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
-          >
-            "Three phases / One system<br />No shortcuts"
-          </h2>
-          <p className="mb-16" style={{ color: "#888888", fontSize: "18px", maxWidth: "540px", lineHeight: "1.7" }}>
-            This isn't theory. It's the exact sequence I followed and the one I teach through
-            everything I build.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                num: "01",
-                phase: "MAKE",
-                title: "Digital leverage",
-                body: "Skills generate free cash flow. Web development, AI automation, performance marketing, SEO systems. The stack that keeps producing whether you're awake or asleep.",
-                tags: "Web · AI · Marketing",
-              },
-              {
-                num: "02",
-                phase: "MULTIPLY",
-                title: "Sound money",
-                body: "Bitcoin accumulation as a philosophical stance, not speculation. The exit ramp from fiat erosion. Conviction built over years of watching currencies collapse and digital scarcity hold.",
-                tags: "Store of value · Long-term conviction",
-              },
-              {
-                num: "03",
-                phase: "PROTECT",
-                title: "Physical assets",
-                body: "Agribusiness, agricultural land, and food infrastructure. The multi-generational anchor that outlasts any market cycle. Roots that no policy can print away.",
-                tags: "Land · Agribusiness · Legacy",
-              },
-            ].map((card) => (
-              <div
-                key={card.num}
-                className="p-8 flex flex-col gap-4"
-                style={{ borderLeft: "3px solid #F2A900", background: "#111111" }}
-              >
-                <span
-                  className="text-xs font-bold"
-                  style={{ color: "#F2A900", letterSpacing: "0.14em" }}
-                >
-                  {card.phase}
-                </span>
-                <h3
-                  className="font-display font-bold text-white"
-                  style={{ fontSize: "1.75rem", letterSpacing: "-0.02em" }}
-                >
-                  {card.title}
-                </h3>
-                <p className="text-sm flex-1" style={{ color: "#888888", lineHeight: "1.7" }}>
-                  {card.body}
-                </p>
-                <span className="text-xs" style={{ color: "#F2A900" }}>→ {card.tags}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── ECOSYSTEM TEASER ── */}
-      <section className="bg-white" style={{ padding: "100px 40px" }}>
-        <div className="max-w-7xl mx-auto">
-          <span className="text-xs font-bold block mb-6" style={{ color: "#F2A900", letterSpacing: "0.12em" }}>
-            THE ECOSYSTEM
-          </span>
-          <h2
-            className="font-display font-bold text-[#0A0A0A] mb-16"
-            style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
-          >
-            "Everything I build<br />points to one outcome"
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            {[
-              {
-                tag: "SOUND MONEY",
-                tagStyle: { background: "#F2A900", color: "#0A0A0A" },
-                title: "Moneyverse",
-                body: "The institutional-grade Bitcoin education platform. 11 modules on DCA, macroeconomics, and wealth preservation for the entrepreneur who refuses to stay in fiat.",
-                link: "moneyverse.network →",
-                href: "https://moneyverse.network",
-                external: true,
-              },
-              {
-                tag: "WRITING",
-                tagStyle: { background: "#0A0A0A", color: "#F2A900" },
-                title: "Mindbloom",
-                body: "The Substack writing engine. Deep frameworks on execution, uncompromised standards, and the mindset behind building from absolute zero.",
-                link: "aboupreneur.substack.com →",
-                href: "https://aboupreneur.substack.com",
-                external: true,
-              },
-              {
-                tag: "AGRIBUSINESS",
-                tagStyle: { background: "#0A0A0A", color: "#FFFFFF" },
-                title: "Farm to Funnel",
-                body: "Newsletter bridging agribusiness communication and digital marketing systems. For the operator who wants to grow what they've built.",
-                link: "Subscribe →",
-                href: "https://www.linkedin.com/newsletters/farm-to-funnel-7409350357295923200",
-                external: true,
-              },
-              {
-                tag: "CONSULTING",
-                tagStyle: { background: "#E5E5E5", color: "#0A0A0A" },
-                title: "Consulting",
-                body: "Systems architecture, AI automation, and web pipelines for operators who want infrastructure, not just tactics. Built for ambitious builders.",
-                link: "Work with me →",
-                href: "/ecosystem#consulting-form",
-                external: false,
-              },
-            ].map((card) => (
-              <div
-                key={card.title}
-                className="p-8 transition-all duration-200"
-                style={{ border: "1px solid #E5E5E5" }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = "#F2A900";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.borderColor = "#E5E5E5";
-                }}
-              >
-                <span
-                  className="text-xs font-bold inline-block mb-4 px-3 py-1"
-                  style={{ ...card.tagStyle, letterSpacing: "0.08em" }}
-                >
-                  {card.tag}
-                </span>
-                <h3
-                  className="font-display font-bold text-[#0A0A0A] mb-3"
-                  style={{ fontSize: "1.375rem" }}
-                >
-                  {card.title}
-                </h3>
-                <p className="text-sm mb-5" style={{ color: "#888888", lineHeight: "1.7" }}>
-                  {card.body}
-                </p>
-                <a
-                  href={card.href}
-                  target={card.external ? "_blank" : "_self"}
-                  rel={card.external ? "noopener noreferrer" : undefined}
-                  className="text-sm font-bold transition-colors duration-200 hover:underline"
-                  style={{ color: "#F2A900" }}
-                >
-                  {card.link}
-                </a>
-              </div>
-            ))}
-          </div>
-
-          <Link
-            href="/ecosystem"
-            className="text-sm font-bold transition-colors duration-200 hover:text-[#F2A900]"
-            style={{ color: "#0A0A0A" }}
-          >
-            EXPLORE THE FULL ECOSYSTEM →
-          </Link>
         </div>
       </section>
 
@@ -426,62 +331,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── NEWSLETTER CTA ── */}
+      {/* ── BOTTOM CTA ── */}
       <section style={{ background: "#F2A900", padding: "100px 40px" }}>
         <div className="max-w-7xl mx-auto">
           <h2
             className="font-display font-bold text-[#0A0A0A] mb-6"
             style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", letterSpacing: "-0.04em", lineHeight: "1.05" }}
           >
-            "You found this page<br />for a reason."
+            "Your next customer is<br />searching right now"
           </h2>
           <p
             className="mb-10"
             style={{ color: "#0A0A0A", fontSize: "18px", maxWidth: "520px", lineHeight: "1.7" }}
           >
-            If you're building from zero and refusing to accept dependence as permanent 
-            the weekly dispatch is where the real work happens. No noise. No motivational
-            garbage. Just the system, live.
+            Let's build digital infrastructure that makes your business easier to find and contact. Reach out to discuss websites, local visibility, or practical automation.
           </p>
 
-          {subscribeSuccess ? (
-            <div className="py-6" style={{ maxWidth: "520px" }}>
-              <p className="font-display font-bold text-[#0A0A0A] text-xl mb-1">You're in.</p>
-              <p style={{ color: "#0A0A0A", opacity: 0.7, fontSize: "15px" }}>
-                Check your inbox confirm your subscription to start receiving the dispatch.
-              </p>
-            </div>
-          ) : (
-            <>
-              <form
-                onSubmit={handleSubscribe}
-                className="flex flex-col sm:flex-row gap-0 mb-4"
-                style={{ maxWidth: "520px" }}
-              >
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="flex-1 px-5 py-4 text-sm outline-none"
-                  style={{ background: "#0A0A0A", color: "#FFFFFF", border: "none" }}
-                />
-                <button
-                  type="submit"
-                  className="text-sm font-bold px-8 py-4 whitespace-nowrap transition-all duration-200"
-                  style={{ background: "#0A0A0A", color: "#F2A900" }}
-                  onMouseEnter={(e) => { const el = e.currentTarget as HTMLButtonElement; el.style.background = "#FFFFFF"; el.style.color = "#0A0A0A"; }}
-                  onMouseLeave={(e) => { const el = e.currentTarget as HTMLButtonElement; el.style.background = "#0A0A0A"; el.style.color = "#F2A900"; }}
-                >
-                  JOIN THE SIGNAL
-                </button>
-              </form>
-              <p className="text-xs" style={{ color: "#0A0A0A", opacity: 0.6 }}>
-                No spam. No fluff. Unsubscribe anytime.
-              </p>
-            </>
-          )}
+          <Link
+            href="/contact"
+            className="inline-block text-sm font-bold px-8 py-4 whitespace-nowrap transition-all duration-200"
+            style={{ background: "#0A0A0A", color: "#F2A900" }}
+            onMouseEnter={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#FFFFFF"; el.style.color = "#0A0A0A"; }}
+            onMouseLeave={(e) => { const el = e.currentTarget as HTMLAnchorElement; el.style.background = "#0A0A0A"; el.style.color = "#F2A900"; }}
+          >
+            START A CONVERSATION
+          </Link>
         </div>
       </section>
 

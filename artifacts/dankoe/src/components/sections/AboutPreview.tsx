@@ -15,7 +15,7 @@ export function AboutPreview() {
               Who Is Aboupreneur?
             </h2>
             <h3 className="text-xl md:text-2xl text-accent font-medium mb-8">
-              Just a builder obsessed with food, agriculture, and leverage.
+              Just a builder obsessed with food, agriculture, and leverage
             </h3>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>Hey, I'm Aboubakar.</p>
@@ -36,7 +36,7 @@ export function AboutPreview() {
             
             <div className="mt-10">
               <Link 
-                href="/about"
+                href="/story"
                 className="inline-flex items-center text-sm font-bold uppercase tracking-wider text-foreground hover:text-accent transition-colors"
               >
                 Read My Full Story →

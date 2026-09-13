@@ -18,20 +18,22 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 mb-12">
           <div>
-            <Link href="/" className="font-display font-bold text-xl text-white block mb-2" style={{ letterSpacing: "0.04em" }}>
+            <Link href="/" aria-label="Aboupreneur home" className="cursor-pointer font-display font-bold text-xl block mb-2" style={{ color: "#F09C00", letterSpacing: "0.04em" }}>
               ABOUPRENEUR
             </Link>
             <p className="text-sm" style={{ color: "#888888", letterSpacing: "0.04em" }}>
-              Build. Stack. Sovereign.
+              Digital strategy & growth systems.
             </p>
           </div>
 
           <nav className="flex items-center gap-6">
             {[
               { href: "/story", label: "STORY" },
-              { href: "/ecosystem", label: "ECOSYSTEM" },
+              { href: "/ecosystem", label: "SERVICES" },
+              { href: "/portfolio", label: "WORK" },
               { href: "/writing", label: "WRITING" },
-              { href: "/ecosystem#consulting-form", label: "WORK WITH ME" },
+              { href: "/contact", label: "WORK WITH ME" },
+              { href: "/pay", label: "PAY" },
             ].map((link) => (
               <Link
                 key={link.href}
@@ -88,10 +90,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div style={{ borderTop: "1px solid #1A1A1A", paddingTop: "24px" }}>
-          <p className="text-xs" style={{ color: "#888888" }}>
-            © {currentYear} Aboubakar Moussa — All rights reserved
+        <div
+          className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
+          style={{ borderTop: "1px solid #1A1A1A", paddingTop: "24px" }}
+        >
+          <p className="text-xs" style={{ color: "#F09C00" }}>
+            © {currentYear} Aboupreneur — All rights reserved
           </p>
+          <a
+            href="tel:+17806951526"
+            className="text-xs transition-colors duration-200 hover:text-white"
+            style={{ color: "#F09C00", letterSpacing: "0.04em" }}
+          >
+            +1 (780) 695-1526
+          </a>
         </div>
       </div>
     </footer>

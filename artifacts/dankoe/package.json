@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite --config vite.config.ts --host 0.0.0.0",
-    "build": "vite build --config vite.config.ts && node scripts/prerender.mjs",
+    "build": "node scripts/validate-testimonial-approvals.mjs && node scripts/prerender.mjs --validate-only && vite build --config vite.config.ts && node scripts/prerender.mjs",
     "serve": "vite preview --config vite.config.ts --host 0.0.0.0",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "validate:search": "node scripts/prerender.mjs --validate-only",
+    "validate:testimonials": "node scripts/validate-testimonial-approvals.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -65,7 +67,6 @@
   },
   "devDependencies": {
     "@replit/vite-plugin-cartographer": "catalog:",
-    "@replit/vite-plugin-dev-banner": "catalog:",
     "@replit/vite-plugin-runtime-error-modal": "catalog:",
     "@tailwindcss/typography": "^0.5.15",
     "@tailwindcss/vite": "catalog:",
@@ -73,7 +74,7 @@
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.4",
     "tailwindcss": "catalog:",
     "vite": "catalog:"
   }

@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Link } from "wouter";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { MapPin, Mail, Linkedin } from "lucide-react";
+import { MapPin, Mail, Linkedin, MessageCircle, MessageSquare, Paperclip, Phone } from "lucide-react";
 import SocialButtons from "@/components/ui/SocialButtons";
 import { useSEO } from "@/hooks/useSEO";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Contact() {
   useSEO({
@@ -20,6 +22,19 @@ export default function Contact() {
     service: "",
     message: ""
   });
+  const hasStarted = useRef(false);
+  const industry = typeof window === "undefined"
+    ? ""
+    : new URLSearchParams(window.location.search).get("industry")?.slice(0, 80) ?? "";
+
+  const markFormStarted = () => {
+    if (hasStarted.current) return;
+    hasStarted.current = true;
+    trackEvent("consulting_form_started", {
+      landing_page: "get-in-touch",
+      ...(industry ? { industry } : {}),
+    });
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
@@ -33,22 +48,51 @@ export default function Contact() {
     setStatus("submitting");
 
     try {
+      const params = new URLSearchParams(window.location.search);
+      const attribution: Record<string, string> = {};
+      ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach((key) => {
+        const value = params.get(key);
+        if (value) attribution[key] = value;
+      });
+
       const response = await fetch("https://formspree.io/f/xojkwbvq", {
         method: "POST",
         headers: {
+          "Accept": "application/json",
           "Content-Type": "application/json",
-          "Accept": "application/json"
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          ...formData,
+          ...attribution,
+          landing_page: "get-in-touch",
+          ...(industry ? { industry } : {}),
+        })
       });
 
       if (response.ok) {
+        trackEvent("consulting_form_submitted", {
+          landing_page: "get-in-touch",
+          selected_service: formData.service,
+          ...(industry ? { industry } : {}),
+        });
         setStatus("success");
         setFormData({ name: "", email: "", company: "", service: "", message: "" });
       } else {
+        trackEvent("consulting_form_failed", {
+          landing_page: "get-in-touch",
+          selected_service: formData.service,
+          reason: "provider_error",
+          ...(industry ? { industry } : {}),
+        });
         setStatus("error");
       }
     } catch (error) {
+      trackEvent("consulting_form_failed", {
+        landing_page: "get-in-touch",
+        selected_service: formData.service,
+        reason: "network_error",
+        ...(industry ? { industry } : {}),
+      });
       setStatus("error");
     }
   };
@@ -69,8 +113,51 @@ export default function Contact() {
             <p className="text-xl text-muted-foreground leading-relaxed mb-12">
               Whether you need a website, a campaign, an AI workflow, or a full growth strategy, I'd love to hear what you're working on.
             </p>
+            <p className="text-sm text-muted-foreground leading-relaxed -mt-8 mb-12">
+              Pricing is scoped privately after an initial consultation, with project-based and ongoing options available.
+            </p>
             
             <div className="space-y-8 bg-card border border-border/50 rounded-2xl p-8 mb-10">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-foreground shrink-0">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-sm text-muted-foreground mb-1">Phone</div>
+                  <a
+                    href="tel:+17806951526"
+                    className="font-medium text-foreground hover:text-accent transition-colors"
+                  >
+                    +1 (780) 695-1526
+                  </a>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    <a
+                      href="tel:+17806951526"
+                      className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-2 text-xs font-medium text-foreground hover:border-accent hover:text-accent transition-colors"
+                    >
+                      <Phone className="w-3.5 h-3.5" />
+                      Call
+                    </a>
+                    <a
+                      href="sms:+17806951526"
+                      className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-2 text-xs font-medium text-foreground hover:border-accent hover:text-accent transition-colors"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5" />
+                      Text
+                    </a>
+                    <a
+                      href="https://wa.me/17806951526"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-2 text-xs font-medium text-foreground hover:border-accent hover:text-accent transition-colors"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5" />
+                      WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+
               <a href="mailto:hello@aboupreneur.page" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
                   <Mail className="w-5 h-5" />
@@ -110,7 +197,7 @@ export default function Contact() {
           
           <FadeIn delay={0.2}>
             <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-10 shadow-xl">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} onFocusCapture={markFormStarted} className="space-y-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-foreground">Name *</label>
                   <input
@@ -163,10 +250,10 @@ export default function Contact() {
                     className="w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all appearance-none"
                   >
                     <option value="" disabled>Select a service...</option>
-                    <option value="Website Design & Build">Website Design & Build</option>
-                    <option value="Ads & Digital Marketing">Ads & Digital Marketing</option>
+                    <option value="Website Design & Launch">Website Design & Launch</option>
+                    <option value="Search & Local Visibility">Search & Local Visibility</option>
+                    <option value="Paid Acquisition & Ads">Paid Acquisition & Ads</option>
                     <option value="AI Automation & Workflows">AI Automation & Workflows</option>
-                    <option value="Growth Strategy">Growth Strategy</option>
                     <option value="Other">Other</option>
                   </select>
                 </div>
@@ -184,6 +271,16 @@ export default function Contact() {
                     placeholder="Tell me about your project..."
                   ></textarea>
                 </div>
+
+                <a
+                  href="mailto:hello@aboupreneur.page?subject=Brand%20assets%20or%20project%20examples"
+                  className="flex items-center gap-3 rounded-xl border border-dashed border-border bg-background px-4 py-4 text-sm text-muted-foreground transition-colors hover:border-accent hover:text-foreground"
+                >
+                  <Paperclip className="h-5 w-5 shrink-0" />
+                  <span>
+                    Have brand assets or examples? Email them separately after submitting.
+                  </span>
+                </a>
                 
                 <button
                   type="submit"
@@ -194,8 +291,19 @@ export default function Contact() {
                 </button>
                 
                 {status === "success" && (
-                  <div className="p-4 bg-green-500/10 border border-green-500/20 text-green-500 rounded-xl text-center font-medium">
-                    Message sent! I'll be in touch soon.
+                  <div className="space-y-4 rounded-xl border border-green-500/20 bg-green-500/10 p-5 text-center">
+                    <p className="font-medium text-green-500">Message sent! I'll be in touch soon.</p>
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      If we’ve already discussed your project, you can share the details I need to
+                      prepare next steps.
+                    </p>
+                    <Link
+                      href="/project-brief"
+                      data-analytics-label="contact-success-project-brief"
+                      className="inline-flex items-center justify-center rounded-full border border-green-500/30 px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-accent hover:text-accent"
+                    >
+                      Complete the detailed project brief →
+                    </Link>
                   </div>
                 )}
                 

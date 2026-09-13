@@ -1,0 +1,3 @@
+- [Approved contact experience](approved-contact-experience.md) — user approved the dark, direct contact page with embedded uploads and call, text, and WhatsApp options.
+- [Formspree attachment limit](formspree-attachment-limit.md) — current Formspree account rejects file uploads; keep the contact form JSON-only unless upload support changes.
+- [Notion form automation limit](notion-form-automation-limit.md) — Notion tools can create form views and fields, but question layout and public sharing still require the Notion UI.

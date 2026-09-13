@@ -15,6 +15,12 @@ const projects = [
     oneLiner: "Modern small-business site with a social-to-booking funnel.",
   },
   {
+    name: "Miratus Accounting",
+    url: "miratusaccounting.ca",
+    services: ["Web Design", "Conversion Copy", "Local SEO", "Booking Funnel"],
+    oneLiner: "Trust-focused accounting website for an Edmonton CPA firm.",
+  },
+  {
     name: "Miratus Ltd",
     url: "miratusltd.ca",
     services: ["Web Design", "Meta Ads", "Google Ads", "GA4", "SEO"],
@@ -40,7 +46,7 @@ export function PortfolioPreview() {
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
           {projects.map((project, i) => (
             <FadeIn key={i} delay={i * 0.1} className="h-full">
               <div className="group flex flex-col h-full bg-card border border-border/50 rounded-2xl p-6 hover-card-effect">

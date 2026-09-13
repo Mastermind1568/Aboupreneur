@@ -4,8 +4,22 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { Link } from "wouter";
 import { useState } from "react";
 import { useSEO } from "@/hooks/useSEO";
+import {
+  getApprovedTestimonial,
+  type TestimonialId,
+} from "@/content/testimonialApprovals";
 
-const projects = [
+type PortfolioProject = {
+  name: string;
+  client: string;
+  url: string;
+  screenshot: string;
+  services: string[];
+  oneLiner: string;
+  testimonialId: TestimonialId | null;
+};
+
+const projects: PortfolioProject[] = [
   {
     name: "The Bitcoin Kids",
     client: "Nzonda Fotsing",
@@ -13,7 +27,7 @@ const projects = [
     screenshot: "https://api.microlink.io/?url=https%3A%2F%2Fthebitcoinkids.com&screenshot=true&meta=false&embed=screenshot.url",
     services: ["Digital Marketing", "Demand Generation", "Content Strategy", "International Outreach"],
     oneLiner: "Led the full sales and promotion strategy for a youth-focused financial literacy comic book, achieving 1,000+ copies sold across 12+ countries.",
-    testimonial: "Abou turned a complex idea into a parent-friendly brand and funnel. The site is fast, trustworthy, and the ads brought real sign-ups, not vanity clicks."
+    testimonialId: "bitcoin-kids-nzonda",
   },
   {
     name: "Asabis",
@@ -22,7 +36,16 @@ const projects = [
     screenshot: "https://api.microlink.io/?url=https%3A%2F%2Fasabis.ca&screenshot=true&meta=false&embed=screenshot.url",
     services: ["Web Design", "Social Content", "Google Ads", "GA4", "Email"],
     oneLiner: "Professional website for an accounting firm with a social-to-client funnel.",
-    testimonial: "Clean design, clear story, and a funnel that turns social traffic into bookings. Exactly what we needed."
+    testimonialId: "asabis-niba",
+  },
+  {
+    name: "Miratus Accounting",
+    client: "Miratus Accounting & Tax Services",
+    url: "miratusaccounting.ca",
+    screenshot: "https://api.microlink.io/?url=https%3A%2F%2Fmiratusaccounting.ca&screenshot=true&meta=false&embed=screenshot.url",
+    services: ["Web Design", "Conversion Copy", "Local SEO", "Booking Funnel"],
+    oneLiner: "Trust-focused website for an Edmonton CPA firm, with clear tax-service positioning and a consultation booking path.",
+    testimonialId: null,
   },
   {
     name: "Miratus Ltd",
@@ -31,7 +54,7 @@ const projects = [
     screenshot: "/images/miratus-screenshot.png",
     services: ["Web Design", "Meta Ads", "Google Ads", "GA4", "SEO"],
     oneLiner: "Professional website for a staffing agency, built with clear service packages and an intake funnel.",
-    testimonial: "Our inquiries went from sporadic to steady. The packages, intake forms, and ads captured the right families, not random traffic."
+    testimonialId: "miratus-ltd-mirabelle",
   },
   {
     name: "FA Law Office",
@@ -40,7 +63,7 @@ const projects = [
     screenshot: "https://api.microlink.io/?url=https%3A%2F%2Ffalawoffice.com&screenshot=true&meta=false&embed=screenshot.url",
     services: ["Web Design"],
     oneLiner: "Professional law-firm website with practice pages and credibility elements.",
-    testimonial: "Professional sites, focused practice pages, and ads that bring qualified inquiries, plus tracking we actually trust."
+    testimonialId: "fa-law-ferdinand",
   },
   {
     name: "FA Global Energy",
@@ -49,8 +72,8 @@ const projects = [
     screenshot: "https://api.microlink.io/?url=https%3A%2F%2Ffaglobalenergy.com&screenshot=true&meta=false&embed=screenshot.url",
     services: ["Web Design"],
     oneLiner: "Corporate energy company site with professional presence.",
-    testimonial: null
-  }
+    testimonialId: null,
+  },
 ];
 
 function ProjectImage({ screenshot, name, url }: { screenshot: string; name: string; url: string }) {
@@ -129,7 +152,12 @@ export default function Portfolio() {
         </FadeIn>
 
         <div className="space-y-32">
-          {projects.map((project, i) => (
+          {projects.map((project, i) => {
+            const testimonial = project.testimonialId
+              ? getApprovedTestimonial(project.testimonialId)
+              : null;
+
+            return (
             <FadeIn key={i} delay={0.1}>
               <div className="flex flex-col lg:flex-row gap-12 items-start">
                 <div className="w-full lg:w-3/5">
@@ -155,17 +183,30 @@ export default function Portfolio() {
                   <p className="text-lg leading-relaxed mb-8">
                     {project.oneLiner}
                   </p>
+
+                  <a
+                    href={`https://${project.url}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mb-8 inline-flex w-fit items-center border border-[#F09C00] px-5 py-3 text-sm font-bold uppercase tracking-[0.08em] text-[#F09C00] transition-colors hover:bg-[#F09C00] hover:text-[#0A0A0A]"
+                    aria-label={`Visit ${project.name} website`}
+                  >
+                    Visit website ↗
+                  </a>
                   
-                  {project.testimonial && (
+                  {testimonial && (
                     <div className="bg-card/50 border-l-4 border-accent p-6 rounded-r-xl mb-8">
-                      <p className="italic text-muted-foreground mb-4">"{project.testimonial}"</p>
+                      <p className="italic text-muted-foreground mb-4">
+                        "{testimonial.approvedQuote}" — {testimonial.approvedAttribution}
+                      </p>
                     </div>
                   )}
                   
                 </div>
               </div>
             </FadeIn>
-          ))}
+            );
+          })}
         </div>
 
         <FadeIn className="mt-32 text-center bg-card border border-border/50 rounded-3xl p-12 md:p-20">

@@ -1,0 +1,52 @@
+IMPORTANT CONTEXT: This is being added to my EXISTING Next.js project 
+for aboupreneur.page — the site is already live with Home, About, 
+Portfolio, Blog, and Contact pages. Do NOT create a new project. Do NOT 
+modify, redesign, or touch any of those existing pages. Only ADD new 
+files as described below.
+
+Role: You are a senior web development engineer and CRO specialist.
+Task: Add a dynamic lead-generation landing page section to the existing 
+site, for HVAC and plumbing businesses in Edmonton, Alberta.
+
+NEW FILES TO ADD (nothing else):
+- app/get-in-touch/page.tsx → default page
+- app/get-in-touch/[niche]/page.tsx → server-rendered, reads params.niche, 
+  matches "hvac" or "plumbing"; anything else falls back to the default 
+  content (don't 404)
+- Each page sets its own <title> and meta description for that trade
+
+Design System (match this exactly — do not invent a different look):
+- Background: bg-[#0A0A0A]
+- Text: white / gray-300
+- Accent: Electric Lime, text-[#B5FF3A] / bg-[#B5FF3A]
+- Sharp corners, high contrast, minimalist layout
+
+Copy for each page (H1 / Subhead):
+Default: "Fill Your Schedule & Your Crew." / "Websites, ads, and 
+recruiting help for Alberta trades businesses — one operator, one 
+trade per city."
+HVAC: "Keep Your HVAC Trucks on the Road — and Staffed." / 
+"High-converting websites, Google Ads, and recruiting support for 
+heating and cooling specialists."
+Plumbing: "More Emergency Calls. Fewer Empty Trucks." / "Websites and 
+Google Ads that bring in the calls — and help you find the crew to 
+answer them."
+
+Small text near the CTA, all three pages:
+"We work with one HVAC company and one plumbing company per city — 
+book a call to see if your city is still open."
+
+Value props below the fold (identical on all three pages):
+"Fill Your Schedule", "Fill Your Crew", "Direct Access, No Overhead"
+
+Layout: Hero section, 50/50 split. Left: headline, subhead, exclusivity 
+line, a simple email/phone capture form, lime submit button. Right: a 
+placeholder image area (I'll add the actual image separately).
+
+Tracking: form submit should fire a consulting_form_submitted event 
+that includes a niche value ("default", "hvac", or "plumbing") matching 
+the current page, plus include niche as a hidden form field.
+
+Do not build anything beyond these 3 pages. Do not add navigation links 
+to these new pages from the existing site menu — they're only reached 
+directly by URL (for ads).

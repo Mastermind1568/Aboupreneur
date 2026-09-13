@@ -17,11 +17,12 @@ export function Navbar() {
 
   const navLinks = [
     { href: "/story", label: "STORY" },
-    { href: "/ecosystem", label: "ECOSYSTEM" },
+    { href: "/ecosystem", label: "SERVICES" },
+    { href: "/portfolio", label: "WORK" },
     { href: "/writing", label: "WRITING" },
   ];
 
-  const isActive = (href: string) => location === href;
+  const isActive = (href: string) => location === href || (href === "/ecosystem" && location === "/services");
 
   return (
     <header
@@ -32,7 +33,8 @@ export function Navbar() {
 
         <Link
           href="/"
-          className="font-display text-white font-bold text-lg hover:text-accent transition-colors duration-200"
+          aria-label="Aboupreneur home"
+          className="cursor-pointer font-display text-white font-bold text-lg hover:text-accent transition-colors duration-200"
           style={{ letterSpacing: "0.04em" }}
         >
           ABOUPRENEUR
@@ -58,7 +60,7 @@ export function Navbar() {
 
         <div className="hidden md:block">
           <Link
-            href="/ecosystem"
+            href="/contact"
             className="text-sm font-bold transition-all duration-200 px-5 py-2"
             style={{
               border: "1px solid #F2A900",
@@ -76,7 +78,7 @@ export function Navbar() {
               el.style.color = "#F2A900";
             }}
           >
-            THE BLUEPRINT
+            WORK WITH ME
           </Link>
         </div>
 
@@ -108,12 +110,12 @@ export function Navbar() {
             </Link>
           ))}
           <Link
-            href="/ecosystem"
+            href="/contact"
             onClick={() => setIsOpen(false)}
             className="mt-4 text-sm font-bold px-8 py-3"
             style={{ border: "1px solid #F2A900", color: "#F2A900", letterSpacing: "0.06em" }}
           >
-            THE BLUEPRINT
+            WORK WITH ME
           </Link>
         </div>
       )}

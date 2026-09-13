@@ -155,7 +155,7 @@ export default function About() {
               <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">THE PRESENT</h2>
             </div>
             <div className="md:col-span-8">
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Growth Marketer. Web Builder. AI Automation Strategist.</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Growth Marketer. Web Builder. AI Automation Strategist</h3>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6 mb-12">
                 <p>
                   Today, I operate at the intersection of three things: digital marketing strategy, website development, and AI-powered business automation.
@@ -186,7 +186,7 @@ export default function About() {
               <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">THE LONG GAME</h2>
             </div>
             <div className="md:col-span-8">
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Agriculture. Food. Leverage.</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Agriculture. Food. Leverage</h3>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
                 <p>
                   Digital marketing is the craft. Agriculture and food are the destination.
@@ -212,7 +212,7 @@ export default function About() {
               <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">WHERE I SHOW UP</h2>
             </div>
             <div className="md:col-span-8">
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Where You'll Find Me.</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Where You'll Find Me</h3>
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6 mb-12">
                 <p>
                   I show up in a few different places, depending on what you're looking for.
@@ -264,7 +264,7 @@ export default function About() {
               <h2 className="text-xs font-bold tracking-[0.2em] text-accent uppercase sticky top-32">THE CRAFT</h2>
             </div>
             <div className="md:col-span-8">
-              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Always Learning. Always Building.</h3>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6">Always Learning. Always Building</h3>
               
               <blockquote className="border-l-4 border-accent pl-6 py-2 my-8 text-xl font-serif italic text-muted-foreground/90 bg-secondary/20 rounded-r-lg">
                 "No certificate without application. Every course becomes a project, a case study, and a portfolio piece. Mastery over collection."

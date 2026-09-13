@@ -6,3 +6,60 @@ id = "UeEwY_IAc-bti7T2cP82G"
 uri = "file://artifacts/dankoe/public/favicon.png"
 type = "image"
 title = "Aboupreneur Logo (AP Icon)"
+logical_id = "39cce4a7-a7c6-414b-9a69-5e21f4000065"
+
+[[outputs]]
+id = "58EO7-AruGAoYOCiweSXw"
+uri = "file://exports/aboupreneur-brand-assets.zip"
+type = "unspecified"
+title = "Aboupreneur Brand Assets"
+description = "Complete 6.5 MB brand package with the current brand mark, portraits, website graphics, social and blog graphics, portfolio imagery, and a guide covering colors, typography, and usage."
+logical_id = "8603fddb-0a72-4d8b-8aa2-e55160f39109"
+content_hash = "sha256:3ff90dd120ad19a445d32e44914e5543e05a196b85ebdc377baa31ff79c3d215"
+size = 6813872
+mtime_ms = 1789013829425
+storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:ff476ae2-0410-474e-8c97-0dcf169f1f3a/8603fddb-0a72-4d8b-8aa2-e55160f39109/24b528e7-2a13-47f3-995d-78f4b249850b"
+storage_version_token = "1789013834013383"
+content_type = "application/octet-stream"
+
+[[outputs]]
+id = "CExKFgf2CFR9xb4RDpTzT"
+uri = "file://exports/aboupreneur-ad-campaigns.zip"
+type = "unspecified"
+title = "Aboupreneur Paid Campaign Kit"
+description = "Complete organized ZIP with Google Ads copy, LinkedIn Ads copy, 16 platform-sized JPG creatives, campaign mapping, and landing-page guidance."
+logical_id = "562b2dc7-b0da-4593-9590-685d5e7d5ddc"
+content_hash = "sha256:5dfd6b36ac5a3a70862365da159009771c557e2a7f05e30d263f575c3512bac0"
+size = 523441
+mtime_ms = 1789277335461
+storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:ff476ae2-0410-474e-8c97-0dcf169f1f3a/562b2dc7-b0da-4593-9590-685d5e7d5ddc/4671b135-589e-47dc-8fc2-7583b43e2ccd"
+storage_version_token = "1789277346788408"
+content_type = "application/octet-stream"
+
+[[outputs]]
+id = "D8IwPb7hHPjuIFP7eA9MV"
+uri = "file://exports/aboupreneur-ad-campaigns/google-ads/search/rsa-copy.csv"
+type = "table"
+title = "Google Ads RSA Copy"
+description = "Four audience-specific Responsive Search Ad sets with 15 headlines, 4 descriptions, verified character counts, and final URLs."
+logical_id = "2e01fae8-a5e1-417f-9d72-792dbb49dec9"
+content_hash = "sha256:a061232b26598bec6b53633067a3b1a8c65b493dca2c84548533eb68d43b7012"
+size = 8801
+mtime_ms = 1789277207393
+storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:ff476ae2-0410-474e-8c97-0dcf169f1f3a/2e01fae8-a5e1-417f-9d72-792dbb49dec9/8b2ecacc-9eae-4e37-af10-5381f601784b"
+storage_version_token = "1789277347503421"
+content_type = "text/csv"
+
+[[outputs]]
+id = "LYiNfMsfxm-ATK6onNw9R"
+uri = "file://exports/aboupreneur-ad-campaigns/linkedin-ads/single-image-copy.csv"
+type = "table"
+title = "LinkedIn Ads Copy"
+description = "Pain, outcome, and identity angles for HVAC, plumbing, newcomer-owned businesses, and agri-food, with verified character counts."
+logical_id = "2e32815c-69bb-4d61-965b-d502ae7d0dba"
+content_hash = "sha256:f5acbedf22e949b9361ddcc6955032899d2a399dd704effe2723e83db241858b"
+size = 3170
+mtime_ms = 1789277218477
+storage_uri = "gcs://replit-rams-assets-spock/rams/assets/repl:ff476ae2-0410-474e-8c97-0dcf169f1f3a/2e32815c-69bb-4d61-965b-d502ae7d0dba/16d45323-8aa1-4015-958e-de3695753dbb"
+storage_version_token = "1789277348156335"
+content_type = "text/csv"

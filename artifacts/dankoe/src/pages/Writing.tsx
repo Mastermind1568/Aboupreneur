@@ -225,7 +225,7 @@ export default function Writing() {
             className="font-display font-bold text-[#0A0A0A] mb-4"
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.03em", lineHeight: "1.1" }}
           >
-            Don't miss the next one.
+            Don't miss the next one
           </h2>
           <p className="mb-8" style={{ color: "#0A0A0A", fontSize: "16px", maxWidth: "400px", lineHeight: "1.6" }}>
             The Mindbloom dispatch weekly. No noise.

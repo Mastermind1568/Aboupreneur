@@ -1,0 +1,39 @@
+Role: You are a senior web development engineer and CRO specialist.
+
+Task: Build a dynamic lead-generation landing page for a digital marketing agency targeting Home-Services and Trades (ICP). Use Next.js (App Router) and Tailwind CSS.
+
+Design System (Brutalist / Editorial):
+
+Background: Pure Matte Black (bg-[#0A0A0A])
+
+Text: Pure White (text-white) and Off-White (text-gray-300) for paragraphs.
+
+Accent/Action: Saturated Bitcoin Orange (text-[#FF9900], bg-[#FF9900]).
+
+UI Elements: Sharp corners (no rounded-md), high contrast, thick borders where applicable, minimalist layout.
+
+Functionality (The Dynamic Mechanism):
+
+Use useSearchParams to read a URL parameter called ?niche=.
+
+Create a data object/dictionary that holds variations of the Hero H1, Hero Subtext, and Hero Image URL for the following niches: default, hvac, plumbing, roofing, and landscaping.
+
+If niche=hvac is in the URL, the page should automatically populate the HVAC copy and image. If no parameter is found, fallback to default.
+
+Copy Matrix Structure (Write compelling direct-response copy for these):
+
+Default: H1: "Websites & Ads for Trades & Home Services." Sub: "Stop relying purely on word-of-mouth. Get found online fast."
+
+HVAC: H1: "Keep Your HVAC Trucks on the Road." Sub: "High-converting websites and Google Ads management for heating and cooling specialists."
+
+Plumbing: H1: "More Emergency Plumbing Calls, Less Wasted Ad Spend." Sub: "Rank higher when homeowners in your city have a leak."
+
+(Generate similar punchy copy for Roofing and Landscaping).
+
+Page Layout:
+
+Hero Section: 50/50 split. Left side: Dynamic H1, Dynamic Subtext, an email/phone capture form, and a high-contrast orange submit button. Right side: The dynamically injected visual asset.
+
+Value Props (Below fold): 3 simple columns with icons. "No Long-Term Contracts", "Built for the Trades", "Fast Turnaround."
+
+Output the complete, copy-pasteable code for the page.tsx file. Ensure the form is set up to eventually trigger a Google Ads conversion event (consulting_form_submitted).

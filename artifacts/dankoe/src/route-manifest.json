@@ -1,0 +1,276 @@
+[
+  {
+    "path": "/",
+    "component": "home",
+    "search": {
+      "title": "ABOUPRENEUR | Build. Stack. Sovereign.",
+      "description": "Aboubakar Moussa — entrepreneur, agribusiness strategist, and sound money advocate. The Sovereignty Loop: Make. Multiply. Protect. Built for those who start with nothing.",
+      "canonical": "https://aboupreneur.page"
+    },
+    "sitemap": {
+      "loc": "https://aboupreneur.page/",
+      "lastmod": "2026-05-19",
+      "changefreq": "weekly",
+      "priority": 1
+    }
+  },
+  {
+    "path": "/story",
+    "component": "story",
+    "search": {
+      "title": "The Story | ABOUPRENEUR",
+      "description": "From Cameroon to Canada. The journey from global trader to Bitcoin conviction to agribusiness and the system that connects it all.",
+      "canonical": "https://aboupreneur.page/story"
+    },
+    "sitemap": { "lastmod": "2026-05-19", "changefreq": "monthly", "priority": 0.9 }
+  },
+  {
+    "path": "/ecosystem",
+    "component": "ecosystem",
+    "search": {
+      "title": "The Ecosystem | ABOUPRENEUR",
+      "description": "Moneyverse, Mindbloom, Farm to Funnel, Consulting. Every project built around the Sovereignty Loop. Make. Multiply. Protect.",
+      "canonical": "https://aboupreneur.page/ecosystem"
+    },
+    "sitemap": { "lastmod": "2026-05-19", "changefreq": "monthly", "priority": 0.9 }
+  },
+  {
+    "path": "/services",
+    "component": "ecosystem",
+    "search": {
+      "title": "The Ecosystem | ABOUPRENEUR",
+      "description": "Moneyverse, Mindbloom, Farm to Funnel, Consulting. Every project built around the Sovereignty Loop. Make. Multiply. Protect.",
+      "canonical": "https://aboupreneur.page/ecosystem"
+    }
+  },
+  {
+    "path": "/portfolio",
+    "component": "portfolio",
+    "search": {
+      "title": "Client Work | Aboupreneur Portfolio",
+      "description": "Explore Aboupreneur client work across web design, digital marketing, local visibility, and growth systems.",
+      "canonical": "https://aboupreneur.page/portfolio"
+    },
+    "sitemap": { "lastmod": "2026-09-12", "changefreq": "monthly", "priority": 0.8 }
+  },
+  {
+    "path": "/writing",
+    "component": "writing",
+    "search": {
+      "title": "Writing | ABOUPRENEUR",
+      "description": "Frameworks on building from zero, sound money, and sovereign thinking published on Mindbloom.",
+      "canonical": "https://aboupreneur.page/writing"
+    },
+    "sitemap": { "lastmod": "2026-05-19", "changefreq": "weekly", "priority": 0.8 }
+  },
+  {
+    "path": "/blog",
+    "component": "writing",
+    "search": {
+      "title": "Writing | ABOUPRENEUR",
+      "description": "Frameworks on building from zero, sound money, and sovereign thinking published on Mindbloom.",
+      "canonical": "https://aboupreneur.page/writing"
+    }
+  },
+  {
+    "path": "/get-in-touch",
+    "component": "get-in-touch-campaign",
+    "search": {
+      "title": "Fill Your Schedule & Your Crew | Aboupreneur",
+      "description": "Websites, ads, and recruiting help for Alberta trades businesses — one operator, one trade per city.",
+      "canonical": "https://aboupreneur.page/get-in-touch"
+    },
+    "sitemap": { "lastmod": "2026-09-11", "changefreq": "monthly", "priority": 0.8 }
+  },
+  {
+    "path": "/get-in-touch/hvac",
+    "component": "get-in-touch-campaign",
+    "search": {
+      "title": "Keep Your HVAC Trucks on the Road | Aboupreneur",
+      "description": "High-converting websites, Google Ads, and recruiting support for heating and cooling specialists.",
+      "canonical": "https://aboupreneur.page/get-in-touch/hvac"
+    },
+    "sitemap": { "lastmod": "2026-09-11", "changefreq": "monthly", "priority": 0.8 }
+  },
+  {
+    "path": "/get-in-touch/plumbing",
+    "component": "get-in-touch-campaign",
+    "search": {
+      "title": "More Emergency Plumbing Calls | Aboupreneur",
+      "description": "Websites and Google Ads that bring in the calls — and help you find the crew to answer them.",
+      "canonical": "https://aboupreneur.page/get-in-touch/plumbing"
+    },
+    "sitemap": { "lastmod": "2026-09-11", "changefreq": "monthly", "priority": 0.8 }
+  },
+  {
+    "path": "/get-in-touch/newcomer",
+    "component": "get-in-touch-campaign",
+    "search": {
+      "title": "Websites for Newcomer Entrepreneurs | Aboupreneur",
+      "description": "Professional websites and practical digital systems for newcomer-owned businesses in Edmonton, Alberta, and Western Canada.",
+      "canonical": "https://aboupreneur.page/get-in-touch/newcomer"
+    },
+    "sitemap": { "lastmod": "2026-09-13", "changefreq": "monthly", "priority": 0.8 }
+  },
+  {
+    "path": "/get-in-touch/agri-food",
+    "component": "get-in-touch-campaign",
+    "search": {
+      "title": "Agri-Food Marketing & Websites | Aboupreneur",
+      "description": "Websites and practical demand generation for Canadian agribusinesses, food producers, and specialty brands.",
+      "canonical": "https://aboupreneur.page/get-in-touch/agri-food"
+    },
+    "sitemap": { "lastmod": "2026-09-13", "changefreq": "monthly", "priority": 0.8 }
+  },
+  {
+    "path": "/contact",
+    "component": "contact",
+    "search": {
+      "title": "Work With Me | Contact Aboupreneur Alberta Growth Marketer & Web Designer",
+      "description": "Ready to grow your brand? Contact Aboubakar Moussa to discuss web design, digital marketing strategy, paid advertising, or AI automation for your business.",
+      "canonical": "https://aboupreneur.page/contact"
+    }
+  },
+  {
+    "path": "/pay",
+    "component": "pay",
+    "search": {
+      "title": "Pay Your Project Deposit | Aboupreneur",
+      "description": "Securely pay the CAD $250 Aboupreneur project deposit after your project scope has been agreed.",
+      "canonical": "https://aboupreneur.page/pay"
+    },
+    "sitemap": { "lastmod": "2026-09-10", "changefreq": "monthly", "priority": 0.7 }
+  },
+  {
+    "path": "/project-brief",
+    "component": "project-brief",
+    "search": {
+      "title": "Qualified Client Project Brief | Aboupreneur",
+      "description": "Share the details Aboupreneur needs to prepare for your project.",
+      "canonical": "https://aboupreneur.page/project-brief",
+      "robots": "noindex, nofollow"
+    }
+  },
+  {
+    "path": "/home-services-trades",
+    "component": "home-services-trades",
+    "search": {
+      "title": "Marketing for Home Services & Trades | Aboupreneur",
+      "description": "Websites, local SEO, Google Ads, and lead systems for home-service and trade businesses in Edmonton, Alberta, Canada, and the US.",
+      "canonical": "https://aboupreneur.page/home-services-trades"
+    },
+    "sitemap": { "lastmod": "2026-09-09", "changefreq": "monthly", "priority": 0.9 }
+  },
+  {
+    "path": "/newcomer-owned-businesses",
+    "component": "newcomer-owned-businesses",
+    "search": {
+      "title": "Websites for Newcomer-Owned Businesses | Aboupreneur",
+      "description": "Professional websites and practical digital setup for immigrant and newcomer-owned small businesses in Edmonton, Alberta, and Western Canada.",
+      "canonical": "https://aboupreneur.page/newcomer-owned-businesses"
+    },
+    "sitemap": { "lastmod": "2026-09-09", "changefreq": "monthly", "priority": 0.9 }
+  },
+  {
+    "path": "/agri-food-marketing",
+    "component": "agri-food-marketing",
+    "search": {
+      "title": "Agri-Food Marketing & Websites | Aboupreneur",
+      "description": "Websites and digital growth strategy for Canadian agribusiness, food producers, and specialty brands, informed by an agribusiness background.",
+      "canonical": "https://aboupreneur.page/agri-food-marketing"
+    },
+    "sitemap": { "lastmod": "2026-09-09", "changefreq": "monthly", "priority": 0.9 }
+  },
+  {
+    "path": "/blog/food-brand-gtm-strategy",
+    "component": "food-brand-gtm-strategy",
+    "search": {
+      "title": "Why Every Food Brand Needs a Go-To-Market Strategy Before They Scale | Aboupreneur",
+      "description": "Most food brands rush to sell before knowing who they are selling to. Learn the 4 pillars of a food brand go-to-market strategy.",
+      "canonical": "https://aboupreneur.page/blog/food-brand-gtm-strategy",
+      "ogImage": "https://aboupreneur.page/images/og/food-brand-gtm-strategy.jpg",
+      "datePublished": "2026-04-08",
+      "headline": "Why Every Food Brand Needs a Go-To-Market Strategy Before They Scale"
+    },
+    "sitemap": { "lastmod": "2026-04-08", "changefreq": "yearly", "priority": 0.6 }
+  },
+  {
+    "path": "/blog/ai-automation-small-business",
+    "component": "ai-automation-small-business",
+    "search": {
+      "title": "5 Ways AI Automation Is Changing Small Business Marketing Right Now | Aboupreneur",
+      "description": "Discover 5 practical AI automation workflows that help small businesses market smarter without hiring more people.",
+      "canonical": "https://aboupreneur.page/blog/ai-automation-small-business",
+      "ogImage": "https://aboupreneur.page/images/og/ai-automation-small-business.jpg",
+      "datePublished": "2026-04-08",
+      "headline": "5 Ways AI Automation Is Changing Small Business Marketing Right Now"
+    },
+    "sitemap": { "lastmod": "2026-04-08", "changefreq": "yearly", "priority": 0.6 }
+  },
+  {
+    "path": "/blog/real-cost-of-bad-website",
+    "component": "real-cost-of-bad-website",
+    "search": {
+      "title": "The Real Cost of a Bad Website | Aboupreneur",
+      "description": "A slow, outdated website is a revenue problem. Learn what a bad website is really costing your business and how to fix it.",
+      "canonical": "https://aboupreneur.page/blog/real-cost-of-bad-website",
+      "ogImage": "https://aboupreneur.page/images/og/real-cost-of-bad-website.jpg",
+      "datePublished": "2026-04-08",
+      "headline": "The Real Cost of a Bad Website (It's Not What You Think)",
+      "schemaDescription": "A slow, outdated website is a revenue problem. Learn what a bad website is really costing your business."
+    },
+    "sitemap": { "lastmod": "2026-04-08", "changefreq": "yearly", "priority": 0.6 }
+  },
+  {
+    "path": "/blog/choosing-the-right-marketing-channel",
+    "component": "choosing-the-right-marketing-channel",
+    "search": {
+      "title": "How to Choose the Right Marketing Channel for Your Business | Aboupreneur",
+      "description": "Not every channel works for every business. Learn how to match the right marketing channel to your stage, audience, and offer.",
+      "canonical": "https://aboupreneur.page/blog/choosing-the-right-marketing-channel",
+      "ogImage": "https://aboupreneur.page/images/og/choosing-the-right-marketing-channel.jpg",
+      "datePublished": "2026-04-08",
+      "headline": "How to Choose the Right Marketing Channel for Your Business"
+    },
+    "sitemap": { "lastmod": "2026-04-08", "changefreq": "yearly", "priority": 0.6 }
+  },
+  {
+    "path": "/blog/google-ads-vs-meta-ads",
+    "component": "google-ads-vs-meta-ads",
+    "search": {
+      "title": "Google Ads vs Meta Ads. Which One Is Right for Your Business? | Aboupreneur",
+      "description": "Google Ads and Meta Ads work very differently. Learn which platform fits your offer, budget, and goals.",
+      "canonical": "https://aboupreneur.page/blog/google-ads-vs-meta-ads",
+      "ogImage": "https://aboupreneur.page/images/og/google-ads-vs-meta-ads.jpg",
+      "datePublished": "2026-04-08",
+      "headline": "Google Ads vs Meta Ads. Which One Is Right for Your Business?"
+    },
+    "sitemap": { "lastmod": "2026-04-08", "changefreq": "yearly", "priority": 0.6 }
+  },
+  {
+    "path": "/blog/why-personal-brand-matters",
+    "component": "why-personal-brand-matters",
+    "search": {
+      "title": "Why Your Personal Brand Is Your Most Valuable Business Asset | Aboupreneur",
+      "description": "In a world full of competing offers, your personal brand is the reason someone chooses you over anyone else.",
+      "canonical": "https://aboupreneur.page/blog/why-personal-brand-matters",
+      "ogImage": "https://aboupreneur.page/images/og/why-personal-brand-matters.jpg",
+      "datePublished": "2026-04-08",
+      "headline": "Why Your Personal Brand Is Your Most Valuable Business Asset"
+    },
+    "sitemap": { "lastmod": "2026-04-08", "changefreq": "yearly", "priority": 0.6 }
+  },
+  {
+    "path": "/blog/homepage-that-converts",
+    "component": "homepage-that-converts",
+    "search": {
+      "title": "How to Write a Homepage That Converts | Aboupreneur",
+      "description": "Most homepages talk about the business instead of the visitor. Learn the five-section framework that turns your homepage into a client-generating machine.",
+      "canonical": "https://aboupreneur.page/blog/homepage-that-converts",
+      "ogImage": "https://aboupreneur.page/images/og/homepage-that-converts.jpg",
+      "datePublished": "2026-04-08",
+      "headline": "How to Write a Homepage That Converts (Without Sounding Like a Robot)"
+    },
+    "sitemap": { "lastmod": "2026-04-08", "changefreq": "yearly", "priority": 0.6 }
+  }
+]

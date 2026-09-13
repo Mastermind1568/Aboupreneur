@@ -1,29 +1,25 @@
 import { FadeIn } from "@/components/ui/FadeIn";
+import {
+  getApprovedTestimonial,
+  type TestimonialId,
+} from "@/content/testimonialApprovals";
 
-const testimonials = [
-  {
-    quote: "Abou turned a complex idea into a parent-friendly brand and funnel. The site is fast, trustworthy, and the ads brought real sign-ups, not vanity clicks.",
-    name: "Nzonda Fotsing",
-    title: "Founder, The Bitcoin Kids",
-  },
-  {
-    quote: "Our inquiries went from sporadic to steady. The packages, intake forms, and ads captured the right families, not random traffic.",
-    name: "Mirabelle Nchangwi",
-    title: "Director, Miratus Ltd",
-  },
-  {
-    quote: "Clean design, clear story, and a funnel that turns social traffic into bookings. Exactly what we needed.",
-    name: "Niba Emmanuel",
-    title: "Owner, Asabis",
-  },
-  {
-    quote: "Professional sites, focused practice pages, and ads that bring qualified inquiries, plus tracking we actually trust.",
-    name: "Ferdinand N. Anomah",
-    title: "Managing Partner, FA Law Offices & FA Global Energy",
-  },
+const testimonialIds: TestimonialId[] = [
+  "bitcoin-kids-nzonda",
+  "miratus-ltd-mirabelle",
+  "asabis-niba",
+  "fa-law-ferdinand",
 ];
 
 export function Testimonials() {
+  const testimonials = testimonialIds
+    .map(getApprovedTestimonial)
+    .filter((testimonial): testimonial is NonNullable<typeof testimonial> =>
+      Boolean(testimonial),
+    );
+
+  if (testimonials.length === 0) return null;
+
   return (
     <section className="py-20 md:py-32 bg-background relative z-10 border-t border-border/30">
       <div className="max-w-7xl mx-auto px-6">
@@ -40,15 +36,14 @@ export function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {testimonials.map((testimonial, i) => (
-            <FadeIn key={i} delay={i * 0.1}>
+            <FadeIn key={testimonial.id} delay={i * 0.1}>
               <div className="bg-card border border-border/50 rounded-2xl p-8 md:p-10 h-full flex flex-col relative">
                 <div className="text-4xl text-accent/20 font-serif absolute top-6 left-6 leading-none select-none">"</div>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8 relative z-10 italic">
-                  {testimonial.quote}
+                  {testimonial.approvedQuote}
                 </p>
                 <div className="mt-auto pt-6 border-t border-border/30">
-                  <div className="font-bold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">{testimonial.title}</div>
+                  <div className="font-bold text-foreground">{testimonial.approvedAttribution}</div>
                 </div>
               </div>
             </FadeIn>

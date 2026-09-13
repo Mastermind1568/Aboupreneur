@@ -1,0 +1,48 @@
+Role: You are a senior web development engineer and CRO specialist.
+Task: Build a dynamic lead-generation landing page for a digital marketing 
+agency serving HVAC and plumbing businesses in Edmonton, Alberta. Use 
+Next.js (App Router) and Tailwind CSS.
+
+ROUTING:
+Use a dynamic route segment, not query strings.
+- app/get-in-touch/page.tsx → default variant (current ad group points here)
+- app/get-in-touch/[niche]/page.tsx → server-rendered, reads params.niche, 
+  matches: hvac, plumbing
+- Unmatched niche values fall back to default content, not a 404
+- Each route sets its own <title> and meta description for that trade
+
+Design System (Brutalist / Editorial):
+- Background: bg-[#0A0A0A]
+- Text: white / gray-300
+- Accent: Electric Lime, text-[#B5FF3A] / bg-[#B5FF3A]
+- Sharp corners, high contrast, minimalist layout
+
+Copy matrix (H1 / Subhead per page):
+Default: "Fill Your Schedule & Your Crew." / "Websites, ads, and recruiting 
+help for Alberta trades businesses — one operator, one trade per city."
+HVAC: "Keep Your HVAC Trucks on the Road — and Staffed." / "High-converting 
+websites, Google Ads, and recruiting support for heating and cooling 
+specialists."
+Plumbing: "More Emergency Calls. Fewer Empty Trucks." / "Websites and 
+Google Ads that bring in the calls — and help you find the crew to 
+answer them."
+
+Exclusivity line (small text near the CTA, all pages):
+"We work with one HVAC company and one plumbing company per city — 
+book a call to see if your city is still open."
+
+Value props (below fold, identical across all pages):
+"Fill Your Schedule", "Fill Your Crew", "Direct Access, No Overhead"
+
+Page Layout:
+Hero: 50/50 split. Left: dynamic H1, subtext, exclusivity line, email/phone 
+capture form, high-contrast lime submit button. Right: dynamically injected 
+visual asset per niche.
+
+Conversion tracking:
+Form submit fires consulting_form_submitted with a niche event parameter 
+matching the current route ("default", "hvac", "plumbing"). Include niche 
+as a hidden form field so it appears in the email/CRM notification.
+
+Do not build beyond these 3 pages, and do not add electrical, roofing, 
+renovation, or a [city] segment yet — those come in a later phase.

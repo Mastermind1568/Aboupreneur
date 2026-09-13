@@ -1,0 +1,212 @@
+# Aboupreneur Paid Acquisition Playbook: Google Ads + LinkedIn Ads Go-to-Market Strategy
+
+## TL;DR
+- **Put ~75–80% of the combined $500–$1,500/mo into Google Search and treat LinkedIn as a small retargeting-only sliver — or defer LinkedIn entirely until total spend clears ~$1,000/mo.** LinkedIn's practical cold-lead floor is $1,000–$3,000/mo per campaign; at ~$400/mo it yields roughly 0–3 leads — far too few to exit the learning phase.
+- **Start keyword research in Google Keyword Planner (free) + Google Trends (free); add SEMrush only in month 2–3** once ad revenue can absorb the fixed subscription cost. Anchor Search on high-intent terms like "small business web design," "digital marketing agency for small business," and city + service combos.
+- **Build TWO landing-page variants to A/B test:** (A) the on-brand black/white/lime "Bold and Fast" editorial look and (B) a lighter agency-neutral trust look (white/near-white base, a trust-blue primary, lime reserved for CTA buttons). The evidence points to variant B winning for cold, first-time SMB buyers — clean layout, social proof beside the CTA, and blue trust cues — so test both but expect the neutral skin to convert better on cold traffic.
+
+## Key Findings
+
+**1. Budget reality.** At $500–$1,500/mo combined this is a small-budget account where concentration beats spread. Google Search is the workhorse for high-intent service buyers; LinkedIn CPCs run roughly double Google's (Search Engine Land first-party agency data put LinkedIn's blended CPC at $11.12 vs Google's $5.45), and LinkedIn's algorithm needs on the order of ~50 conversions/campaign/month to optimize — unreachable at a few hundred dollars.
+
+**2. Benchmarks to plan against (2025–2026).** The LocaliQ/WordStream 2026 Search Advertising Benchmarks (13,000+ US campaigns, 23 industries, Apr 2025–Mar 2026) put the all-industry average Search **CTR at 6.64%** and average **Search CPC at $5.42**; B2B/professional-services CTR skews lower (~2.4–3.5%), and marketing/agency and B2B keywords commonly clear $3–$8 CPC. (Note a source conflict: Digital Applied's separate Q1-2026 dataset lists a lower ~$2.96 cross-industry CPC — treat both as planning ranges and trust your own Keyword Planner pull.) LinkedIn benchmarks (Closely 2025): **median CPC $3.94, CPM $31–$38, median CTR 0.52%** (the 0.52% median CTR is independently corroborated by AgencyAnalytics across 150,000+ campaigns).
+
+**3. Landing page.** The Unbounce Conversion Benchmark Report (57M+ conversions across 41,000 landing pages, 464M pageviews, Q4 2024) found a **median landing-page conversion rate of 6.6% across all industries**; agency/services pages run lower (~3.6%), while PPC-traffic pages can reach ~10%. Personalized/single-offer CTAs and social proof placed *next to* the CTA are the highest-leverage elements. A dedicated ad page (not the homepage) is the correct call.
+
+**4. Competitors.** BrandLume (Toronto) wins on flat, upfront "wholesale" pricing and no contracts; local Edmonton shops (Pixel Army, Gomel, Mediashaker, Creologic) sell project-based websites ($2,500–$11,500) and monthly retainers ($840+). White space for Aboupreneur: transparent starter pricing + speed + a founder-led "Bold and Fast" story aimed specifically at businesses with zero online presence.
+
+## Details
+
+### 1. Market Research Methodology — Google tools first, SEMrush later
+
+**Recommendation: Start with Google Keyword Planner + Google Trends. Add SEMrush only in month 2–3, once ad revenue can absorb it.** SEMrush's Pro plan is **$139.95/mo (or $117.33/mo billed annually)** per Semrush's official 2026 pricing — a fixed cost that would eat 9–28% of a $500–$1,500 budget before a single click.
+
+Rationale: Google Keyword Planner is free with any Google Ads account and gives the exact CPC ranges and volume you need to size the budget. Google Trends is free and best for comparing relative interest, US-vs-Canada geo differences, and seasonality. SEMrush's edge is competitor keyword/gap analysis and absolute volume — valuable, but a month-2 upgrade, not a launch necessity.
+
+**Workflow:**
+1. **Google Keyword Planner** → pull volume + CPC (low/high bid) for the seed list below, filtered to US and Canada separately (CPCs differ; Canada is usually cheaper).
+2. **Google Trends** → compare the 3–5 core terms across US vs Canada and by province/state to decide geo weighting and spot seasonality.
+3. **Month 2+: SEMrush** → competitor gap analysis on BrandLume/local shops and long-tail expansion.
+
+**Starting seed keyword list (high-intent, grouped by theme):**
+- *Web design/build:* "small business web design," "wordpress website design," "wordpress developer for small business," "website design for small business," "affordable website design," "[city] web design"
+- *Agency/ads:* "digital marketing agency for small business," "small business marketing agency," "google ads management for small business," "ppc management small business," "social media advertising agency"
+- *Brand strategy:* "brand strategy consultant," "brand identity design," "logo and branding for small business," "small business branding agency"
+- *Consulting:* "marketing consultant for small business," "small business marketing help," "fractional marketing help"
+- *Geo modifiers:* pair each with "near me," "Edmonton," "Alberta," "Canada," and the top US metros you want to serve.
+
+Negative keywords from day one: "jobs," "salary," "free," "course," "internship," "how to," "diy," "templates," "tutorial," "intern."
+
+### 2. Campaign Structure & Budget Split
+
+**Budget allocation: ~75–80% Google / ~20–25% LinkedIn — and at the low end ($500–$800/mo total), run Google only and hold LinkedIn until you can give it ≥$500/mo of its own.**
+
+LinkedIn's hard floor is **$10/day (~$300/mo) per campaign with a $100 minimum lifetime budget** for new campaigns (LinkedIn's official "Making the Most of Your Budget" doc: *"The minimum daily budget amount required to start on LinkedIn is $10, for any ad format"*). But experts uniformly place the practical **cold-prospecting minimum at $1,000–$3,000/mo** (Impactable, Stackmatix, Paul Fairbrother; one LinkedIn rep reportedly advises against sub-$5k budgets). Below that, LinkedIn is only sensible for **retargeting warm website visitors** — and Closely's data shows why that niche works: retargeting campaigns *"achieve CTRs of 0.8% and CPLs of $90, delivering an ROI of 400%"* versus ~$180 average CPL on cold LinkedIn conversion campaigns. So: spend where the intent and efficiency are (Google Search), and use LinkedIn narrowly.
+
+**Google Ads structure (gets ~$375–$1,200/mo):**
+- **Campaign type: Search only at launch.** Do **not** use Performance Max yet — PMax needs ~$1,000–$2,000+/mo and conversion history to learn; below that you're "funding Google's machine-learning experiments." Avoid Display for direct response. Revisit PMax once you log 15–30 conversions/mo.
+- **One Search campaign, 3 tightly-themed ad groups** (each ad group = one service, tight keyword match groups, one RSA + matching landing section):
+  1. *Websites/WordPress* → web design / WordPress build terms
+  2. *Ads management / digital marketing agency* → agency + PPC/social terms
+  3. *Brand strategy & consulting* → branding + consulting terms
+- **Match types:** Phrase + exact for control on a small budget. Start Manual CPC or Maximize Clicks with a CPC cap; move to Maximize Conversions/tCPA once you have ≥15 conversions/mo.
+- **Geo:** Split or bid-segment US vs Canada. Consider starting Canada-heavy (cheaper CPCs, home advantage in Edmonton/Alberta) and layering in top US metros as data allows.
+- **Assets/extensions:** Sitelinks (Services, Portfolio, Pricing, Contact), callouts ("Free Consultation," "No Long-Term Contracts," "Chartered Marketer"), structured snippets (Services: Websites, Google Ads, Branding, Consulting), lead-form and/or call extensions.
+- **Daily math:** $500/mo ≈ $16/day; $1,000/mo ≈ $33/day; $1,500/mo ≈ $49/day. At a ~$4–$7 blended CPC you're buying roughly 55–110 Google clicks/mo at the low end — enough to test if concentrated on 8–15 keywords.
+
+**LinkedIn Ads structure (only when it can get ≥$500/mo; ideally ~$300–$400 of the combined budget as retargeting):**
+- **Objective:** Website Visits (or Lead Gen with native Lead Gen Forms if prospecting later) — but at this budget, prioritize a **retargeting campaign** to people who already hit the landing page (via the LinkedIn Insight Tag / Matched Audiences). Cold prospecting here will underperform.
+- **Cold targeting (only if budget grows):** Attribute targeting — Job titles (Owner, Founder, Co-Founder, CEO, Managing Director, Marketing Manager) + Company size (1–10, 11–50) + Geography (US/Canada) + relevant industries. Keep audiences ~15k–50k. Note LinkedIn **discontinued lookalike audiences on Feb 29, 2024**; the replacement, **Predictive Audiences, requires a 300+ member seed** (Lead Gen Forms, Insight Tag conversions, or a contact list) you won't have at launch — so early cold targeting relies on standard attributes + Matched Audiences retargeting.
+- **Ad format:** Single Image Sponsored Content is the versatile default. **Thought Leader Ads are dramatically cheaper per click (~$2.29 vs ~$13 for single image)** and fit Abou's "Sovereign Operator" personal-brand voice — a strong budget hack. Carousel (~$2.15 CPC) also stretches spend. Avoid Message Ads at this budget.
+- **Ads per campaign:** Load 4–5 creatives (LinkedIn's own best practice) so it can rotate.
+
+### 3. Ad Copy (copy-paste ready)
+
+**GOOGLE RESPONSIVE SEARCH ADS** — Limits: Headlines ≤30 chars (up to 15), Descriptions ≤90 chars (up to 4), 2 paths ≤15 chars. Front-load Headline 1 and Description 1. Google recommends 8–15 headlines per RSA; feel free to pool headlines across fewer RSAs.
+
+**RSA 1 — Digital Marketing Agency (umbrella)**
+Headlines: `Marketing Agency for SMBs` | `Bold, Fast Small Biz Growth` | `Websites, Ads & Branding` | `Get Found Online Fast` | `Chartered Marketer Speed` | `No Long-Term Contracts` | `Free 30-Min Strategy Call` | `Your All-in-One Marketing Pro` | `Launch in Weeks, Not Months` | `US & Canada Small Business`
+Descriptions: `Websites, Google & LinkedIn ads, and branding — built bold and fast for SMBs.` | `One operator, no bloated agency fees. Book a free strategy call today.` | `From zero online presence to a real pipeline. Transparent pricing.` | `Chartered marketer helping small businesses win online. Get started.`
+Paths: `/small-business` `/marketing`
+
+**RSA 2 — WordPress Websites**
+Headlines: `WordPress Sites for SMBs` | `Small Business Web Design` | `Launch Your Site in Weeks` | `Websites That Win Clients` | `Bold, Fast WordPress Builds` | `No Website? Start Here` | `Mobile-Ready & Built to Sell` | `Affordable Pro Web Design` | `Free Website Consultation` | `Designed to Get You Leads`
+Descriptions: `Custom WordPress websites for businesses with little or no online presence.` | `Fast, mobile-ready, built to convert visitors into customers. Book a call.` | `Get a professional site without the agency price tag. Transparent quotes.` | `From idea to launch in weeks. Bold design, fast turnaround.`
+Paths: `/web-design` `/wordpress`
+
+**RSA 3 — Google & LinkedIn Ads Management**
+Headlines: `Google Ads for Small Biz` | `Ads Management, Done Right` | `Stop Wasting Ad Budget` | `Get More Leads From Ads` | `Google & LinkedIn Ads` | `PPC for Small Business` | `Bold, Fast Ad Campaigns` | `Track Every Dollar Spent` | `Free Ads Strategy Call` | `Small Budgets Welcome`
+Descriptions: `Done-for-you Google & LinkedIn ads built to get SMBs real leads, fast.` | `Transparent reporting on every click, lead, and dollar. No contracts.` | `Turn ad spend into pipeline with a chartered marketer. Book a call.` | `First-time advertiser? We make paid ads simple and measurable.`
+Paths: `/google-ads` `/ppc`
+
+**RSA 4 — Brand Strategy & Identity**
+Headlines: `Brand Strategy for SMBs` | `Stand Out & Get Noticed` | `Brand Identity Design` | `Look Bigger Than You Are` | `Bold Brands, Built Fast` | `Logo & Brand Identity` | `Small Business Branding` | `Make Your Brand Memorable` | `Free Brand Consultation` | `From Invisible to Iconic`
+Descriptions: `Brand strategy and identity design that makes small businesses unforgettable.` | `Look credible and premium from day one. Bold, fast, founder-led.` | `Stand out in a crowded market with a brand built to convert. Book a call.` | `Full brand identity — strategy, logo, and voice — for growing SMBs.`
+Paths: `/branding` `/brand-strategy`
+
+**RSA 5 — Marketing Consulting**
+Headlines: `Marketing Help for SMBs` | `Your Fractional Marketer` | `Small Business Marketing` | `No Marketing Team? No Problem` | `Bold, Fast Marketing Plans` | `Chartered Marketer On Call` | `Grow Without a Big Agency` | `Clear, Simple Strategy` | `Free Strategy Session` | `Marketing That Makes Sense`
+Descriptions: `Practical marketing consulting for owners with no in-house team. Book a call.` | `Get a clear, prioritized plan — not jargon. Bold and fast execution.` | `A chartered marketer in your corner, minus the agency retainer.` | `From strategy to done — websites, ads, and brand under one roof.`
+Paths: `/consulting` `/strategy`
+
+---
+
+**LINKEDIN ADS (Single Image / Sponsored Content)** — Intro text ≤150 chars visible (600 max), Headline ≤70 chars (no expansion — never exceed), Description ≤100 chars. Image 1200×627. Keep the core message in the first 150 chars of intro.
+
+**LinkedIn Ad 1 — Umbrella / Bold and Fast**
+Intro: `No website. No ads. No time? One operator builds your site, runs your ads, and sharpens your brand — bold and fast.`
+Headline: `Your All-in-One Marketing Partner for Small Business`
+Description: `Websites, ads & branding. No contracts.`
+CTA: Learn more
+
+**LinkedIn Ad 2 — Websites**
+Intro: `Still don't have a real website? Your competitors do. Get a bold, conversion-ready WordPress site launched in weeks — not months.`
+Headline: `Small Business Websites, Built Bold and Fast`
+Description: `Free consultation. Transparent pricing.`
+CTA: Learn more
+
+**LinkedIn Ad 3 — Ads Management**
+Intro: `Burning cash on ads that don't convert? A chartered marketer builds Google & LinkedIn campaigns that turn spend into real leads.`
+Headline: `Ad Campaigns That Actually Get You Leads`
+Description: `Every dollar tracked. No long contracts.`
+CTA: Learn more
+
+**LinkedIn Ad 4 — Brand Strategy (Thought Leader Ad voice — run from Abou's profile)**
+Intro: `Most small businesses look small because their brand is an afterthought. Here's how to look premium and win trust from day one.`
+Headline: `Build a Brand That Punches Above Its Weight`
+Description: `Brand strategy & identity for SMBs.`
+CTA: Learn more
+
+**LinkedIn Ad 5 — Consulting / Founder**
+Intro: `You started the business. You shouldn't have to figure out marketing alone. Get a chartered marketer in your corner — bold, fast, no fluff.`
+Headline: `A Marketing Partner for Founders Who Move Fast`
+Description: `Free strategy call. US & Canada.`
+CTA: Sign up
+
+### 4. Landing Page Strategy & Wireframe
+
+**Best practices (2025–2026):** single conversion goal, one offer; the headline + CTA get read by ~90% of visitors; personalized/single-offer CTAs convert far better than generic/multi-offer ones (multi-offer pages convert markedly worse); social proof placed *next to the CTA* (not buried in the footer) is a top lever; sub-2-second load; 3–5 form fields max; clean, whitespace-forward layouts outperform dense ones. For first-time SMB buyers, trust signals matter most: named testimonials, credential badges (chartered marketer), guarantees, visible contact info, and transparent pricing.
+
+**Recommended wireframe (both A/B variants share this structure; only the visual skin differs):**
+1. **Sticky nav** — logo + one CTA button ("Book Free Call"). No other nav links (reduce leaks).
+2. **Hero (above the fold)** — benefit headline (e.g., "Websites, Ads & Branding — Built Bold and Fast for Small Business"), one-line subhead naming the audience ("For SMBs with little or no online presence, in the US & Canada"), primary CTA, and a trust strip immediately below (chartered-marketer badge, "No long-term contracts," "Free 30-min strategy call").
+3. **Social-proof bar** — testimonials/logos/a results stat directly under the hero; put at least one *named* testimonial next to the first CTA.
+4. **Services (4 cards)** — Websites, Ad Campaigns, Brand Strategy, Consulting; one benefit-led line each.
+5. **Why Aboupreneur / founder story** — Abou, chartered marketer, "Bold and Fast"; humanizes a solo operator (trust).
+6. **How it works (3 steps)** — Book call → Get a plan → Launch. Reduces first-timer anxiety.
+7. **Proof / mini case study** — even one before/after or metric.
+8. **Transparent "starting from" pricing** — a differentiator vs opaque agencies; reduces friction.
+9. **FAQ** — handles "I've never had a website / run ads" objections.
+10. **Final CTA + short form** (Name, Email, Business, one dropdown: what do you need?). Repeat the CTA; add a sticky bottom-bar CTA on mobile.
+
+**A/B decision (mirror brand vs agency-neutral):** Test both, but the hypothesis is that the **agency-neutral / trust variant wins for cold SMB traffic** — white or near-white background, generous whitespace, a blue or dark trust cue for credibility, and electric lime reserved *only* for CTA buttons (the isolation/Von Restorff effect makes a single bright accent the click magnet). The full black/white/lime editorial look is striking and reinforces the brand, but a pure-black premium-editorial page can read as "creative/personal brand" rather than "safe, trustworthy vendor" to a nervous first-time buyer. Keep lime as the CTA accent in **both** so brand DNA persists. Call the winner only after ≥300 visits per variant, judged on conversion rate (and, ideally, lead quality).
+
+### 5. Competitive Intelligence
+
+- **BrandLume (Toronto, CA)** — "Amazon of agencies": flat, upfront *wholesale* pricing, no long-term contracts, a claimed 96% retention rate, all services (web, SEO, PPC, branding) in one shop; min project ~$1,000+. **Lesson:** transparent, productized pricing plus "no contracts" is a proven SMB trust play — copy the transparency, differentiate on founder-led speed and personal service.
+- **Mediaforce (Ottawa, serves CA+US)** — positions "80% of our clients are small businesses," offers a free website analysis, SEO + Google Ads + social. **Lesson:** a free-audit lead magnet works.
+- **Storyteller Media (Nova Scotia)** — productized "Essentials" small-business bundle (SEO + Google Ads + web maintenance), ~13% bundle discount, "no setup fee, cancel anytime," priced in CAD. **Lesson:** bundle services into one monthly price.
+- **Edmonton local (Pixel Army, Gomel Digital, Mediashaker, Creologic)** — project-based websites $2,500–$11,500; retainers from ~$840/mo (Mediashaker) up; premium builds $9,000–$90,000. **Lesson:** local anchors are expensive and project-based — Aboupreneur can undercut on entry price and turnaround while leaning on the chartered-marketer credential.
+- **Positioning white space for Aboupreneur:** founder-led, "Bold and Fast," transparent starter pricing, all-in-one (site + ads + brand), and specifically for businesses with *no* current online presence — a segment most agencies treat as too small. Differentiate on speed, personal accountability, and the chartered-marketer credential as a trust anchor.
+
+### 6. Replit / Claude Code Build Guidance
+
+**Setup steps:**
+1. In Replit, create a new App and choose the Agent (Claude). For a marketing landing page, a **static site (HTML/CSS/JS)** or a lightweight React/Vite build is ideal — static deploys cheapest and loads fastest (better for conversion). Replit's Agent runs Claude Sonnet 4.5 / Opus 4.5.
+2. Use **Plan mode** first to review the structure before it builds; create a checkpoint before major changes.
+3. Build **two variants** (A = brand, B = neutral) so you can A/B test. Deploy both via Replit static hosting/Deployments and either split traffic or point each ad group at a variant and compare.
+4. Add the Google Ads conversion tag / GA4 and the **LinkedIn Insight Tag** in the `<head>` so tracking (and retargeting) work from day one.
+5. Wire the form to email or a Google Sheet/webhook; ensure a thank-you state that fires the conversion event.
+
+**Copy-paste prompt for Replit's Claude agent:**
+
+> Build a fast, mobile-first, single-page marketing landing page for a digital marketing agency called **Aboupreneur** (aboupreneur.page), run by Abou (Aboubakar Moussa), a chartered-marketer solo operator serving small and medium businesses in the US and Canada that have little or no online presence. Services: WordPress website builds, Google/LinkedIn/social ad campaign management, brand strategy & identity, and marketing consulting. Positioning: **"Bold and Fast."**
+>
+> Build it as a **static site (semantic HTML + CSS + minimal vanilla JS)** optimized for sub-2-second load and Core Web Vitals. Make the whole thing **themeable via CSS variables** so I can flip between two visual skins with one class on `<body>`:
+> - **Theme A "Brand":** background #0A0A0A, text #FFFFFF, accent electric lime #B5FF3A, headings in Playfair Display Bold (Google Fonts), body in Inter. Premium editorial feel.
+> - **Theme B "Neutral/Trust":** background #FFFFFF / #F7F8FA sections, dark charcoal text #0A0A0A, a trust-blue primary (#1E4FFF or similar) with electric lime **#B5FF3A reserved only for the primary CTA buttons**, headings Playfair Display Bold, body Inter. Clean, corporate, lots of whitespace.
+>
+> Sections in order: (1) sticky minimal nav (logo + one "Book Free Call" button, no other links); (2) hero above the fold — big benefit headline, one-line subhead naming the SMB audience, primary CTA, and a trust strip below it (chartered-marketer badge, "No long-term contracts," "Free 30-min strategy call"); (3) social-proof row with 3 testimonial placeholders and a results stat, placed right under the hero; (4) 4 service cards (Websites, Ad Campaigns, Brand Strategy, Consulting) with benefit-led one-liners; (5) founder story block for Abou with the chartered-marketer credential; (6) "How it works" 3-step (Book a call → Get a plan → Launch fast); (7) transparent "starting from" pricing block; (8) FAQ addressing first-time website/ads buyers; (9) final CTA with a short lead form (Name, Email, Business name, dropdown: What do you need? [Website / Ads / Branding / Consulting]) and a sticky bottom CTA bar on mobile.
+>
+> Requirements: single conversion goal (book a call / submit form); CTAs repeat 3x and use the lime accent; form validates and shows a thank-you state; include clearly-marked placeholder comments in the `<head>` for a Google Ads/GA4 tag and a LinkedIn Insight Tag, and fire a conversion event on successful form submit; use accessible color contrast, alt text, and reduced-motion support; add a subtle fade-in on the hero. Keep all copy in one clearly-commented content block. Do not add external nav links that leak traffic off the page.
+
+After it builds, ask the agent: *"Create a second deployable version toggled to Theme B"* and *"run a Lighthouse-style check and fix anything under 90 on performance/accessibility."*
+
+### 7. Tracking / KPI Alignment (maps to the Jelly Academy templates)
+
+Your Jelly Academy Digital Ads Reporting template tracks: impressions, clicks, CTR, CPC, cost, conversions, cost/conversion, conversion rate, ROAS. Every campaign above maps cleanly:
+
+| KPI (your template) | Google Search (plan against) | LinkedIn (if run) |
+|---|---|---|
+| Impressions | Per ad group | Per campaign |
+| Clicks | Per keyword/ad | Per ad |
+| **CTR** | Target ~3–6%; B2B/services skews lower ~2.5–4% early; all-industry avg 6.64% | ~0.4–0.6% (median 0.52%) — normal for LinkedIn |
+| **CPC** | Plan $3–$8 (marketing/agency & B2B terms; all-industry avg $5.42) | ~$6–$11 US blended; Thought Leader/Carousel ~$2–$3 |
+| Cost | Daily × 30.4 (e.g., $1,000/mo ≈ $33/day) | Daily × 30.4 |
+| **Conversions** | Form fills + calls; expect low volume early (concentrate keywords) | Lead Gen Form submits or LP conversions |
+| **Cost/Conversion (CPL)** | Plan $40–$120+ (services CPL varies); the "money metric" | $75–$150 typical B2B; retargeting ~$90; cold ~$180 |
+| **Conversion rate** | LP ~6–10% for PPC traffic; account CVR ~4–7% services | 3–5% LP / 6–10% native Lead Gen Form |
+| **ROAS** | Track once deal values are logged; all-Google median ~3.5:1; investigate if <2:1 for 2 months | Same; expect thinner early; retargeting can hit ~4:1 |
+
+For the **Marketing/Monthly Plan template** (channel-by-channel budget, leads, CPL, CAC): log Google and LinkedIn as separate channel rows; CPL = channel cost ÷ conversions; CAC = channel cost ÷ closed clients. Because Aboupreneur's own deal values (a $2,500+ website, a monthly retainer) are high relative to a $40–$120 CPL, even a handful of closed clients per month produces a strong ROAS — the core argument for why a small, concentrated Google Search budget can pay back quickly.
+
+## Recommendations
+
+**Stage 1 (Month 1, ~$500–$800/mo): Google Search only.** One campaign, 3 ad groups, 8–15 tightly-themed high-intent keywords, phrase + exact match, Maximize Clicks with a CPC cap. Ship both landing-page variants and split by ad group or 50/50. Install GA4 + Google Ads conversion tracking + the LinkedIn Insight Tag (to build a retargeting pool for later). Review the search-terms report weekly; add negatives. Benchmarks to hit: CTR >3%, CPL under ~$120, LP conversion >5%.
+
+**Stage 2 (Month 2–3 — trigger: ROAS ≥2 and ≥300 visits/variant): Pick the winning landing page, add SEMrush (~$117/mo annual) for competitor gap analysis, and turn on a small LinkedIn retargeting campaign** (~$300–$400/mo, $10–$15/day) to landing-page visitors using Single Image or Thought Leader Ads. Keep Google at ~75–80% of spend.
+
+**Stage 3 (Month 4+ — trigger: consistently profitable): Scale Google in 20–30% monthly increments** (don't jump budgets — it resets the learning phase). Once you log 15–30 conversions/mo, test Maximize Conversions/tCPA and consider a small Performance Max campaign for reach. Expand LinkedIn to cold prospecting only if you can commit ≥$1,000/mo to it; otherwise keep it retargeting-only.
+
+**Thresholds that change the plan:**
+- Google CPL under ~$80 with clients closing → scale faster, add PMax.
+- LinkedIn cold CPL >$300 or <2 leads/mo → kill cold LinkedIn, keep retargeting only.
+- Neither LP variant clears ~4% conversion → fix message-match/offer before spending more (a page problem, not a traffic problem).
+- ROAS <2:1 for two consecutive months → audit search terms, negatives, and LP before cutting budget.
+
+## Caveats
+- **Benchmarks are medians, not promises.** Marketing/agency and B2B-services keywords vary widely by metro and by US vs Canada; your Keyword Planner pull is the real number. Sources also conflict (e.g., cross-industry Google Search CPC of $5.42 per LocaliQ/WordStream vs ~$2.96 per Digital Applied; LinkedIn CPC from ~$3.94 median to ~$11.12 blended) — treat all figures here as planning ranges.
+- **LinkedIn at this budget is marginal for cold acquisition** — the single biggest strategic call, and the evidence strongly favors Google-first with LinkedIn as retargeting. Predictive Audiences require a 300+ seed you won't have at launch.
+- **Solo-operator capacity:** managing Search well takes ~5–10 hrs/mo (weekly search-term review, negatives, copy tests). Budget the time or results drift.
+- **Replit-generated code ships without auth/rate-limiting by default** and is best for a marketing page, not sensitive data; keep the form to a webhook/email and don't store PII in the repo. Verify the Insight Tag and conversion events actually fire before spending.
+- **Competitor pricing signals** are from public pages and directories (Clutch, Semrush, agency sites) and may be out of date; treat as directional.
