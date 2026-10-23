@@ -22,8 +22,7 @@ export default function Pay() {
   }, [status]);
 
   const startCheckout = () => {
-    trackEvent("payment_checkout_started", { product: "project_deposit" });
-    trackEvent("payment_checkout_created", {
+    trackEvent("payment_checkout_clicked", {
       product: "project_deposit",
       provider: "stripe_payment_link",
     });
@@ -44,12 +43,12 @@ export default function Pay() {
 
         {status === "success" && (
           <div role="status" className="mt-10 rounded-2xl border border-green-500/30 bg-green-500/10 p-5 flex gap-3 text-green-600">
-            <CheckCircle2 className="shrink-0" /> Payment received. Thank you — I’ll be in touch with the next steps.
+            <CheckCircle2 className="shrink-0" /> Back from Stripe? Check your Stripe receipt for payment confirmation. I’ll follow up once the deposit is confirmed.
           </div>
         )}
         {status === "cancelled" && (
           <div role="status" className="mt-10 rounded-2xl border border-border bg-card p-5 text-muted-foreground">
-            Checkout was cancelled. No payment was taken. You can return whenever you’re ready.
+            You returned from checkout. If you did not complete payment, you can try again whenever you’re ready. Check your Stripe receipt before retrying.
           </div>
         )}
 
